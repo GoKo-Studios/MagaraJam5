@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eeb8155bdbe7cf44aee0cfbc2152cce, type: 3}
+  m_Name: NewPassiveMob
+  m_EditorClassIdentifier: 
+  Data:
+    DisplayName: Passive
+    MaxHealth: 100
+    FollowSpeed: 2
+    DetectionRange: 10
+    AttackRange: 1
+    StoppingDistance: 1
+    DamageDealt: 1
+    DetectionLayerMask:
+      serializedVersion: 2
+      m_Bits: 64
+    Mesh: {fileID: 2986628881038703742, guid: 101fb7339b978ad4e8fa7dbb5f233b33, type: 3}
+    WaveCost: 0
+    PoolingTime: 1
+    AttackTime: 1
+    AttackAreaSize: {x: 0, y: 0, z: 0}
+    OnDeathAlertRange: 0
+    TriggerSize: {x: 1, y: 2, z: 1}
+    InvulnerableTime: 1
+  DistanceToKeep: 10
+  RandomRunDistance: 10

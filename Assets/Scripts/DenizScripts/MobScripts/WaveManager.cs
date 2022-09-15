@@ -27,7 +27,7 @@ namespace Assets.Scripts.Managers {
 
         [SerializeField] private List<MobDataBase> _mobDataList; 
         [SerializeField] private int _currentWave;
-        [SerializeField] private int _waveValue;
+        [SerializeField] private float _waveValue;
         [SerializeField] private int _timeBetweenWaves;
         private List<MobDataBase> _generatedWave = new List<MobDataBase>();
         [SerializeField] private float _playerSpawnRange;
@@ -124,7 +124,7 @@ namespace Assets.Scripts.Managers {
             List<MobDataBase> generatedEnemies = new List<MobDataBase>();
             while (_waveValue > 0) {
                 int randomEnemyID = Random.Range(0, _mobDataList.Count);
-                int randomEnemyCost = _mobDataList[randomEnemyID].Data.WaveCost;
+                float randomEnemyCost = _mobDataList[randomEnemyID].Data.WaveCost;
 
                 if (_waveValue - randomEnemyCost >= 0) {
                     generatedEnemies.Add(_mobDataList[randomEnemyID]);

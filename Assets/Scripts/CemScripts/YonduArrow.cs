@@ -6,6 +6,7 @@ public class YonduArrow : MonoBehaviour
 {
 
     private void Update(){
+        //Debug.Log(Input.mousePosition);
     }
 
     public static Vector3 mosueWorldPosition(){

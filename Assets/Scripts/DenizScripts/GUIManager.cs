@@ -30,8 +30,12 @@ namespace Assets.Scripts.Managers {
             EventManager.Instance.OnUpdateTimer -= UpdateWaveTimer;
         }
 
-        public void Button_SpawnMob() {
+        public void Button_SpawnAggressiveMob() {
             MobSpawnerManager.Instance.SpawnObjectWithPooling(ResourceLoader.LoadResource<ScriptableObject>("Objects/PoolableObjects/New Spider") as MobDataBase);
+        }
+
+        public void Button_SpawnPassiveMob() {
+            MobSpawnerManager.Instance.SpawnObjectWithPooling(ResourceLoader.LoadResource<ScriptableObject>("Objects/PoolableObjects/NewPassiveMob") as MobDataBase);
         }
 
         private void UpdateWaveTimer(int time) {
