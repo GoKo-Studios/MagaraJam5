@@ -6,10 +6,9 @@ public class YonduArrow : MonoBehaviour
 {
 
     private void Update(){
-        Debug.Log(Input.mousePosition);
     }
 
-    public Vector3 mosueWorldPosition(){
+    public static Vector3 mosueWorldPosition(){
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray, out RaycastHit hit)){
             return hit.point;

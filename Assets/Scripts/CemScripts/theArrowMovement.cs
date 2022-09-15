@@ -12,9 +12,10 @@ public class theArrowMovement : MonoBehaviour
 
     private float heightFromGround;
 
-    public YonduArrow ya;
+    private YonduArrow ya;
+    
+    private Transform player;
 
-    [SerializeField] private AnimationCurve distanceCurve;
     [SerializeField] private AnimationCurve turnCurve;
 
     private Vector3 mousePos;
@@ -23,7 +24,7 @@ public class theArrowMovement : MonoBehaviour
     private float curveDistanceTime;
 
     private float distance_mousePos_arrow;
-    private float angle_mousePos_arrow;
+    private float angleBetweenTarget;
 
     [SerializeField]
     private float arrowCenterDeadzone = 3.0f;
@@ -34,6 +35,9 @@ public class theArrowMovement : MonoBehaviour
 
     ArrowInputManager arrowInput;
 
+    public enum ArrowStates { CallBack, OutAndActive, Disabled };
+    public ArrowStates theArrowState = ArrowStates.OutAndActive;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,14 +45,33 @@ public class theArrowMovement : MonoBehaviour
         arrowInput = ArrowInputManager.Instance;
 
         rb = transform.GetComponent<Rigidbody>();
+        ya = transform.GetComponent<YonduArrow>();
+
+        player = GameObject.Find("CamFollow").transform;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        mousePos = ya.mosueWorldPosition();
+
+        switch (theArrowState){
+            case ArrowStates.Disabled:
+                
+                return;
+            case ArrowStates.OutAndActive:
+                OutAndActiveMovement();
+                return;
+            case ArrowStates.CallBack:
+                CallBackMovement();
+                return;
+        }
+
         
-        distance_mousePos_arrow = Vector3.Distance(transform.position, mousePos);
+    }
+
+    private void OutAndActiveMovement(){
+
+        mousePos = YonduArrow.mosueWorldPosition();
 
         if(arrowInput.arrowToTheFloor){
             RaycastHit hit;
@@ -57,30 +80,42 @@ public class theArrowMovement : MonoBehaviour
             }
         }
 
-        RotateArrow();
+        RotateArrow(mousePos);
 
-        moveArrow();
-        
+        moveArrow(mousePos, arrowCenterDeadzone);
+
+        if(arrowInput.callArrowBack){
+            arrowInput.callArrowBack = false;
+            theArrowState = ArrowStates.CallBack;
+        }
     }
 
-    private void RotateArrow(){
-        Vector3 relativePos = (new Vector3(mousePos.x, mousePos.y + heightFromGround, mousePos.z) - transform.position).normalized;
+    private void CallBackMovement(){
+
+        RotateArrow(player.position);
+
+        moveArrow(player.position, 1.0f);
+
+        if(arrowInput.callArrowBack){
+            arrowInput.callArrowBack = false;
+            theArrowState = ArrowStates.OutAndActive;
+        }
+    }
+
+    private void RotateArrow(Vector3 destination){
+        Vector3 relativePos = (new Vector3(destination.x, destination.y + heightFromGround, destination.z) - transform.position).normalized;
         Quaternion toRotation = Quaternion.LookRotation(relativePos);
-        angle_mousePos_arrow = Vector3.Angle(transform.forward, relativePos);
+        angleBetweenTarget = Vector3.Angle(transform.forward, relativePos);
         transform.rotation = Quaternion.Lerp( transform.rotation, toRotation, rotateSpeed * Time.deltaTime );
     }
 
-    private void moveArrow(){
-        float clampedDistance = Mathf.Clamp(distance_mousePos_arrow, arrowCenterDeadzone, distanceCap);
-        float mappedDistance = YonduArrow.MapRange(arrowCenterDeadzone, distanceCap, 0.0f, 30.0f, clampedDistance);
+    private void moveArrow(Vector3 targetToMove, float stopRange){
+        float distance = Vector3.Distance(transform.position, targetToMove);
+
+        float clampedDistance = Mathf.Clamp(distance, stopRange, distanceCap);
+        float mappedDistance = YonduArrow.MapRange(stopRange, distanceCap, 0.0f, 30.0f, clampedDistance);
         // Debug.Log(Vector3.Distance(transform.position, mousePos));
-        rb.velocity = transform.forward * speed * TurnSpeedCurve(angle_mousePos_arrow) * mappedDistance;
-    }
-    
-    private float DistanceCurve(float distance) {
-        float res = YonduArrow.MapRange(0, 30, 0, 1, distance);
-        curveDistanceTime = res;
-        return distanceCurve.Evaluate(res);
+        rb.velocity = transform.forward * speed * TurnSpeedCurve(angleBetweenTarget) * mappedDistance;
     }
 
     private float TurnSpeedCurve(float angle) {

@@ -20,6 +20,7 @@ public class InputEventSystem : MonoBehaviour
     public pMovInput playerDirectionInput;
 
     public UnityAction JumpEvent;
+    public UnityAction callSecondaryBack;
     public UnityAction toTheFloor;
 
 }

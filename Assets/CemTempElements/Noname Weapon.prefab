@@ -48,17 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16681ac06cf7a504fb0331c45cad62b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 7177489754752019117}
   speed: 2
   distanceCap: 15
   rotateSpeed: 10
-  ya: {fileID: 7177489754752019113}
-  distanceCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  player: {fileID: 0}
   turnCurve:
     serializedVersion: 2
     m_Curve:
@@ -96,6 +89,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
+  theArrowState: 1
 --- !u!114 &7177489754752019113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowToTheFloor: 0
+  callArrowBack: 0
 --- !u!54 &7177489754752019117
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,9 +129,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &7177489754383150145
 PrefabInstance:
   m_ObjectHideFlags: 0

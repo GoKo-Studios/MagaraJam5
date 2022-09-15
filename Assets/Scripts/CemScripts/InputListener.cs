@@ -16,6 +16,11 @@ public class InputListener : MonoBehaviour
             InputEventSystem.Instance.JumpEvent?.Invoke();
         }
 
+        if(Input.GetKeyDown(KeyCode.F)){
+            Debug.Log("HEY");
+            InputEventSystem.Instance.callSecondaryBack?.Invoke();
+        }
+
         if(Input.GetMouseButtonDown(1)){
             InputEventSystem.Instance.toTheFloor?.Invoke();
         }

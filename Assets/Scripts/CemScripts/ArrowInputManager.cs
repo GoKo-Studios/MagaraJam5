@@ -16,18 +16,25 @@ public class ArrowInputManager : MonoBehaviour
     #endregion
 
     public bool arrowToTheFloor;
+    public bool callArrowBack;
 
     void Start()
     {
         arrowToTheFloor = false; //It's important for this bool to have false value in the beginning
         InputEventSystem.Instance.toTheFloor += toTheFloorEvent;
+        InputEventSystem.Instance.callSecondaryBack += callArrowBackEvent;
     }
 
     void OnDestroy(){
         InputEventSystem.Instance.toTheFloor -= toTheFloorEvent;
+        InputEventSystem.Instance.callSecondaryBack -= callArrowBackEvent;
     }
 
     private void toTheFloorEvent(){
         arrowToTheFloor = !arrowToTheFloor;
+    }
+
+    private void callArrowBackEvent(){
+        callArrowBack = true;
     }
 }
