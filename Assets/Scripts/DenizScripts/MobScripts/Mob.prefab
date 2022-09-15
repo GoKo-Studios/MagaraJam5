@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3105200907975400960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69f42a80891c5dd478f592f83052fe4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e71ae93c761e674ca6abd70315a826e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3802926277855850972
@@ -91,11 +91,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 3802926277855850972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 997a2309e8a66ca4c84f588c4b970023, type: 3}
+  m_Script: {fileID: 11500000, guid: dbe1c469c488596478a61219fa4f6a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MobData: {fileID: 0}
   State: 0
+  Data:
+    DisplayName: 
+    MaxHealth: 0
+    FollowSpeed: 0
+    DetectionRange: 0
+    AttackRange: 0
+    StoppingDistance: 0
+    DamageDealt: 0
+    DetectionLayerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    Mesh: {fileID: 0}
+    WaveCost: 0
+    PoolingTime: 0
+    AttackTime: 0
+  CurrentHealth: 0
 --- !u!114 &561344163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3802926277855850972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59bd1dc6d22ba074f8307aab7d9f30da, type: 3}
+  m_Script: {fileID: 11500000, guid: 14e9be4fcacdac143bb21a26c21f0d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8701824380603881190
@@ -117,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3802926277855850972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4337c67c4e2d63549af517aa13e3f9be, type: 3}
+  m_Script: {fileID: 11500000, guid: 1747e44f19553404c8868148186cdb81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsCalledByPooling: 0
@@ -200,6 +216,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5597665116397484284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4de98184ff712a42bef5d47fc85be5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f8deb9be3f1edb4da6810eef4bc0b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -16,4 +16,6 @@ public struct MobData
     public int WaveCost;
     public int PoolingTime;
     public float AttackTime;
+    public Vector3 AttackAreaSize;
+    public float OnDeathAlertRange;
 }

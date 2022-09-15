@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using Assets.Scripts.Params;
 using UnityEngine.AI;
 using Assets.Scripts.Managers;
@@ -41,25 +42,35 @@ public abstract class MobDataBase : ScriptableObject
             
             // If there is no any valid target.
             if (_target == null) {
-                Params.Manager.OnIdle?.Invoke();
+                //Params.Manager.OnIdle?.Invoke();
                 Params.Manager.SetState(MobStates.Idle);
             } 
 
             // An object entered the detection range while the mob was not alert.
             if (Params.Manager.GetState() == MobStates.Idle && _target != null) {
-                Params.Manager.OnEnterRange?.Invoke();
+                //Params.Manager.OnEnterRange?.Invoke();
             }
 
             // All objects have left the detection range while the mob was alert.
             if (Params.Manager.GetState() != MobStates.Idle && _target == null) {
-                Params.Manager.OnExitRange?.Invoke();
+                //Params.Manager.OnExitRange?.Invoke();
             }
 
             // If there is a valid target, move to the target position. 
             if (_target != null) {
-                Vector3 _targetPosition;
-                _targetPosition = _target.position;
-                MoveToPosition(Params.NavAgent, _target.position);
+                // Attack
+                if (Vector3.Distance(_target.position, Params.MobTransform.position) <= Params.Manager.Data.AttackRange 
+                && Params.Manager.GetState() != MobStates.Attacking) {
+                    Params.Manager.OnAttack?.Invoke(new MobOnAttackParams(Params.Manager, _target, Params.Manager.Data.DamageDealt, 
+                        Params.Manager.Data.AttackRange, Params.Manager.Data.AttackTime, Params.Manager.Data.DetectionLayerMask, 
+                        Params.MobTransform, Params.Manager.Data.AttackAreaSize));
+                }
+                // Follow
+                else {
+                    Vector3 _targetPosition;
+                    _targetPosition = _target.position;
+                    MoveToPosition(Params.NavAgent, _target.position);
+                }
             }
             else {
                 if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
@@ -77,13 +88,8 @@ public abstract class MobDataBase : ScriptableObject
             }
     }
 
-    // Action logic to be used in MobActionController.
-    public virtual void ActionLogic() {
-
-    }
-
-    public virtual void AttackTarget(Transform Target, int DamageDealt) { 
-
+    public virtual void OnAttack(MobOnAttackParams Params) { 
+        Params.Manager.StartCoroutine(HandleAttackingState(Params));
     }
 
     public virtual void HandleHit(MobOnHitParams Params) {
@@ -117,7 +123,13 @@ public abstract class MobDataBase : ScriptableObject
     public virtual void OnStunned(MobManager Manager, float Duration) {
         Manager.StartCoroutine(HandleStunnedState(Manager, Duration));
     }
-    public virtual void OnAttackHit(MobOnAttackHitParams data) { return; }
+    public virtual void OnAttackHit(MobOnAttackHitParams Params) { 
+        //Target.GetComponent<PlayerManager>().OnHit?.Invoke(Params.DamageDealt);
+    }
+
+    public virtual void OnHit(MobOnHitParams Params) { 
+        HandleHit(Params); 
+    }
 
     public virtual void OnDamageTaken(MobManager Manager, float DamageTaken) { 
         Manager.CurrentHealth -= DamageTaken;
@@ -128,11 +140,23 @@ public abstract class MobDataBase : ScriptableObject
         HandleDeath(Manager);
     }
 
+    public virtual void OnEnterRange(MobManager Manager) {
+        
+    }
+
+    public virtual void OnExitRange(MobManager Manager) {
+        
+    }
+
     #endregion
 
     #endregion
 
     #region Non-Virtual Functions
+
+    public void FollowPath() {
+        // DO I NEED THIS? DISCUSS WITH THE TEAM MEMBERS.
+    }
 
     public void MoveToPosition(NavMeshAgent Agent, Vector3 Position) { 
         Agent.SetDestination(Position);
@@ -155,6 +179,37 @@ public abstract class MobDataBase : ScriptableObject
 
         if (Manager.GetState() == MobStates.Stunned)
         Manager.SetState(MobStates.Idle);
+    }
+
+    public IEnumerator HandleAttackingState(MobOnAttackParams Params) {
+        if (Params.Manager.GetState() == MobStates.Attacking) yield break;
+
+        Params.Manager.SetState(MobStates.Attacking);
+
+        // Spawn the field towards the player's direction.
+        Vector3 direction = (Params.MobTransform.position - Params.Target.position).normalized;
+
+        float elapsedTime = 0;
+        while(elapsedTime < Params.AttackTime) {
+            
+            // If the mob gets stunned while charging an attack, cancel the attack.
+            if (Params.Manager.GetState() == MobStates.Stunned) yield break;
+
+            elapsedTime += Time.deltaTime;
+            // Add attack area fill animation to here.
+            yield return null;
+        }
+
+        // If target is still within the attack area, deal damage to them.
+        Collider[] colliders = Physics.OverlapBox(Params.MobTransform.position + Params.MobTransform.forward *  Params.AttackAreaSize.z, Params.AttackAreaSize, 
+        Quaternion.LookRotation(Params.MobTransform.forward, Vector3.up), Params.Mask);
+        if (colliders.Length > 0) {
+            Params.Manager.OnAttackHit?.Invoke(new MobOnAttackHitParams(colliders, Params.DamageDealt));
+        } 
+
+        if (Params.Manager.GetState() != MobStates.Stunned) yield break;
+        if (Params.Manager.GetState() == MobStates.Attacking)
+        Params.Manager.SetState(MobStates.Idle);
     }
 
     #endregion
