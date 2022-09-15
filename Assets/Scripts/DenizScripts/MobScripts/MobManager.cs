@@ -16,6 +16,7 @@ namespace Assets.Scripts.Managers {
         public MobData Data;
 
         public float CurrentHealth;
+        public bool IsAlert = false;
 
         #region References
 
@@ -28,25 +29,16 @@ namespace Assets.Scripts.Managers {
         public UnityAction OnSetup;
         public UnityAction OnClear;
 
-        public UnityAction<MobOnHitParams> OnHit => MobData.HandleHit;
+        public UnityAction<MobOnHitParams> OnHit => MobData.OnHit;
         public UnityAction<MobOnMoveParams> OnMove => MobData.MovementController;
         public UnityAction<NavMeshAgent, Vector3> MoveToPosition => MobData.MoveToPosition;
-
         public UnityAction<MobManager, float> OnDamageTaken => MobData.OnDamageTaken;
         public UnityAction<MobManager> OnDeath => MobData.OnDeath;
         public UnityAction<MobManager, float> OnStunned => MobData.OnStunned;
-
-
         public UnityAction<MobOnAttackHitParams> OnAttackHit => MobData.OnAttackHit;
-        public UnityAction<Transform, int> AttackTarget => MobData.AttackTarget; 
-        public UnityAction OnAttackMiss;
+        public UnityAction<MobOnAttackParams> OnAttack => MobData.OnAttack; 
         public UnityAction OnEnterRange;
         public UnityAction OnExitRange;
-        public UnityAction OnWait;
-        public UnityAction OnLoseTarget;
-        public UnityAction OnFollowTarget;
-        public UnityAction OnSearchTarget;
-        public UnityAction OnIdle;
 
         #endregion
 
@@ -75,5 +67,12 @@ namespace Assets.Scripts.Managers {
 
         public MobStates GetState() => State;
     }
+
+    // public UnityAction OnAttackMiss;
+    // public UnityAction OnWait;
+    // public UnityAction OnLoseTarget;
+    // public UnityAction OnFollowTarget;
+    // public UnityAction OnSearchTarget;
+    // public UnityAction OnIdle;
 }
 
