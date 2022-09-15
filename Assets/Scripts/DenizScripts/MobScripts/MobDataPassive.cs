@@ -44,13 +44,16 @@ public class MobDataPassive : MobDataBase
             //Params.Manager.OnExitRange?.Invoke();
         }
 
-        // If there is a valid target, move to the target position. 
+        // If there is a valid target, run away from the target to keep distance. 
         if (_target != null) {
-            
-            
-            Vector3 _targetPosition;
-            _targetPosition = _target.position;
-            MoveToPosition(Params.NavAgent, _target.position);
+            float _distance = Vector3.Distance(Params.MobTransform.position, _target.position);
+            if ( _distance < DistanceToKeep) {
+                Params.Manager.SetState(MobStates.Following);
+                Vector3 _direction = -(Params.MobTransform.position - _target.position).normalized;
+                Vector3 _targetPosition = _direction * (DistanceToKeep - _distance);
+                _targetPosition = _target.position;
+                MoveToPosition(Params.NavAgent, _target.position);
+            }
         }
         else {
             if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;

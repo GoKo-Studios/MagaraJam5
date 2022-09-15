@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dcd7c79fb781c14a9b3cf7e87b4b60c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ae7e9dbe84d1814fb2d1c0601e2ce12, type: 3}
   m_Name: New Spider
   m_EditorClassIdentifier: 
   Data:
@@ -24,6 +24,9 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 64
     Mesh: {fileID: 2986628881038703742, guid: 101fb7339b978ad4e8fa7dbb5f233b33, type: 3}
-    WaveCost: 1
+    WaveCost: 0
     PoolingTime: 1
     AttackTime: 1
+    AttackAreaSize: {x: 1, y: 1, z: 1}
+    OnDeathAlertRange: 10
+    TriggerSize: {x: 1, y: 2, z: 1}

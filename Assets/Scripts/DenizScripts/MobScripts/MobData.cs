@@ -18,4 +18,6 @@ public struct MobData
     public float AttackTime;
     public Vector3 AttackAreaSize;
     public float OnDeathAlertRange;
+    public Vector3 TriggerSize;
+    public float InvulnerableTime;
 }

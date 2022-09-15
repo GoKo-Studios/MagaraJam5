@@ -58,15 +58,18 @@ public abstract class MobDataBase : ScriptableObject
 
             // If there is a valid target, move to the target position. 
             if (_target != null) {
+                
+                if (Params.Manager.GetState() == MobStates.Attacking || Params.Manager.GetState() == MobStates.Stunned) return;
+                
                 // Attack
-                if (Vector3.Distance(_target.position, Params.MobTransform.position) <= Params.Manager.Data.AttackRange 
-                && Params.Manager.GetState() != MobStates.Attacking) {
+                if (Vector3.Distance(_target.position, Params.MobTransform.position) <= Params.Manager.Data.AttackRange) {
                     Params.Manager.OnAttack?.Invoke(new MobOnAttackParams(Params.Manager, _target, Params.Manager.Data.DamageDealt, 
                         Params.Manager.Data.AttackRange, Params.Manager.Data.AttackTime, Params.Manager.Data.DetectionLayerMask, 
                         Params.MobTransform, Params.Manager.Data.AttackAreaSize));
                 }
                 // Follow
                 else {
+                    Params.Manager.SetState(MobStates.Following);
                     Vector3 _targetPosition;
                     _targetPosition = _target.position;
                     MoveToPosition(Params.NavAgent, _target.position);
@@ -121,6 +124,7 @@ public abstract class MobDataBase : ScriptableObject
     #region Event Functions
 
     public virtual void OnStunned(MobManager Manager, float Duration) {
+        if (Duration <= 0f) return;
         Manager.StartCoroutine(HandleStunnedState(Manager, Duration));
     }
     public virtual void OnAttackHit(MobOnAttackHitParams Params) { 
@@ -133,7 +137,8 @@ public abstract class MobDataBase : ScriptableObject
 
     public virtual void OnDamageTaken(MobManager Manager, float DamageTaken) { 
         Manager.CurrentHealth -= DamageTaken;
-        if (Manager.CurrentHealth <= Manager.Data.MaxHealth) Manager.OnDeath?.Invoke(Manager);
+        Debug.Log("Damage Taken: " + DamageTaken + " Health: " + Manager.CurrentHealth);
+        if (Manager.CurrentHealth <= 0f) Manager.OnDeath?.Invoke(Manager);
     }
 
     public virtual void OnDeath(MobManager Manager) { 
