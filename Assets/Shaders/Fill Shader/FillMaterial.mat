@@ -48,7 +48,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _FillRate: 1
+    - _ProgressBorder: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    m_Colors:
+    - _EmptyColor: {r: 0.8490566, g: 0.0280349, b: 0.0280349, a: 0}
+    - _FillColor: {r: 0.28763506, g: 0.75471693, b: 0.15307936, a: 0}
   m_BuildTextureStacks: []

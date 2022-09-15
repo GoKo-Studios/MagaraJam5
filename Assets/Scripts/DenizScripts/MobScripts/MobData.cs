@@ -5,19 +5,20 @@ public struct MobData
 {
     public string DisplayName;
     public int MaxHealth;
-    public int FollowSpeed;
-    public int DetectionRange;
-    public int AttackRange;
-    public int StoppingDistance;
-    public int DamageDealt;
+    public float FollowSpeed;
+    public float DetectionRange;
+    public float AttackRange;
+    public float StoppingDistance;
+    public float DamageDealt;
     //public int JumpHeight;
     public LayerMask DetectionLayerMask;
     public GameObject Mesh;
-    public int WaveCost;
-    public int PoolingTime;
+    public float WaveCost;
+    public float PoolingTime;
     public float AttackTime;
     public Vector3 AttackAreaSize;
     public float OnDeathAlertRange;
     public Vector3 TriggerSize;
     public float InvulnerableTime;
+    public GameObject AttackIndicator;
 }

@@ -60,7 +60,7 @@ public abstract class MobDataBase : ScriptableObject
             if (_target != null) {
                 
                 if (Params.Manager.GetState() == MobStates.Attacking || Params.Manager.GetState() == MobStates.Stunned) return;
-                
+
                 // Attack
                 if (Vector3.Distance(_target.position, Params.MobTransform.position) <= Params.Manager.Data.AttackRange) {
                     Params.Manager.OnAttack?.Invoke(new MobOnAttackParams(Params.Manager, _target, Params.Manager.Data.DamageDealt, 
@@ -137,7 +137,6 @@ public abstract class MobDataBase : ScriptableObject
 
     public virtual void OnDamageTaken(MobManager Manager, float DamageTaken) { 
         Manager.CurrentHealth -= DamageTaken;
-        Debug.Log("Damage Taken: " + DamageTaken + " Health: " + Manager.CurrentHealth);
         if (Manager.CurrentHealth <= 0f) Manager.OnDeath?.Invoke(Manager);
     }
 
@@ -163,11 +162,15 @@ public abstract class MobDataBase : ScriptableObject
         // DO I NEED THIS? DISCUSS WITH THE TEAM MEMBERS.
     }
 
+    public void SpawnAttackIndicator() {
+
+    }
+
     public void MoveToPosition(NavMeshAgent Agent, Vector3 Position) { 
         Agent.SetDestination(Position);
     }
 
-    public RaycastHit[] SearchRange(Vector3 CenterPosition, int DetectionRange, LayerMask Mask) {       
+    public RaycastHit[] SearchRange(Vector3 CenterPosition, float DetectionRange, LayerMask Mask) {       
         RaycastHit[] hits = Physics.SphereCastAll(CenterPosition, DetectionRange, Vector3.up, DetectionRange, Mask);
         return hits;
     }

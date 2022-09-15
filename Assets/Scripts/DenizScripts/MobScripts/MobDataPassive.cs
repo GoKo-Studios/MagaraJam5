@@ -5,13 +5,14 @@ using UnityEngine;
 using Assets.Scripts.Enums;
 using Assets.Scripts.Managers;
 
+[CreateAssetMenu(menuName = "ScriptableObjects/MobData/Passive", fileName = "NewPassiveMob")]
 public class MobDataPassive : MobDataBase
 {
     public float DistanceToKeep;
     public float RandomRunDistance;
 
     public override void MovementController(MobOnMoveParams Params)
-    {
+    {                   
         // Search for a target by checking if any object is in detection range.
         RaycastHit[] _hits = SearchRange(Params.MobTransform.position, Params.Manager.Data.DetectionRange, Params.Manager.Data.DetectionLayerMask);
 
@@ -49,10 +50,9 @@ public class MobDataPassive : MobDataBase
             float _distance = Vector3.Distance(Params.MobTransform.position, _target.position);
             if ( _distance < DistanceToKeep) {
                 Params.Manager.SetState(MobStates.Following);
-                Vector3 _direction = -(Params.MobTransform.position - _target.position).normalized;
-                Vector3 _targetPosition = _direction * (DistanceToKeep - _distance);
-                _targetPosition = _target.position;
-                MoveToPosition(Params.NavAgent, _target.position);
+                Vector3 _direction = (Params.MobTransform.position - _target.position).normalized;
+                Vector3 _targetPosition = Params.MobTransform.position + _direction * (DistanceToKeep - _distance);
+                MoveToPosition(Params.NavAgent, _targetPosition);
             }
         }
         else {

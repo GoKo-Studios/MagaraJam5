@@ -129,6 +129,7 @@ MonoBehaviour:
     OnDeathAlertRange: 0
     TriggerSize: {x: 0, y: 0, z: 0}
     InvulnerableTime: 0
+    AttackIndicator: {fileID: 0}
   CurrentHealth: 0
   IsAlert: 0
 --- !u!114 &561344163
