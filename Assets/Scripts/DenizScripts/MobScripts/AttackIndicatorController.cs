@@ -5,4 +5,5 @@ using UnityEngine;
 public class AttackIndicatorController : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _attackIndicator;
+    [SerializeField] private Material _fillMaterial;
 }

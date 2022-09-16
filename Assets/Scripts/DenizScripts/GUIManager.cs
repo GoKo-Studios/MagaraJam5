@@ -31,11 +31,11 @@ namespace Assets.Scripts.Managers {
         }
 
         public void Button_SpawnAggressiveMob() {
-            MobSpawnerManager.Instance.SpawnObjectWithPooling(ResourceLoader.LoadResource<ScriptableObject>("Objects/PoolableObjects/New Spider") as MobDataBase);
+            MobSpawnerManager.Instance.SpawnMobWithPooling(ResourceLoader.LoadResource<ScriptableObject>("Objects/PoolableObjects/New Spider") as MobDataBase);
         }
 
         public void Button_SpawnPassiveMob() {
-            MobSpawnerManager.Instance.SpawnObjectWithPooling(ResourceLoader.LoadResource<ScriptableObject>("Objects/PoolableObjects/NewPassiveMob") as MobDataBase);
+            MobSpawnerManager.Instance.SpawnMobWithPooling(ResourceLoader.LoadResource<ScriptableObject>("Objects/PoolableObjects/NewPassiveMob") as MobDataBase);
         }
 
         private void UpdateWaveTimer(int time) {

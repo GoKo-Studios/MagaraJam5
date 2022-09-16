@@ -17,8 +17,14 @@ public struct MobData
     public float PoolingTime;
     public float AttackTime;
     public Vector3 AttackAreaSize;
-    public float OnDeathAlertRange;
     public Vector3 TriggerSize;
     public float InvulnerableTime;
-    public GameObject AttackIndicator;
+    //public float OnDeathAlertRange;
+    //public GameObject AttackIndicator;
+
+    [Header("VFX")]
+    public ParticleSystem HitEffect;
+
+    [Header("SFX")]
+    public AudioClip HitSound;
 }

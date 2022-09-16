@@ -66,10 +66,13 @@ public abstract class MobDataBase : ScriptableObject
                     Params.Manager.OnAttack?.Invoke(new MobOnAttackParams(Params.Manager, _target, Params.Manager.Data.DamageDealt, 
                         Params.Manager.Data.AttackRange, Params.Manager.Data.AttackTime, Params.Manager.Data.DetectionLayerMask, 
                         Params.MobTransform, Params.Manager.Data.AttackAreaSize));
+                    Params.NavAgent.isStopped = true;
+                    //Params.Manager.OnAnimation("Attacking");
                 }
                 // Follow
                 else {
                     Params.Manager.SetState(MobStates.Following);
+                    //Params.Manager.OnAnimation("Moving");
                     Vector3 _targetPosition;
                     _targetPosition = _target.position;
                     MoveToPosition(Params.NavAgent, _target.position);
@@ -77,6 +80,7 @@ public abstract class MobDataBase : ScriptableObject
             }
             else {
                 if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
+                //Params.Manager.OnAnimation("Idle");
             }
 
             // When the mob is stunned.
@@ -96,6 +100,7 @@ public abstract class MobDataBase : ScriptableObject
     }
 
     public virtual void HandleHit(MobOnHitParams Params) {
+        if (Params.Manager.IsInvulnerable) return;
         Params.Manager.OnStunned?.Invoke(Params.Manager, Params.StunDuration);
         HandleKnockback(Params.Rb, Params.Knockback, Params.Direction);
         HandleDamage(Params.Manager, Params.DamageTaken);
@@ -114,8 +119,10 @@ public abstract class MobDataBase : ScriptableObject
     }
 
     public  virtual void HandleDeath(MobManager Manager) {
+        //Manager.OnAnimation("Dying");
         Manager.GetComponent<PoolableObjectController>().EnqueueCheck(Manager.Data.PoolingTime);
         WaveManager.Instance.RemoveFromSpawnedList(Manager.gameObject);
+        MobSpawnerManager.Instance.SpawnOrbWithPooling(Manager.gameObject.transform.position);
         Manager.StopAllCoroutines();
         Manager.SetState(MobStates.StopAI);
         Manager.Clear();
@@ -138,6 +145,7 @@ public abstract class MobDataBase : ScriptableObject
     public virtual void OnDamageTaken(MobManager Manager, float DamageTaken) { 
         Manager.CurrentHealth -= DamageTaken;
         if (Manager.CurrentHealth <= 0f) Manager.OnDeath?.Invoke(Manager);
+        else Manager.StartCoroutine(HandleInvulnerableState(Manager));
     }
 
     public virtual void OnDeath(MobManager Manager) { 
@@ -196,6 +204,8 @@ public abstract class MobDataBase : ScriptableObject
 
         // Spawn the field towards the player's direction.
         Vector3 direction = (Params.MobTransform.position - Params.Target.position).normalized;
+        Params.MobTransform.forward = direction;
+        Params.Manager.SpawnAttackIndicator?.Invoke();
 
         float elapsedTime = 0;
         while(elapsedTime < Params.AttackTime) {
@@ -205,9 +215,11 @@ public abstract class MobDataBase : ScriptableObject
 
             elapsedTime += Time.deltaTime;
             // Add attack area fill animation to here.
+            Params.Manager.UpdateAttackIndicator?.Invoke(elapsedTime / Params.AttackTime);
             yield return null;
         }
 
+        Params.Manager.DespawnAttackIndicator?.Invoke();
         // If target is still within the attack area, deal damage to them.
         Collider[] colliders = Physics.OverlapBox(Params.MobTransform.position + Params.MobTransform.forward *  Params.AttackAreaSize.z, Params.AttackAreaSize, 
         Quaternion.LookRotation(Params.MobTransform.forward, Vector3.up), Params.Mask);
@@ -218,6 +230,12 @@ public abstract class MobDataBase : ScriptableObject
         if (Params.Manager.GetState() != MobStates.Stunned) yield break;
         if (Params.Manager.GetState() == MobStates.Attacking)
         Params.Manager.SetState(MobStates.Idle);
+    }
+
+    public IEnumerator HandleInvulnerableState(MobManager Manager) {
+        Manager.IsInvulnerable = true;
+        yield return new WaitForSecondsRealtime(Manager.Data.InvulnerableTime);
+        Manager.IsInvulnerable = false;
     }
 
     #endregion

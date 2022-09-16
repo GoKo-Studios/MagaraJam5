@@ -17,16 +17,18 @@ MonoBehaviour:
     MaxHealth: 100
     FollowSpeed: 1
     DetectionRange: 10
-    AttackRange: 1
+    AttackRange: 3
     StoppingDistance: 1
     DamageDealt: 10
     DetectionLayerMask:
       serializedVersion: 2
       m_Bits: 64
     Mesh: {fileID: 2986628881038703742, guid: 101fb7339b978ad4e8fa7dbb5f233b33, type: 3}
-    WaveCost: 0
+    WaveCost: 2.5
     PoolingTime: 1
     AttackTime: 1
     AttackAreaSize: {x: 1, y: 1, z: 1}
-    OnDeathAlertRange: 10
     TriggerSize: {x: 1, y: 2, z: 1}
+    InvulnerableTime: 1
+    HitEffect: {fileID: 0}
+    HitSound: {fileID: 0}

@@ -30,30 +30,30 @@ namespace Assets.Scripts.Managers {
         [SerializeField] private float _waveValue;
         [SerializeField] private int _timeBetweenWaves;
         private List<MobDataBase> _generatedWave = new List<MobDataBase>();
-        [SerializeField] private float _playerSpawnRange;
         [SerializeField] private List<GameObject> _spawnedEnemies;
-        private int _waveDuration;
+        [SerializeField] private float _waveDuration;
         private float _waveTimer;
         private float _spawnInterval;
         private float _spawnTimer;
         private float _betweenTimer;
         [SerializeField] private WaveManagerStates _state;
 
-    //     private void OnEnable() {
-    //     EventManager.Instance.OnGameStart += OnGameStart;
-    //     EventManager.Instance.OnWaveSkip += OnWaveSkip;
-    //     EventManager.Instance.OnGamePause += OnGamePause;
+        private void OnEnable() {
+            //EventManager.Instance.OnGameStart += OnGameStart;
+            //EventManager.Instance.OnWaveSkip += OnWaveSkip;
+            //EventManager.Instance.OnGamePause += OnGamePause;
+        }
 
-    // }
-
-    // private void OnDisable() {
-    //     EventManager.Instance.OnPlay -= OnPlay;
-    //      EventManager.Instance.onSkip -= OnSkip;
-    // }
+        private void OnDisable() {
+            //EventManager.Instance.OnPlay -= OnPlay;
+            //EventManager.Instance.onSkip -= OnSkip;
+        }
 
          void Start()
         {
             PopulateDataList();
+
+            ProocedToNextWave();
         }
 
          private void PopulateDataList() {
@@ -67,7 +67,7 @@ namespace Assets.Scripts.Managers {
                 case WaveManagerStates.InWave:
                     if (_spawnTimer <= 0) {
                         if (_generatedWave.Count > 0) {
-                            GameObject obj = MobSpawnerManager.Instance.SpawnObjectWithPooling(_generatedWave[0]);
+                            GameObject obj = MobSpawnerManager.Instance.SpawnMobWithPooling(_generatedWave[0]);
                             _generatedWave.RemoveAt(0);
                             _spawnTimer = _spawnInterval;
 

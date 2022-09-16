@@ -17,6 +17,7 @@ namespace Assets.Scripts.Managers {
 
         public float CurrentHealth;
         public bool IsAlert = false;
+        public bool IsInvulnerable = false;
 
         #region References
 
@@ -39,6 +40,12 @@ namespace Assets.Scripts.Managers {
         public UnityAction<MobOnAttackParams> OnAttack => MobData.OnAttack; 
         public UnityAction OnEnterRange;
         public UnityAction OnExitRange;
+        public UnityAction<string> OnAnimation;
+        public UnityAction OnEffect;
+
+        public UnityAction SpawnAttackIndicator;
+        public UnityAction<float> UpdateAttackIndicator;
+        public UnityAction DespawnAttackIndicator;
 
         #endregion
 
@@ -57,6 +64,8 @@ namespace Assets.Scripts.Managers {
 
         public void Clear() {
             SetState(MobStates.NoData);
+            IsAlert = false;
+            IsInvulnerable = false;
             MobData = null;
             OnClear?.Invoke();
         }
