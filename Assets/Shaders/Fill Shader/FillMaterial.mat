@@ -48,7 +48,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+<<<<<<< Updated upstream
     - _FillRate: 1
+=======
+    - _FillRate: 0
+>>>>>>> Stashed changes
     - _ProgressBorder: 0
     - _QueueControl: 0
     - _QueueOffset: 0
