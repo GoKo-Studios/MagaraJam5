@@ -19,6 +19,7 @@ public struct MobData
     public Vector3 AttackAreaSize;
     public Vector3 TriggerSize;
     public float InvulnerableTime;
+    public float AttackAngleTreshold;
     //public float OnDeathAlertRange;
     //public GameObject AttackIndicator;
 

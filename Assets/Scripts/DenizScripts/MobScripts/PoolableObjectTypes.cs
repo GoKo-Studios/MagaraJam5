@@ -4,7 +4,8 @@ namespace Assets.Scripts.Enums {
     public enum PoolableObjectTypes
     {
         Mob,
-        Orb
+        Orb,
+        Bullet
     }
 }
 

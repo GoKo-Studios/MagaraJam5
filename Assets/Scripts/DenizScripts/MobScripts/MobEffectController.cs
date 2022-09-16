@@ -32,7 +32,10 @@ namespace Assets.Scripts.Controllers {
         }
 
         private void OnSetup() { 
-            _attackIndicatorObject.transform.localScale = _manager.Data.AttackAreaSize;
+            // _attackIndicatorObject.transform.localScale = _manager.Data.AttackAreaSize;
+            ParticleSystem.MainModule _mainModule = _attackIndicatorParticle.main;
+            _mainModule.startSizeX = new ParticleSystem.MinMaxCurve(_manager.Data.AttackAreaSize.x);
+            _mainModule.startSizeY = new ParticleSystem.MinMaxCurve(_manager.Data.AttackAreaSize.z);
             //_attackIndicatorParticle.GetComponent<Renderer>().material = new Material(_fillShader);
             _attackIndicatorMaterial = _attackIndicatorObject.GetComponent<Renderer>().material;
         }

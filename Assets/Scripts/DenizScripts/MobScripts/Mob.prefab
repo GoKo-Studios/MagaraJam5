@@ -176,6 +176,7 @@ MonoBehaviour:
     AttackAreaSize: {x: 0, y: 0, z: 0}
     TriggerSize: {x: 0, y: 0, z: 0}
     InvulnerableTime: 0
+    AttackAngleTreshold: 0
     HitEffect: {fileID: 0}
     HitSound: {fileID: 0}
   CurrentHealth: 0
@@ -329,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 551749882437824529, guid: 885137b597917dd46b5f0e0e95c738fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 551749882437824529, guid: 885137b597917dd46b5f0e0e95c738fa,
         type: 3}
