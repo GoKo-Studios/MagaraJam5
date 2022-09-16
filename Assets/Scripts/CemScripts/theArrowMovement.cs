@@ -87,6 +87,7 @@ public class theArrowMovement : MonoBehaviour
         if(arrowInput.callArrowBack){
             arrowInput.callArrowBack = false;
             theArrowState = ArrowStates.CallBack;
+            CameraManager.Instance.setOrthoSize(11.0f);
         }
     }
 
@@ -99,6 +100,7 @@ public class theArrowMovement : MonoBehaviour
         if(arrowInput.callArrowBack){
             arrowInput.callArrowBack = false;
             theArrowState = ArrowStates.OutAndActive;
+            CameraManager.Instance.setOrthoSize(13.5f);
         }
     }
 
