@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using Cinemachine;
+using Assets.Scripts.Managers;
+using Assets.Scripts.Params;
 
 public class Player : MonoBehaviour
 {
@@ -36,6 +38,8 @@ public class Player : MonoBehaviour
     private float distanceFromGround;
 
     public LayerMask groundLayerMask;
+
+
     
     // Start is called before the first frame update
     void Start()
@@ -169,6 +173,25 @@ public class Player : MonoBehaviour
         //playerInput.groundSmashEvent = false;
 
         if(isGrounded){
+
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 5.0f);
+            foreach(Collider col in colliders){
+                
+                Debug.Log(col.transform.name);
+                if(col.GetComponentInParent<MobManager>()){
+                    MobManager mobManager = col.GetComponentInParent<MobManager>();
+                    Vector3 direction = (col.transform.position - transform.position).normalized;
+                    direction.y = 1.0f;
+                    
+                    Rigidbody rb = col.GetComponentInParent<Rigidbody>();
+                    
+                    if(mobManager.isActiveAndEnabled){
+                        mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, 30.0f, 4.0f, direction, 2.0f, rb));
+                    }
+                    
+                }
+            }
+
             charController.Move(Vector3.down);
             StartCoroutine(setState(PlayerStates.Idle, 0.5f));
         }
@@ -202,11 +225,11 @@ public class Player : MonoBehaviour
     }
 
     private void LookAtMouse(){
-        Vector3 normal = (YonduArrow.mosueWorldPosition() - transform.position).normalized;
+        Vector3 normal = (YonduArrow.mosueWorldPosition(groundLayerMask) - transform.position).normalized;
         float angle = Mathf.Atan2(normal.x, normal.z) * Mathf.Rad2Deg;
 
         //Prevents sudden rotation when mouse goes out off border.
-        if (YonduArrow.mosueWorldPosition() != Vector3.zero){
+        if (YonduArrow.mosueWorldPosition(groundLayerMask) != Vector3.zero){
             transform.rotation = Quaternion.Euler(0, angle, 0);
         }
     }
