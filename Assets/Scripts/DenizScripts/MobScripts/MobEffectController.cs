@@ -7,12 +7,14 @@ namespace Assets.Scripts.Controllers {
     public class MobEffectController : MonoBehaviour
     {
         private MobManager _manager;
-        [SerializeField] private GameObject _attackIndicator;
-        [SerializeField] private Shader _fillShader;
+        [SerializeField] private GameObject _attackIndicatorObject;
+        //[SerializeField] private Shader _fillShader;
         private Material _attackIndicatorMaterial;
+        [SerializeField] private ParticleSystem _attackIndicatorParticle;
 
         private void Awake() {
             _manager = GetComponentInParent<MobManager>();
+            _attackIndicatorParticle  = _attackIndicatorObject.GetComponent<ParticleSystem>(); 
         }
 
         private void OnEnable() {
@@ -29,10 +31,10 @@ namespace Assets.Scripts.Controllers {
             _manager.OnEffect -= OnEffect;
         }
 
-        private void OnSetup() {
-            _attackIndicator.transform.localScale = _manager.Data.AttackAreaSize;
-            _attackIndicator.GetComponent<MeshRenderer>().material = new Material(_fillShader);
-            _attackIndicator.SetActive(false);
+        private void OnSetup() { 
+            _attackIndicatorObject.transform.localScale = _manager.Data.AttackAreaSize;
+            //_attackIndicatorParticle.GetComponent<Renderer>().material = new Material(_fillShader);
+            _attackIndicatorMaterial = _attackIndicatorObject.GetComponent<Renderer>().material;
         }
 
         private void OnEffect() {
@@ -40,16 +42,16 @@ namespace Assets.Scripts.Controllers {
         }
 
         private void SpawnAttackIndicator() {
-            _attackIndicator.SetActive(true);
+            _attackIndicatorParticle.Play();
         }
 
         private void DespawnAttackIndicator() {
-            _attackIndicator.SetActive(false);
+            _attackIndicatorParticle.Stop();
         }
 
         private void UpdateAttackIndicator(float Progress) {
             if (_attackIndicatorMaterial == null) return;
-            _attackIndicatorMaterial.SetFloat("_ProgressBorder", Progress);
+            _attackIndicatorMaterial.SetFloat("_FillAmount", Progress);
         }
     }
 }
