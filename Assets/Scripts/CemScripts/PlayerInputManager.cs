@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerInputManager : MonoBehaviour
 {
@@ -22,24 +23,6 @@ public class PlayerInputManager : MonoBehaviour
     public bool groundSmashEvent;
     public bool pullEnemiesEvent;
 
-    private void Update(){
-        if(jumpEvent){
-            Debug.Log("Jump Event!");
-        }
-        if(runEvent){
-            Debug.Log("Run Event!");
-        }
-        if(dashEvent){
-            Debug.Log("Dash Event!");
-        }
-    }
-
-    private void LateUpdate(){
-        jumpEvent = false;
-        dashEvent = false;
-        groundSmashEvent = false;
-        pullEnemiesEvent = false;
-    }
 
     private void Start(){
         InputEventSystem.Instance.playerDirectionInput += getMovementDirInput;
@@ -87,6 +70,7 @@ public class PlayerInputManager : MonoBehaviour
         dashEvent = false;
         groundSmashEvent = false;
         jumpEvent = false;
+        pullEnemiesEvent = false;
     }
 
 }

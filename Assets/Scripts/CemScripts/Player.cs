@@ -77,21 +77,27 @@ public class Player : MonoBehaviour
         switch (playerStates){
             case PlayerStates.Idle:
                 IdleStateMovement();
+                playerInput.setInputsToFalse();
                 return;
             case PlayerStates.Walking:
                 relocationStateMovement(walkingSpeed);
+                playerInput.setInputsToFalse();
                 return;
             case PlayerStates.Running:
                 relocationStateMovement(runningSpeed);
+                playerInput.setInputsToFalse();
                 return;
             case PlayerStates.Dashing:
                 DashStateMovement();
+                playerInput.setInputsToFalse();
                 return;
             case PlayerStates.GroundSmash:
                 GroundSmashStateMovement();
+                playerInput.setInputsToFalse();
                 return;
         }
 
+        
     }
 
     private void IdleStateMovement(){
@@ -131,8 +137,8 @@ public class Player : MonoBehaviour
         charController.Move(movingDirection * speed * Time.deltaTime);
 
         if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.OutAndActive){
-                if(movingDirection != Vector3.zero){
-                    LookAtMovementRotation();
+            if(movingDirection != Vector3.zero){
+                LookAtMovementRotation();
             }
         }
         else if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.CallBack){
