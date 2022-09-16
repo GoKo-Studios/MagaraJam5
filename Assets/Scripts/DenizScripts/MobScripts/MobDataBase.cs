@@ -60,15 +60,22 @@ public abstract class MobDataBase : ScriptableObject
             if (_target != null) {
                 
                 if (Params.Manager.GetState() == MobStates.Attacking || Params.Manager.GetState() == MobStates.Stunned) return;
+            
+                Vector3 direction = (_target.position - Params.MobTransform.position).normalized;
+                //LookAtTarget(Params.MobTransform, direction);
 
                 // Attack
                 if (Vector3.Distance(_target.position, Params.MobTransform.position) <= Params.Manager.Data.AttackRange) {
-                    Params.Manager.OnAttack?.Invoke(new MobOnAttackParams(Params.Manager, _target, Params.Manager.Data.DamageDealt, 
-                        Params.Manager.Data.AttackRange, Params.Manager.Data.AttackTime, Params.Manager.Data.DetectionLayerMask, 
-                        Params.MobTransform, Params.Manager.Data.AttackAreaSize));
-                    MoveToPosition(Params.NavAgent, Params.MobTransform.position);
-                    Params.NavAgent.isStopped = true;
-                    //Params.Manager.OnAnimation("Attacking");
+                    
+                    Debug.Log(Vector3.Angle(Params.MobTransform.forward, direction));
+                    if (Vector3.Angle(Params.MobTransform.forward, direction) <= Params.Manager.Data.AttackAngleTreshold) {
+                        Params.Manager.OnAttack?.Invoke(new MobOnAttackParams(Params.Manager, _target, Params.Manager.Data.DamageDealt, 
+                            Params.Manager.Data.AttackRange, Params.Manager.Data.AttackTime, Params.Manager.Data.DetectionLayerMask, 
+                            Params.MobTransform, Params.Manager.Data.AttackAreaSize));
+                        MoveToPosition(Params.NavAgent, Params.MobTransform.position);
+                        Params.NavAgent.isStopped = true;
+                        //Params.Manager.OnAnimation("Attacking");
+                    }
                 }
                 // Follow
                 else {
@@ -188,6 +195,10 @@ public abstract class MobDataBase : ScriptableObject
         return hits;
     }
 
+    public void LookAtTarget(Transform MobTransform, Vector3 Direction) {
+        MobTransform.forward = Direction;
+    }
+
     public IEnumerator HandleStunnedState(MobManager Manager, float Duration) {
         if (Manager.GetState() == MobStates.Stunned) yield break;
 
@@ -216,7 +227,11 @@ public abstract class MobDataBase : ScriptableObject
         while(elapsedTime < Params.AttackTime) {
             
             // If the mob gets stunned while charging an attack, cancel the attack.
-            if (Params.Manager.GetState() == MobStates.Stunned) yield break;
+
+            if (Params.Manager.GetState() == MobStates.Stunned) {
+                Params.Manager.DespawnAttackIndicator?.Invoke();
+                yield break;
+            } 
 
             elapsedTime += Time.deltaTime;
             // Add attack area fill animation to here.
