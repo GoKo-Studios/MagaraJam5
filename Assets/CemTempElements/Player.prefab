@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3777601318819174343}
   - component: {fileID: -8798164609419412275}
   - component: {fileID: 5377920669459596940}
+  - component: {fileID: 9157592147793947636}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -80,6 +81,7 @@ MonoBehaviour:
   runEvent: 0
   dashEvent: 0
   groundSmashEvent: 0
+  pullEnemiesEvent: 0
 --- !u!143 &3777601318819174343
 CharacterController:
   m_ObjectHideFlags: 0
@@ -130,6 +132,20 @@ MonoBehaviour:
   SoulLayerMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &9157592147793947636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777601318819174344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea32233ed99f154b87094658054e9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillCooldown: 5
+  skillDamage: 30
 --- !u!1 &3777601319442728889
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using Cinemachine;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Params;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -40,7 +41,11 @@ public class Player : MonoBehaviour
 
     public LayerMask groundLayerMask;
 
+    public LayerMask enemyLayerMask;
 
+    private DashSkill dashSkill;
+
+    public UnityAction dashCollidedWithEnemy;
     
     // Start is called before the first frame update
     void Start()
@@ -50,6 +55,8 @@ public class Player : MonoBehaviour
         groundCheck = transform.GetChild(0).transform;
         playerFollowCam = GameObject.Find("PlayerFollowCam").GetComponent<CinemachineVirtualCamera>();
         arrowMovement = GameObject.Find("Noname Weapon").GetComponent<theArrowMovement>();
+
+        dashSkill = GetComponent<DashSkill>();
 
         for(int i = 0; i < 4; i++){
             stateAwake[i] = true;
@@ -143,7 +150,8 @@ public class Player : MonoBehaviour
             playerStates = PlayerStates.Walking;
         }
 
-        if(playerInput.dashEvent){
+        if(playerInput.dashEvent && dashSkill.IsAvailable()){
+            dashSkill.OnUse();
             playerStates = PlayerStates.Dashing;
         }
         else if(playerInput.groundSmashEvent && distanceFromGround > 3.0f){
@@ -164,6 +172,26 @@ public class Player : MonoBehaviour
             stateAwake[3] = false;
         }
         charController.Move(movingDirection * dashSpeed * Time.deltaTime);
+
+        if(dashSkill.IsAttackAvailable()){
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 1.4f);
+            foreach(Collider col in colliders){
+                if(col.transform.tag == "Enemy"){
+                    MobManager mobManager = col.GetComponentInParent<MobManager>();
+                    Vector3 direction = (col.transform.position - transform.position).normalized;
+                    direction.y = 1.0f;
+                    
+                    Rigidbody rb = col.GetComponentInParent<Rigidbody>();
+                    
+                    if(mobManager.isActiveAndEnabled){
+                        mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, dashSkill.skillDamageValue, 4.0f, direction, 2.0f, rb));
+                    }
+
+                    dashCollidedWithEnemy?.Invoke();
+
+                }
+            }
+        }
 
         //playerInput.dashEvent = false;
         if(Time.time - dashTimer > dashDuration){
