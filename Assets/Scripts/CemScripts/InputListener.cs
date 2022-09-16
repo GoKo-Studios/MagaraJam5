@@ -2,6 +2,16 @@ using UnityEngine;
 
 public class InputListener : MonoBehaviour
 {
+
+    private float dashKeyPressTime;
+    private float dashKeyReleaseTime;
+    private bool isDashKeyReleased;
+    private float runTimer = 0.0f;
+
+    void Start(){
+        //timer = Time.time;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -16,8 +26,24 @@ public class InputListener : MonoBehaviour
             InputEventSystem.Instance.JumpEvent?.Invoke();
         }
 
+        DashKeyBehaviour();
+
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            runTimer = 0.0f;
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift)){
+            runTimer += Time.deltaTime;
+            if(runTimer > 0.22f){
+                InputEventSystem.Instance.runEvent?.Invoke(true);
+            }
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftShift)){
+            InputEventSystem.Instance.runEvent?.Invoke(false);
+        }
+
         if(Input.GetKeyDown(KeyCode.F)){
-            Debug.Log("HEY");
             InputEventSystem.Instance.callSecondaryBack?.Invoke();
         }
 
@@ -28,5 +54,23 @@ public class InputListener : MonoBehaviour
         if(Input.GetMouseButtonUp(1)){
             InputEventSystem.Instance.toTheFloor?.Invoke();
         }
+
+
+    }
+
+    private void DashKeyBehaviour(){
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            dashKeyPressTime = Time.time;
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftShift)){
+            dashKeyReleaseTime = Time.time;
+
+            if(dashKeyReleaseTime - dashKeyPressTime < 0.2f){
+                InputEventSystem.Instance.dashEvent?.Invoke();
+            }
+        }
+
+
     }
 }
