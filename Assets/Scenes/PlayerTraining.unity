@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 200481602}
   - component: {fileID: 200481601}
   - component: {fileID: 200481600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 624544189}
   - component: {fileID: 624544188}
   - component: {fileID: 624544187}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 640020714}
   - component: {fileID: 640020713}
   - component: {fileID: 640020712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 1295683998}
   - component: {fileID: 1295683997}
   - component: {fileID: 1295683996}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 1414547481}
   - component: {fileID: 1414547480}
   - component: {fileID: 1414547479}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 1585662444}
   - component: {fileID: 1585662443}
   - component: {fileID: 1585662442}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 2125056345}
   - component: {fileID: 2125056344}
   - component: {fileID: 2125056343}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,16 +1212,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3777601318819174341, guid: 53400ea471d68c143bf65e0ee854371c,
-        type: 3}
-      propertyPath: dashSpeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3777601318819174341, guid: 53400ea471d68c143bf65e0ee854371c,
-        type: 3}
-      propertyPath: dashDuration
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3777601318819174341, guid: 53400ea471d68c143bf65e0ee854371c,
         type: 3}
