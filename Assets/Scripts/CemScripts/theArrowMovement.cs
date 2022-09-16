@@ -31,6 +31,8 @@ public class theArrowMovement : MonoBehaviour
 
     public LayerMask layerMask;
 
+    public LayerMask mouseRayMask;
+
     private Vector3 floorPosition;
 
     ArrowInputManager arrowInput;
@@ -47,7 +49,7 @@ public class theArrowMovement : MonoBehaviour
         rb = transform.GetComponent<Rigidbody>();
         ya = transform.GetComponent<YonduArrow>();
 
-        player = GameObject.Find("CamFollow").transform;
+        player = GameObject.Find("WeaponCallBackPos").transform;
     }
 
     // Update is called once per frame
@@ -71,7 +73,7 @@ public class theArrowMovement : MonoBehaviour
 
     private void OutAndActiveMovement(){
 
-        mousePos = YonduArrow.mosueWorldPosition();
+        mousePos = YonduArrow.mosueWorldPosition(mouseRayMask);
 
         if(arrowInput.arrowToTheFloor){
             RaycastHit hit;
@@ -95,7 +97,7 @@ public class theArrowMovement : MonoBehaviour
 
         RotateArrow(player.position);
 
-        moveArrow(player.position, 1.0f);
+        moveArrow(player.position, 2.0f);
 
         if(arrowInput.callArrowBack){
             arrowInput.callArrowBack = false;
