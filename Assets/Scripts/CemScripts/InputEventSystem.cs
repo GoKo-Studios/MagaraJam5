@@ -23,6 +23,7 @@ public class InputEventSystem : MonoBehaviour
     public UnityAction callSecondaryBack;
     public UnityAction toTheFloor;
     public UnityAction dashEvent;
+    public UnityAction groundSmash;
     public UnityAction<bool> runEvent;
 
 }

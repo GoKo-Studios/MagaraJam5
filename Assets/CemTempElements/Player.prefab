@@ -49,14 +49,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c0439ef55cdf84fac2c8ccc4d33d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  walkingSpeed: 5
+  runningSpeed: 8.5
+  dashSpeed: 50
+  dashDuration: 0.1
+  smashSpeed: 30
   jumpHeight: 2
   gravity: -29.43
   fallingSpeed: 1
-  playerFollowCam: {fileID: 0}
-  arrowMovement: {fileID: 7177489754752019112, guid: b868063fa43ff1d4497604abc0f16b18,
-    type: 3}
-  playerStates: 1
+  playerStates: 0
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 1032
 --- !u!114 &3777601318819174342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +74,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpEvent: 0
+  runEvent: 0
+  dashEvent: 0
+  groundSmashEvent: 0
 --- !u!143 &3777601318819174343
 CharacterController:
   m_ObjectHideFlags: 0

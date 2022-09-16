@@ -19,6 +19,7 @@ public class PlayerInputManager : MonoBehaviour
     public bool jumpEvent;
     public bool runEvent;
     public bool dashEvent;
+    public bool groundSmashEvent;
 
     private void Update(){
         if(jumpEvent){
@@ -32,11 +33,18 @@ public class PlayerInputManager : MonoBehaviour
         }
     }
 
+    private void LateUpdate(){
+        jumpEvent = false;
+        dashEvent = false;
+        groundSmashEvent = false;
+    }
+
     private void Start(){
         InputEventSystem.Instance.playerDirectionInput += getMovementDirInput;
         InputEventSystem.Instance.JumpEvent += OnJumpevent;
         InputEventSystem.Instance.runEvent += OnRunEvent;
         InputEventSystem.Instance.dashEvent += OnDashEvent;
+        InputEventSystem.Instance.groundSmash += OnGroundSmashEvent;
     }
     
     private void OnDestroy(){
@@ -44,6 +52,7 @@ public class PlayerInputManager : MonoBehaviour
         InputEventSystem.Instance.JumpEvent -= OnJumpevent;
         InputEventSystem.Instance.runEvent -= OnRunEvent;
         InputEventSystem.Instance.dashEvent -= OnDashEvent;
+        InputEventSystem.Instance.groundSmash -= OnGroundSmashEvent;
     }
 
     protected void getMovementDirInput(Vector2 input){
@@ -60,6 +69,16 @@ public class PlayerInputManager : MonoBehaviour
 
     private void OnDashEvent(){
         dashEvent = true;
+    }
+
+    private void OnGroundSmashEvent(){
+        groundSmashEvent = true;
+    }
+
+    public void setInputsToFalse(){
+        dashEvent = false;
+        groundSmashEvent = false;
+        jumpEvent = false;
     }
 
 }

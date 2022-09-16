@@ -28,15 +28,10 @@ public class InputListener : MonoBehaviour
 
         DashKeyBehaviour();
 
-        if(Input.GetKeyDown(KeyCode.LeftShift)){
-            runTimer = 0.0f;
-        }
+        RunKeyBehaviour();
 
-        if(Input.GetKey(KeyCode.LeftShift)){
-            runTimer += Time.deltaTime;
-            if(runTimer > 0.22f){
-                InputEventSystem.Instance.runEvent?.Invoke(true);
-            }
+        if(Input.GetKeyDown(KeyCode.E)){
+            InputEventSystem.Instance.groundSmash?.Invoke();
         }
 
         if(Input.GetKeyUp(KeyCode.LeftShift)){
@@ -71,6 +66,18 @@ public class InputListener : MonoBehaviour
             }
         }
 
+    }
 
+    private void RunKeyBehaviour(){
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            runTimer = 0.0f;
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift)){
+            runTimer += Time.deltaTime;
+            if(runTimer > 0.22f){
+                InputEventSystem.Instance.runEvent?.Invoke(true);
+            }
+        }
     }
 }

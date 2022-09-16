@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using Cinemachine;
 
 public class Player : MonoBehaviour
@@ -7,8 +8,9 @@ public class Player : MonoBehaviour
     private CharacterController charController;
     [SerializeField] private float walkingSpeed = 5.0f;
     [SerializeField] private float runningSpeed = 8.5f;
-    [SerializeField] private float dashSpeed = 25.0f;
-    [SerializeField] private float dashDuration = 0.3f;
+    [SerializeField] private float dashSpeed = 50.0f;
+    [SerializeField] private float dashDuration = 0.1f;
+    [SerializeField] private float smashSpeed = 30.0f;
     [SerializeField] private float jumpHeight = 2.0f;
     [SerializeField] private float gravity = -29.43f; // 3 * -9.81
     [SerializeField] private float fallingSpeed = 1.0f;
@@ -23,13 +25,17 @@ public class Player : MonoBehaviour
 
     private theArrowMovement arrowMovement;
 
-    public enum PlayerStates{ Idle, Walking, Running, Dashing };
-    public PlayerStates playerStates = PlayerStates.Walking;
+    public enum PlayerStates{ Idle, Walking, Running, Dashing, GroundSmash };
+    public PlayerStates playerStates = PlayerStates.Idle;
 
-    private bool[] stateAwake = new bool[4];
-    private float stateSize = 4;
+    private bool[] stateAwake = new bool[5];
+    private float stateSize = 5;
 
     private float dashTimer = 0.0f;
+
+    private float distanceFromGround;
+
+    public LayerMask groundLayerMask;
     
     // Start is called before the first frame update
     void Start()
@@ -51,7 +57,10 @@ public class Player : MonoBehaviour
         //isGrounded = Physics.CheckSphere(groundCheck.position, 0.2f, groundMask);
         isGrounded = charController.isGrounded;
 
-        
+        RaycastHit ray;
+        if(Physics.Raycast(transform.position, Vector3.down, out ray, 50f, groundLayerMask)){
+            distanceFromGround = ray.distance;
+        } 
 
         switch (playerStates){
             case PlayerStates.Idle:
@@ -66,13 +75,27 @@ public class Player : MonoBehaviour
             case PlayerStates.Dashing:
                 DashStateMovement();
                 return;
+            case PlayerStates.GroundSmash:
+                GroundSmashStateMovement();
+                return;
         }
 
     }
 
     private void IdleStateMovement(){
+        if(stateAwake[0] == true){
+            //first transition frame.
+            setAllAwakes();
+            //playerInput.setInputsToFalse();
+            stateAwake[1] = false;
+        }
         if(playerInput.movingInput.magnitude > 0.0f){
             playerStates = PlayerStates.Walking;
+        }
+        applyPlayerYVelocity();
+
+        if(!isGrounded && playerInput.groundSmashEvent){
+            playerStates = PlayerStates.GroundSmash;
         }
     }
 
@@ -100,17 +123,7 @@ public class Player : MonoBehaviour
             LookAtMouse();                  
         }
 
-        if(isGrounded && velocity.y < 0f){
-        velocity.y = -2.0f;
-        }
-
-        if(playerInput.jumpEvent && isGrounded){
-            velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
-            PlayerInputManager.Instance.jumpEvent = false;
-        }
-
-        velocity.y += gravity * fallingSpeed * Time.deltaTime;
-        charController.Move(velocity * Time.deltaTime);
+        applyPlayerYVelocity();
 
         if(playerInput.runEvent){
             playerStates = PlayerStates.Running;
@@ -122,6 +135,15 @@ public class Player : MonoBehaviour
         if(playerInput.dashEvent){
             playerStates = PlayerStates.Dashing;
         }
+        else if(playerInput.groundSmashEvent && distanceFromGround > 3.0f){
+            playerStates = PlayerStates.GroundSmash;
+        }
+        else{
+            if(movingDirection.magnitude == 0 && isGrounded){
+                StartCoroutine(setState(PlayerStates.Idle, 0.0f));
+            }
+        }
+
     }
 
     private void DashStateMovement(){
@@ -132,12 +154,47 @@ public class Player : MonoBehaviour
         }
         charController.Move(movingDirection * dashSpeed * Time.deltaTime);
 
-        playerInput.dashEvent = false;
+        //playerInput.dashEvent = false;
         if(Time.time - dashTimer > dashDuration){
             playerStates = PlayerStates.Idle;
         }
     }
+
+    private void GroundSmashStateMovement(){
+        if(stateAwake[4] == true){
+            setAllAwakes();
+            stateAwake[4] = false;
+        }
+
+        //playerInput.groundSmashEvent = false;
+
+        if(isGrounded){
+            charController.Move(Vector3.down);
+            StartCoroutine(setState(PlayerStates.Idle, 0.5f));
+        }
+        else{
+            charController.Move(Vector3.down * smashSpeed * Time.deltaTime);
+        }
+    }
+
+    private void applyPlayerYVelocity(){
+        if(isGrounded && velocity.y < 0f){
+        velocity.y = -2.0f;
+        }
+
+        if(playerInput.jumpEvent && isGrounded){
+            velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+            PlayerInputManager.Instance.jumpEvent = false;
+        }
+
+        velocity.y += gravity * fallingSpeed * Time.deltaTime;
+        charController.Move(velocity * Time.deltaTime);
+    }
     
+    private IEnumerator setState(PlayerStates state, float delay){
+        yield return new WaitForSeconds(delay);
+        playerStates = state;
+    }
 
     private void LookAtMovementRotation(){
         Quaternion toRotation = Quaternion.LookRotation(movingDirection);
