@@ -31,6 +31,8 @@ namespace Assets.Scripts.Controllers {
             // Rewrite here when this variables are implemented into the weapon script.
             WeaponDamageHolder holder = other.gameObject.GetComponent<WeaponDamageHolder>();
             Vector3 direction = (transform.position - other.transform.position).normalized;
+
+            if (_manager == null) return;
             _manager.OnHit?.Invoke(new MobOnHitParams(_manager, holder.Damage, holder.Knockback, direction, holder.StunDuration, _rigidbody));
        }
 

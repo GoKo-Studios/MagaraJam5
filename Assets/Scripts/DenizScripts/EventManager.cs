@@ -35,6 +35,12 @@ namespace Assets.Scripts.Managers {
         public UnityAction OnWaveEnd;
         public UnityAction<int> OnUpdateTimer;
 
+        public UnityAction OnNextLevel;
+        public UnityAction OnRestartLevel;
+        public UnityAction OnClearLevel;
+        public UnityAction<int> OnLoadLevel;
+
+
         #endregion
     }
 }

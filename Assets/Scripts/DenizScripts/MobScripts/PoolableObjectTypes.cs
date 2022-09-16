@@ -3,8 +3,8 @@ namespace Assets.Scripts.Enums {
     [System.Serializable]
     public enum PoolableObjectTypes
     {
-        Bullet,
-        Enemy
+        Mob,
+        Orb
     }
 }
 
