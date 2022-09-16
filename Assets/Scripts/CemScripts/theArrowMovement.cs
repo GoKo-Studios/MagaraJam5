@@ -11,8 +11,6 @@ public class theArrowMovement : MonoBehaviour
     [SerializeField] private float rotateSpeed = 10.0f;
 
     private float heightFromGround;
-
-    private YonduArrow ya;
     
     private Transform player;
 
@@ -37,6 +35,8 @@ public class theArrowMovement : MonoBehaviour
 
     ArrowInputManager arrowInput;
 
+    public List<Transform> taggedEnemyList;
+
     public enum ArrowStates { CallBack, OutAndActive, Disabled };
     public ArrowStates theArrowState = ArrowStates.OutAndActive;
 
@@ -47,7 +47,6 @@ public class theArrowMovement : MonoBehaviour
         arrowInput = ArrowInputManager.Instance;
 
         rb = transform.GetComponent<Rigidbody>();
-        ya = transform.GetComponent<YonduArrow>();
 
         player = GameObject.Find("WeaponCallBackPos").transform;
     }
@@ -73,7 +72,7 @@ public class theArrowMovement : MonoBehaviour
 
     private void OutAndActiveMovement(){
 
-        mousePos = YonduArrow.mosueWorldPosition(mouseRayMask);
+        mousePos = InputListener.mousePosOnWorld;
 
         if(arrowInput.arrowToTheFloor){
             RaycastHit hit;
@@ -106,6 +105,21 @@ public class theArrowMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other){
+        Debug.Log(other.transform.name);
+        if(other.tag == "Enemy"){
+            if(!taggedEnemyList.Contains(other.transform)){
+                taggedEnemyList.Add(other.transform);
+            }
+        }
+    }
+
+    public void RemoveFromTaggedEnemyList(Transform enemy){
+        if(taggedEnemyList.Contains(enemy)){
+            taggedEnemyList.Remove(enemy);
+        }
+    }
+
     private void RotateArrow(Vector3 destination){
         Vector3 relativePos = (new Vector3(destination.x, destination.y + heightFromGround, destination.z) - transform.position).normalized;
         Quaternion toRotation = Quaternion.LookRotation(relativePos);
@@ -117,16 +131,23 @@ public class theArrowMovement : MonoBehaviour
         float distance = Vector3.Distance(transform.position, targetToMove);
 
         float clampedDistance = Mathf.Clamp(distance, stopRange, distanceCap);
-        float mappedDistance = YonduArrow.MapRange(stopRange, distanceCap, 0.0f, 30.0f, clampedDistance);
+        float mappedDistance = MapRange(stopRange, distanceCap, 0.0f, 30.0f, clampedDistance);
         // Debug.Log(Vector3.Distance(transform.position, mousePos));
         rb.velocity = transform.forward * speed * TurnSpeedCurve(angleBetweenTarget) * mappedDistance;
     }
 
     private float TurnSpeedCurve(float angle) {
-        float res = YonduArrow.MapRange(0, 180, 0, 1, angle);
+        float res = MapRange(0, 180, 0, 1, angle);
         curveTurnTime = res;
         return turnCurve.Evaluate(res);
     }
 
+    public static float MapRange(float input_start, float input_end, float output_start, float output_end, float value ){
+        return output_start + ((output_end - output_start) / (input_end - input_start)) * (value - input_start);
+    }
+
+    public static float MapRange(float input_start, float input_end, float output_start, float slope, float value, bool optimized ){
+        return output_start + slope * (value - input_start);
+    }
 
 }

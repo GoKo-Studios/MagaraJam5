@@ -3,6 +3,7 @@ using System.Collections;
 using Cinemachine;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Params;
+using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
@@ -96,7 +97,12 @@ public class Player : MonoBehaviour
         if(playerInput.movingInput.magnitude > 0.0f){
             playerStates = PlayerStates.Walking;
         }
+        
         applyPlayerYVelocity();
+
+        PullEnemiesSkill();
+
+        LookAtMouse();
 
         if(!isGrounded && playerInput.groundSmashEvent){
             playerStates = PlayerStates.GroundSmash;
@@ -122,12 +128,13 @@ public class Player : MonoBehaviour
                     LookAtMovementRotation();
             }
         }
-
         else if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.CallBack){
             LookAtMouse();                  
         }
 
         applyPlayerYVelocity();
+
+        PullEnemiesSkill();
 
         if(playerInput.runEvent){
             playerStates = PlayerStates.Running;
@@ -213,6 +220,30 @@ public class Player : MonoBehaviour
         velocity.y += gravity * fallingSpeed * Time.deltaTime;
         charController.Move(velocity * Time.deltaTime);
     }
+
+    private void PullEnemiesSkill(){
+        if(playerInput.pullEnemiesEvent && isGrounded && arrowMovement.taggedEnemyList.Count > 0){
+            foreach(Transform enemy in arrowMovement.taggedEnemyList){
+                if(enemy == null){
+                    return;
+                }
+                MobManager mb = enemy.GetComponentInParent<MobManager>();
+                mb.OnStunned?.Invoke(mb, 10.0f);
+                Transform tf = mb.GetComponent<Transform>();
+                NavMeshAgent agent = enemy.GetComponentInParent<NavMeshAgent>();
+                StartCoroutine(PullEnemies((transform.position - tf.position).normalized, tf, agent));
+            }
+            arrowMovement.taggedEnemyList.Clear();
+        }
+    }
+
+    private IEnumerator PullEnemies(Vector3 dir, Transform tf, NavMeshAgent agent){
+        while(Vector3.Distance(transform.position, tf.position) > 3.0f){
+            yield return new WaitForFixedUpdate();
+            agent.Move(dir * Time.deltaTime * 50f);
+        }
+        yield return null;
+    }
     
     private IEnumerator setState(PlayerStates state, float delay){
         yield return new WaitForSeconds(delay);
@@ -225,11 +256,11 @@ public class Player : MonoBehaviour
     }
 
     private void LookAtMouse(){
-        Vector3 normal = (YonduArrow.mosueWorldPosition(groundLayerMask) - transform.position).normalized;
+        Vector3 normal = (InputListener.mousePosOnWorld - transform.position).normalized;
         float angle = Mathf.Atan2(normal.x, normal.z) * Mathf.Rad2Deg;
 
         //Prevents sudden rotation when mouse goes out off border.
-        if (YonduArrow.mosueWorldPosition(groundLayerMask) != Vector3.zero){
+        if (InputListener.mousePosOnWorld != Vector3.zero){
             transform.rotation = Quaternion.Euler(0, angle, 0);
         }
     }

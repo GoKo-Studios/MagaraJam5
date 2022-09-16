@@ -3,6 +3,9 @@ using UnityEngine;
 public class InputListener : MonoBehaviour
 {
 
+    public static Vector3 mousePosOnWorld;
+    public LayerMask MouseCollisionLayer;
+
     private float dashKeyPressTime;
     private float dashKeyReleaseTime;
     private bool isDashKeyReleased;
@@ -15,6 +18,14 @@ public class InputListener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(ray, out RaycastHit hit, 100.0f, MouseCollisionLayer)){
+            mousePosOnWorld = hit.point;
+        }else{
+            mousePosOnWorld = Vector3.zero;
+        }
+
         if(Input.GetButton("Horizontal") || Input.GetButton("Vertical")){
             InputEventSystem.Instance.playerDirectionInput?.Invoke(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized);
         }
@@ -40,6 +51,10 @@ public class InputListener : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F)){
             InputEventSystem.Instance.callSecondaryBack?.Invoke();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Q)){
+            InputEventSystem.Instance.pullEnemies?.Invoke();
         }
 
         if(Input.GetMouseButtonDown(1)){

@@ -141,7 +141,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7177489755086773955}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 511872049}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16681ac06cf7a504fb0331c45cad62b4, type: 3}
@@ -268,6 +268,25 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &511872049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7177489754752019114, guid: b868063fa43ff1d4497604abc0f16b18,
+    type: 3}
+  m_PrefabInstance: {fileID: 7177489755086773955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &511872050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511872049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c18fd2f80b847848831523d8dc34808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggedEnemyList: []
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +443,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e56bb015267ac4eb4c4811d641ccbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseCollisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1926535863
 MonoBehaviour:
   m_ObjectHideFlags: 0

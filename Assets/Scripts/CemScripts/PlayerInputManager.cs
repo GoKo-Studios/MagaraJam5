@@ -20,6 +20,7 @@ public class PlayerInputManager : MonoBehaviour
     public bool runEvent;
     public bool dashEvent;
     public bool groundSmashEvent;
+    public bool pullEnemiesEvent;
 
     private void Update(){
         if(jumpEvent){
@@ -37,6 +38,7 @@ public class PlayerInputManager : MonoBehaviour
         jumpEvent = false;
         dashEvent = false;
         groundSmashEvent = false;
+        pullEnemiesEvent = false;
     }
 
     private void Start(){
@@ -45,6 +47,7 @@ public class PlayerInputManager : MonoBehaviour
         InputEventSystem.Instance.runEvent += OnRunEvent;
         InputEventSystem.Instance.dashEvent += OnDashEvent;
         InputEventSystem.Instance.groundSmash += OnGroundSmashEvent;
+        InputEventSystem.Instance.pullEnemies += OnPullEnemiesEvent;
     }
     
     private void OnDestroy(){
@@ -53,6 +56,7 @@ public class PlayerInputManager : MonoBehaviour
         InputEventSystem.Instance.runEvent -= OnRunEvent;
         InputEventSystem.Instance.dashEvent -= OnDashEvent;
         InputEventSystem.Instance.groundSmash -= OnGroundSmashEvent;
+        InputEventSystem.Instance.pullEnemies -= OnPullEnemiesEvent;
     }
 
     protected void getMovementDirInput(Vector2 input){
@@ -73,6 +77,10 @@ public class PlayerInputManager : MonoBehaviour
 
     private void OnGroundSmashEvent(){
         groundSmashEvent = true;
+    }
+
+    private void OnPullEnemiesEvent(){
+        pullEnemiesEvent = true;
     }
 
     public void setInputsToFalse(){

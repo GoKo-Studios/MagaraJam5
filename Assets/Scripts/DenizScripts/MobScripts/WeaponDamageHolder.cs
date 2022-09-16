@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponDamageHolder : MonoBehaviour
 {
-    public float Damage;
-    public float Knockback;
-    public float StunDuration;
+    public float Damage = 25.0f;
+    public float Knockback = 4.0f;
+    public float StunDuration = 2.0f;
 }

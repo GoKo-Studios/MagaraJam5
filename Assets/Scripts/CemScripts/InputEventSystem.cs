@@ -24,6 +24,7 @@ public class InputEventSystem : MonoBehaviour
     public UnityAction toTheFloor;
     public UnityAction dashEvent;
     public UnityAction groundSmash;
+    public UnityAction pullEnemies;
     public UnityAction<bool> runEvent;
 
 }

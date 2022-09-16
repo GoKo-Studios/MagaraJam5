@@ -41,7 +41,7 @@ public abstract class MobDataBase : ScriptableObject
             }
             
             // If there is no any valid target.
-            if (_target == null) {
+            if (_target == null && Params.Manager.GetState() != MobStates.Stunned) {
                 //Params.Manager.OnIdle?.Invoke();
                 Params.Manager.SetState(MobStates.Idle);
             } 
@@ -95,7 +95,7 @@ public abstract class MobDataBase : ScriptableObject
             }
     }
 
-    public virtual void OnAttack(MobOnAttackParams Params) { 
+    public virtual void OnAttack(MobOnAttackParams Params) {
         Params.Manager.StartCoroutine(HandleAttackingState(Params));
     }
 
@@ -126,6 +126,7 @@ public abstract class MobDataBase : ScriptableObject
         Manager.StopAllCoroutines();
         Manager.SetState(MobStates.StopAI);
         Manager.Clear();
+        FindObjectOfType<theArrowMovement>().RemoveFromTaggedEnemyList(Manager.transform.GetChild(1).transform);
     }
 
     #region Event Functions
