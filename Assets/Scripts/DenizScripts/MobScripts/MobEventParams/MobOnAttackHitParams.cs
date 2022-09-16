@@ -9,7 +9,7 @@ namespace Assets.Scripts.Params {
             this.DamageDealt = DamageDealt;
         }
 
-        Collider[]  Target;
+        public Collider[] Target;
         public float DamageDealt;
     }
 }

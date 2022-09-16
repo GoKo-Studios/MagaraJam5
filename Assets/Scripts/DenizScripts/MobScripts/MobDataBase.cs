@@ -135,7 +135,9 @@ public abstract class MobDataBase : ScriptableObject
         Manager.StartCoroutine(HandleStunnedState(Manager, Duration));
     }
     public virtual void OnAttackHit(MobOnAttackHitParams Params) { 
-        //Target.GetComponent<PlayerManager>().OnHit?.Invoke(Params.DamageDealt);
+        foreach (Collider collider in Params.Target) {
+            collider.GetComponent<PlayerHealthManager>().TakeDamage(Params.DamageDealt);
+        }
     }
 
     public virtual void OnHit(MobOnHitParams Params) { 
@@ -204,8 +206,8 @@ public abstract class MobDataBase : ScriptableObject
 
         // Spawn the field towards the player's direction.
         Vector3 direction = (Params.MobTransform.position - Params.Target.position).normalized;
-        Params.MobTransform.forward = direction;
-        Params.Manager.SpawnAttackIndicator?.Invoke();
+        //Params.MobTransform.forward = direction;
+        //Params.Manager.SpawnAttackIndicator?.Invoke();
 
         float elapsedTime = 0;
         while(elapsedTime < Params.AttackTime) {
@@ -215,11 +217,11 @@ public abstract class MobDataBase : ScriptableObject
 
             elapsedTime += Time.deltaTime;
             // Add attack area fill animation to here.
-            Params.Manager.UpdateAttackIndicator?.Invoke(elapsedTime / Params.AttackTime);
+            //Params.Manager.UpdateAttackIndicator?.Invoke(elapsedTime / Params.AttackTime);
             yield return null;
         }
 
-        Params.Manager.DespawnAttackIndicator?.Invoke();
+        //Params.Manager.DespawnAttackIndicator?.Invoke();
         // If target is still within the attack area, deal damage to them.
         Collider[] colliders = Physics.OverlapBox(Params.MobTransform.position + Params.MobTransform.forward *  Params.AttackAreaSize.z, Params.AttackAreaSize, 
         Quaternion.LookRotation(Params.MobTransform.forward, Vector3.up), Params.Mask);

@@ -49,7 +49,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FillRate: 1
-    - _ProgressBorder: -0.5
+    - _ProgressBorder: 0.62
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

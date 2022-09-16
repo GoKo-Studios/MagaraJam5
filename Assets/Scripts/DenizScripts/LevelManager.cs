@@ -28,21 +28,20 @@ namespace Assets.Scripts.Managers {
         [Header("Holder")] [SerializeField] private GameObject _levelHolder;
 
         [Space] [SerializeField] private int _totalLevelCount;
-        [SerializeField] private int _currentlevelIndex;
         [SerializeField] private int LevelID = 0;
-        [SerializeField] private List<GameObject> _levelList;
 
         #endregion
 
         #endregion
 
-        private void OnEnable()
+        private void Start()
         {
             EventManager.Instance.OnLoadLevel += OnLoadLevel;
             EventManager.Instance.OnClearLevel += OnClearLevel;
             EventManager.Instance.OnNextLevel += OnNextLevel;
             EventManager.Instance.OnRestartLevel += OnRestartLevel;
 
+            _levelHolder = GameObject.Find("LevelHolder");
             EventManager.Instance.OnLoadLevel?.Invoke(LevelID);
         }
 
@@ -55,17 +54,10 @@ namespace Assets.Scripts.Managers {
 
         }
 
-        private void PopulateList()
-        {
-            _levelList.AddRange(ResourceLoader.LoadResources<GameObject>("Levels"));
-            _totalLevelCount = _levelList.Count;
-        }
-
-
         private void OnNextLevel()
         {
             LevelID++;
-            // EventManager.Instance.onClearActiveLevel?.Invoke();
+             EventManager.Instance.OnClearLevel?.Invoke();
             // DOVirtual.DelayedCall(.1f, () => EventManager.Instance.onLevelInitialize?.Invoke(GetLevelID()));
             // EventManager.Instance.onSaveGameData?.Invoke(new GameSaveDataParams()
             // {
@@ -75,7 +67,7 @@ namespace Assets.Scripts.Managers {
 
         private void OnRestartLevel()
         {
-            //EventManager.Instance.onClearActiveLevel?.Invoke();
+            EventManager.Instance.OnClearLevel?.Invoke();
             //DOVirtual.DelayedCall(.1f, () => EventManager.Instance.onLevelInitialize?.Invoke(GetLevelID()));
             //EventManager.Instance.onSaveGameData?.Invoke(new GameSaveDataParams()
             // {
@@ -85,7 +77,7 @@ namespace Assets.Scripts.Managers {
 
         private void OnLoadLevel(int levelID)
         {
-            var newLevelObject = Resources.Load<GameObject>($"Prefabs/LevelPrefabs/level {levelID}");
+            var newLevelObject = ResourceLoader.LoadResource<GameObject>(($"Levels/Level{levelID}"));
             var newLevel = Instantiate(newLevelObject, Vector3.zero, Quaternion.identity);
             if (newLevel != null) newLevel.transform.SetParent(_levelHolder.transform);
         }
