@@ -28,6 +28,7 @@ public abstract class MobDataBase : ScriptableObject
             RaycastHit[] _hits = SearchRange(Params.MobTransform.position, Params.Manager.Data.DetectionRange, Params.Manager.Data.DetectionLayerMask);
 
             Transform _target = null;
+            Vector3 _targetPosition = Vector3.zero;
 
             // Get the closest object within detection range.
             if (_hits.Length > 0) {
@@ -39,12 +40,6 @@ public abstract class MobDataBase : ScriptableObject
                     }
                 }
             }
-            
-            // If there is no any valid target.
-            if (_target == null && Params.Manager.GetState() != MobStates.Stunned) {
-                //Params.Manager.OnIdle?.Invoke();
-                Params.Manager.SetState(MobStates.Idle);
-            } 
 
             // An object entered the detection range while the mob was not alert.
             if (Params.Manager.GetState() == MobStates.Idle && _target != null) {
@@ -59,42 +54,46 @@ public abstract class MobDataBase : ScriptableObject
             // If there is a valid target, move to the target position. 
             if (_target != null) {
                 
+                Vector3 _directionTowardsPlayer = (_target.position - Params.MobTransform.position).normalized;
+                Vector3 _directionTowardsTarget = (Params.MobTransform.position - _target.position).normalized;
+
                 if (Params.Manager.GetState() == MobStates.Attacking || Params.Manager.GetState() == MobStates.Stunned) return;
             
-                Vector3 direction = (_target.position - Params.MobTransform.position).normalized;
-                //LookAtTarget(Params.MobTransform, direction);
-
                 // Attack
                 if (Vector3.Distance(_target.position, Params.MobTransform.position) <= Params.Manager.Data.AttackRange) {
                     
-                    Debug.Log(Vector3.Angle(Params.MobTransform.forward, direction));
-                    if (Vector3.Angle(Params.MobTransform.forward, direction) <= Params.Manager.Data.AttackAngleTreshold) {
+                    if (Vector3.Angle(Params.MobTransform.forward, _directionTowardsPlayer) <= Params.Manager.Data.AttackAngleTreshold) {
                         Params.Manager.OnAttack?.Invoke(new MobOnAttackParams(Params.Manager, _target, Params.Manager.Data.DamageDealt, 
                             Params.Manager.Data.AttackRange, Params.Manager.Data.AttackTime, Params.Manager.Data.DetectionLayerMask, 
                             Params.MobTransform, Params.Manager.Data.AttackAreaSize));
-                        MoveToPosition(Params.NavAgent, Params.MobTransform.position);
+
+                        _targetPosition = Params.MobTransform.position;
                         Params.NavAgent.isStopped = true;
-                        //Params.Manager.OnAnimation("Attacking");
+                        Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Trigger, true);
                     }
                 }
                 // Follow
                 else {
                     Params.Manager.SetState(MobStates.Following);
-                    //Params.Manager.OnAnimation("Moving");
-                    Vector3 _targetPosition;
+                    Params.Manager.OnAnimation("Walk", MobAnimationControllerTypes.Trigger, true);     
                     _targetPosition = _target.position;
-                    MoveToPosition(Params.NavAgent, _target.position);
+                    
                 }
             }
             else {
-                MoveToPosition(Params.NavAgent, Params.MobTransform.position);
+                // If there is no any valid target.
+
+                _targetPosition = Params.MobTransform.position;
+                //Params.Manager.OnIdle?.Invoke();
+                Params.Manager.SetState(MobStates.Idle);
                 //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
-                //Params.Manager.OnAnimation("Idle");
+                Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
             }
 
             // When the mob is stunned.
             if (Params.Manager.GetState() == MobStates.Stunned) {
                 if (!Params.NavAgent.isStopped) {
+                    _targetPosition = Params.MobTransform.position;
                     Params.NavAgent.velocity = Vector3.zero;
                     Params.NavAgent.isStopped = true;
                 }
@@ -102,6 +101,15 @@ public abstract class MobDataBase : ScriptableObject
             else {
                 Params.NavAgent.isStopped = false;
             }
+
+            // When the mob is panicking.
+            if (Params.Manager.GetState() == MobStates.Panic) {
+                float randomPosX = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
+                float randomPosZ = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
+                _targetPosition = new Vector3(randomPosX, 0, randomPosZ);
+            }
+
+            MoveToPosition(Params.NavAgent, _targetPosition);
     }
 
     public virtual void OnAttack(MobOnAttackParams Params) {
@@ -128,7 +136,7 @@ public abstract class MobDataBase : ScriptableObject
     }
 
     public  virtual void HandleDeath(MobManager Manager) {
-        //Manager.OnAnimation("Dying");
+        Manager.OnAnimation("Death", MobAnimationControllerTypes.Trigger, true);
         Manager.GetComponent<PoolableObjectController>().EnqueueCheck(Manager.Data.PoolingTime);
         WaveManager.Instance.RemoveFromSpawnedList(Manager.gameObject);
         MobSpawnerManager.Instance.SpawnOrbWithPooling(Manager.gameObject.transform.position);
@@ -161,7 +169,13 @@ public abstract class MobDataBase : ScriptableObject
     }
 
     public virtual void OnDeath(MobManager Manager) { 
+        DeathPanic(Manager, Manager.transform);
         HandleDeath(Manager);
+    }
+
+    public void OnPanic(MobManager Manager) {
+        if (Manager.GetState() != MobStates.Idle) return;
+        Manager.StartCoroutine(HandlePanicState(Manager, Manager.Data.PanicDuration));
     }
 
     public virtual void OnEnterRange(MobManager Manager) {
@@ -182,10 +196,6 @@ public abstract class MobDataBase : ScriptableObject
         // DO I NEED THIS? DISCUSS WITH THE TEAM MEMBERS.
     }
 
-    public void SpawnAttackIndicator() {
-
-    }
-
     public void MoveToPosition(NavMeshAgent Agent, Vector3 Position) { 
         Agent.SetDestination(Position);
     }
@@ -195,7 +205,16 @@ public abstract class MobDataBase : ScriptableObject
         return hits;
     }
 
+    public void DeathPanic(MobManager Manager, Transform MobTransform) {
+        Collider[] colliders = Physics.OverlapSphere(MobTransform.position, Manager.Data.OnDeathPanicRange,Manager.Data.PanicLayerMask);
+        foreach (Collider col in colliders) {
+            MobManager manager = col.GetComponentInParent<MobManager>();
+            manager.OnPanic?.Invoke(manager);
+        }
+    }
+
     public void LookAtTarget(Transform MobTransform, Vector3 Direction) {
+        Direction.y = 0f;
         MobTransform.forward = Direction;
     }
 
@@ -213,7 +232,7 @@ public abstract class MobDataBase : ScriptableObject
         Manager.SetState(MobStates.Idle);
     }
 
-    public IEnumerator HandleAttackingState(MobOnAttackParams Params) {
+    public virtual IEnumerator HandleAttackingState(MobOnAttackParams Params) {
         if (Params.Manager.GetState() == MobStates.Attacking) yield break;
 
         Params.Manager.SetState(MobStates.Attacking);
@@ -255,6 +274,23 @@ public abstract class MobDataBase : ScriptableObject
         Manager.IsInvulnerable = true;
         yield return new WaitForSecondsRealtime(Manager.Data.InvulnerableTime);
         Manager.IsInvulnerable = false;
+    }
+
+    public IEnumerator HandlePanicState(MobManager Manager, float Duration) {
+        Manager.SetState(MobStates.Panic);
+
+        float elapsedTime = 0;
+        while(elapsedTime < Duration) {
+            elapsedTime += Time.deltaTime;
+            if (Manager.GetState() == MobStates.Stunned) yield break;
+            if (Manager.GetState() == MobStates.Attacking) yield break;
+            if (Manager.GetState() == MobStates.Following) yield break;
+            yield return null;
+        }
+
+        if (Manager.GetState() == MobStates.Stunned) yield break;
+        if (Manager.GetState() == MobStates.Attacking) yield break;
+        Manager.SetState(MobStates.Idle);
     }
 
     #endregion

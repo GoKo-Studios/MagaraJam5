@@ -59,6 +59,14 @@ namespace Assets.Scripts.Managers {
             return spawnedObj;
         }
 
+        public GameObject SpawnBulletWithPooling(Vector3 Position, Vector3 Direction) {
+            var spawnedObj = ObjectPoolingManager.Instance.DequeObject(PoolableObjectTypes.Bullet);
+            spawnedObj.transform.position = Position;
+            spawnedObj.transform.forward = Direction;
+            spawnedObj.GetComponent<PoolableObjectController>().IsCalledByPooling = true;
+            return spawnedObj;
+        }
+
         private Transform GetSpawnPosition() {
             // Redo here if needed!
 

@@ -40,8 +40,9 @@ namespace Assets.Scripts.Managers {
         public UnityAction<MobOnAttackParams> OnAttack => MobData.OnAttack; 
         public UnityAction OnEnterRange;
         public UnityAction OnExitRange;
-        public UnityAction<string> OnAnimation;
+        public UnityAction<string, MobAnimationControllerTypes, bool> OnAnimation;
         public UnityAction OnEffect;
+        public UnityAction<MobManager> OnPanic => MobData.OnPanic;
 
         public UnityAction SpawnAttackIndicator;
         public UnityAction<float> UpdateAttackIndicator;

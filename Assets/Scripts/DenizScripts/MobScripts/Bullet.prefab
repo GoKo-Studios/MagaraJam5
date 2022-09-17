@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1586636407967896493}
   - component: {fileID: 6994510936763444940}
   - component: {fileID: 6613627310492531398}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,9 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33afd3be8a68aa548958d163f83c079e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
-  _damage: 0
-  _poolingTime: 0
+  _speed: 10
+  _damage: 10
+  _poolingTime: 1
 --- !u!114 &1586636407967896493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937529219425137260}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.75}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7801134572803922405}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7159642959648117617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 6013685288392613804}
   - component: {fileID: 8471201209609719071}
   - component: {fileID: 5985966313543177812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,11 +5,9 @@ namespace Assets.Scripts.Enums
     {
         NoData,
         Idle,
-        Moving,
         Attacking,
-        Dying,
         Stunned,
-        Searching,
+        Panic,
         Following,
         StopAI
     }
