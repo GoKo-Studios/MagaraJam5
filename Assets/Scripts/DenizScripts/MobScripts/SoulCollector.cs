@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class SoulCollector : MonoBehaviour
@@ -7,6 +6,8 @@ public class SoulCollector : MonoBehaviour
     [SerializeField] private float CurrentSouls;
     [SerializeField] private float AttractionRange;
     [SerializeField] private LayerMask SoulLayerMask;
+
+    public UnityAction OnSoulCollect;
 
     void Update()
     {
@@ -18,6 +19,7 @@ public class SoulCollector : MonoBehaviour
     }
 
     public void CollectSoul() {
+        OnSoulCollect?.Invoke();
         CurrentSouls++;
     }
 }

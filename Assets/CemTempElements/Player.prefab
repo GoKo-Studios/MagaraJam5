@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5377920669459596940}
   - component: {fileID: 9157592147793947636}
   - component: {fileID: 8331189151294850907}
+  - component: {fileID: 6559018093385084909}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -165,6 +166,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillCooldown: 5
   skillDamage: 25
+--- !u!114 &6559018093385084909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777601318819174344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478f12a600d8d9e4f9600cbc8ab07ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMana: 0
 --- !u!1 &3777601320706814663
 GameObject:
   m_ObjectHideFlags: 0

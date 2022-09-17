@@ -12,7 +12,9 @@ public class theArrowMovement : MonoBehaviour
 
     private float heightFromGround;
     
-    private Transform player;
+    private Transform playerCallBackDestination;
+
+    private PlayerMana playerMana;
 
     [SerializeField] private AnimationCurve turnCurve;
 
@@ -38,7 +40,7 @@ public class theArrowMovement : MonoBehaviour
     public List<Transform> taggedEnemyList;
 
     public enum ArrowStates { CallBack, OutAndActive, Disabled };
-    public ArrowStates theArrowState = ArrowStates.OutAndActive;
+    public ArrowStates theArrowState = ArrowStates.CallBack;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +50,8 @@ public class theArrowMovement : MonoBehaviour
 
         rb = transform.GetComponent<Rigidbody>();
 
-        player = GameObject.Find("WeaponCallBackPos").transform;
+        playerCallBackDestination = GameObject.Find("WeaponCallBackPos").transform;
+        playerMana = GameObject.Find("Player").GetComponent<PlayerMana>();
     }
 
     // Update is called once per frame
@@ -58,16 +61,16 @@ public class theArrowMovement : MonoBehaviour
         switch (theArrowState){
             case ArrowStates.Disabled:
                 
-                return;
+                break;
             case ArrowStates.OutAndActive:
                 OutAndActiveMovement();
-                return;
+                break;
             case ArrowStates.CallBack:
                 CallBackMovement();
-                return;
+                break;
         }
 
-        
+        arrowInput.SetInputsToFalse();
     }
 
     private void OutAndActiveMovement(){
@@ -85,8 +88,7 @@ public class theArrowMovement : MonoBehaviour
 
         moveArrow(mousePos, arrowCenterDeadzone);
 
-        if(arrowInput.callArrowBack){
-            arrowInput.callArrowBack = false;
+        if(arrowInput.callArrowBack || !playerMana.ArrowAvailability()){
             theArrowState = ArrowStates.CallBack;
             CameraManager.Instance.setOrthoSize(11.0f);
         }
@@ -94,12 +96,11 @@ public class theArrowMovement : MonoBehaviour
 
     private void CallBackMovement(){
 
-        RotateArrow(player.position);
+        RotateArrow(playerCallBackDestination.position);
 
-        moveArrow(player.position, 2.0f);
+        moveArrow(playerCallBackDestination.position, 2.0f);
 
-        if(arrowInput.callArrowBack){
-            arrowInput.callArrowBack = false;
+        if(arrowInput.callArrowBack && playerMana.ArrowAvailability()){
             theArrowState = ArrowStates.OutAndActive;
             CameraManager.Instance.setOrthoSize(13.5f);
         }

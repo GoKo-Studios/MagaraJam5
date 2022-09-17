@@ -329,4 +329,6 @@ public class Player : MonoBehaviour
             stateAwake[i] = true;
         }
     }
+
+    
 }

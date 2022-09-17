@@ -794,6 +794,11 @@ PrefabInstance:
       propertyPath: playerFollowCam
       value: 
       objectReference: {fileID: 69336501}
+    - target: {fileID: 3777601318819174341, guid: 53400ea471d68c143bf65e0ee854371c,
+        type: 3}
+      propertyPath: enemyLayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 3777601318819174344, guid: 53400ea471d68c143bf65e0ee854371c,
         type: 3}
       propertyPath: m_Name
@@ -817,7 +822,7 @@ PrefabInstance:
     - target: {fileID: 8331189151294850907, guid: 53400ea471d68c143bf65e0ee854371c,
         type: 3}
       propertyPath: skillCooldown
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53400ea471d68c143bf65e0ee854371c, type: 3}
@@ -1501,7 +1506,8 @@ MonoBehaviour:
     type: 3}
   _orbPrefab: {fileID: 7009921566515370491, guid: 8c5862771f3cc2e418ddd640a8178a0f,
     type: 3}
-  _bulletPrefab: {fileID: 0}
+  _bulletPrefab: {fileID: 1937529219425137260, guid: bd9c826e8208f9645a13689b4a2b4d24,
+    type: 3}
 --- !u!4 &6601666591577385384
 Transform:
   m_ObjectHideFlags: 0

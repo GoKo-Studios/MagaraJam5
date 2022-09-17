@@ -37,4 +37,8 @@ public class ArrowInputManager : MonoBehaviour
     private void callArrowBackEvent(){
         callArrowBack = true;
     }
+
+    public void SetInputsToFalse(){
+        callArrowBack = false;
+    }
 }
