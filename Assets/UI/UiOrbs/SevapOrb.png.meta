@@ -1,0 +1,2763 @@
+fileFormatVersion: 2
+guid: da5c91d369a4e444f9fe3a6eac087512
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e8c7bd5386a4b4b9f4fd1f5fd0639b
+      internalID: -1536972578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00001
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278940072ac10a9419090637f6e2b3e6
+      internalID: -1503735830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00002
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bf7b5a3c9304247850f0ad6afe9ec6
+      internalID: 1025936928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00003
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a565d39f9f50eb47ac5dc7a65caa8a1
+      internalID: -2069479932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00004
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27fae5414d0cba44a3e33f5f59bf0e1
+      internalID: 1893044508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00005
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68906fb645759fb42a91319acc5aabc4
+      internalID: 1789910140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00006
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd30c433ece4de40a5eb8756ed64a49
+      internalID: -686987526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00007
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ff6f949bc095441a2af321a2c46938
+      internalID: 948376013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00008
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528edc50bdcc6ca4781fd6f328525ad6
+      internalID: 469251699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00009
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 3897
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f340d0a6fc2499f46a3a25cbb7520c7b
+      internalID: -757434471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00010
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ff79c0c257bde4fa184a9290065075
+      internalID: 754300448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00011
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa2cf3e2de042441bfe8ce9f8c69f81
+      internalID: -917064491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00012
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07aea1bf228b48040ad35e2e861c304d
+      internalID: -1849302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00013
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b68c24b8a629ec409f1f0b1ce24660b
+      internalID: 1739050411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00014
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4846176f1820c8d4fba79ef7a57d5c3f
+      internalID: 313511276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00015
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3023b6375d9727d44a9c730829367918
+      internalID: -929294588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00016
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136051d5ab6045b4282c56e9a9bcfc14
+      internalID: 1884856287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00017
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308c407a1e4e9ac4cbe3ba826bdcd847
+      internalID: 155722300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00018
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e105e3b01c324a49929c7cc9f686388
+      internalID: -144703943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00019
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 3698
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a2646fb36b3c444818ced47522819e
+      internalID: 1254667027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00020
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1a685174f5e0e46a8b4826b503d0da
+      internalID: -2128515359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00021
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d668e1c1744fa04dbfe49b98c421d6a
+      internalID: 255285134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00022
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a31f74dea1aaad46bf0571ebb2237fe
+      internalID: 1498369475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00023
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dd60c716a670d4d90e3f2b01ee275c
+      internalID: -1888731977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00024
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bc9d52c2906c846b8ba2a5da8443bc
+      internalID: -1112828648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00025
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ebcf89ba660eb46b8ae6acba750028
+      internalID: -687075137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00026
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ec921c075e43543bc7a43d22fda909
+      internalID: -611752717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00027
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3b84146adabef4d9200c30378b73aa
+      internalID: -377091893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00028
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cb4fd1915702946881b01e98b328de
+      internalID: -606796626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00029
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 3499
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1e6c5fa567f994684be83c5a624b09
+      internalID: 2049217833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00030
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4ffc3c22b590846a2f51b94dc4c4ec
+      internalID: -1282902711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00031
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0378d8b90278c67408d313901c3f26d4
+      internalID: -1352065647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00032
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8907c594cd54ef749844e344c06d4168
+      internalID: 1534984821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00033
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27517ac783059084e9faa35a20b7f303
+      internalID: -1621001018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00034
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4cb280b17f17d245beda5768ce49554
+      internalID: 2094287326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00035
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426eb676270d0524badf1e261b41f1f0
+      internalID: 910041136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00036
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff1d1da24295ad47967e8b833bf6e4a
+      internalID: 1183984905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00037
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f78f2d30c53a114f921a1fdeef639be
+      internalID: 1604641864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00038
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af80c3b638ff98448c0f74cf75f8b5a
+      internalID: 1371765980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00039
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 3300
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886b0950d1865264aba0d3eedea3df41
+      internalID: 2029290402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00040
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afeefd58f902b3e428df2f1cdd66fa62
+      internalID: 980924818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00041
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89f82a043479c247b7f33553059869b
+      internalID: 1785507983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00042
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ef1cf0dfc93ce48b4d9f94c452d463
+      internalID: -1416315946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00043
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f0d64a4262e2a449307ad8be0f02d6
+      internalID: 1917428910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00044
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1e43830014fa049a6b627b60276c11
+      internalID: -619641960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00045
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6841f4f5580754795e342054075362
+      internalID: -2142124553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00046
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74b907bcab5f1e439e58a127089c83f
+      internalID: -2071708902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00047
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5260725724c7cf41af9a2d65878a353
+      internalID: 106771033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00048
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6c4b5766578a7459d71da656a26f4f
+      internalID: -1560702470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00049
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 3101
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bced404cb3de9ad45bfc12c8d782ccdb
+      internalID: -133822368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00050
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c89c89dd2faa24e9110e7d389406ff
+      internalID: -574574045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00051
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7e6819551e6f841ba5562763f49fdf
+      internalID: 498637458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00052
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f44970f2e85c441aa0ef8e92d5ce94
+      internalID: -1210027540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00053
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a26092101e15964a820ead967379e99
+      internalID: -542118783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00054
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc53d9c205404049bec769c2e2e57ad
+      internalID: -436908255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00055
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57868d4c79443c34082cab3353a6da58
+      internalID: -980239261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00056
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34740a664e340164a97e51adb11a0896
+      internalID: -1116848766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00057
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160b0bcb6870cd0458c93f29c1db8635
+      internalID: -1597425922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00058
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b72fb960f0a25445adf8100f678e915
+      internalID: 1018423335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00059
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 2902
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31822ca39d0b1347aa2ce588dfc66f4
+      internalID: 1460321027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00060
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6126878a79b145a4f881109a7d111e26
+      internalID: -1262330011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00061
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca26f66842056a14e8dc2d462f229fde
+      internalID: -1631522996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00062
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32821ce1e48950a42b9c6ed057beaae7
+      internalID: -593783954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00063
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe2f095f08bddf40b2aaaf2eea41aaf
+      internalID: 7101806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00064
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034943ba83c3f4442acedbfeb5dd7daf
+      internalID: 143408601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00065
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fc5410b91752f409dde19cca3798e4
+      internalID: 1396925265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00066
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4731dbf3dac39bd4da51b492e85ef63f
+      internalID: -519481290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00067
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c751852c46edb944ab6132a9489d06c
+      internalID: -2038646651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00068
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cbf98e74a047842bacc0f74ac2d449
+      internalID: 730155661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00069
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 2703
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214cbd6a3ff45314cb2bb57d27b1d88e
+      internalID: 783443159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00070
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241836118cac70a42b75772dff51e355
+      internalID: 1710131975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00071
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f9e397ef836b8419e35e6f036ba424
+      internalID: 1675654981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00072
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190f11531de216149b1cf7f5dabbd7d2
+      internalID: 1813505484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00073
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663455facc526fb4791988a5fcdde56d
+      internalID: 1711722310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00074
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13d206d4582a7b489199d24f58c8f2e
+      internalID: 1465960661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00075
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c7341d1825f934b81723db50eebaff
+      internalID: 752044437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00076
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8ff4af1f915a1408724b0d152f6299
+      internalID: -498362707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00077
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d81c53c405e974f83abcd642753961
+      internalID: -655341118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00078
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4b5c1e8c0662a40abc7cde9abbeca1
+      internalID: 393351685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00079
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 2504
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85a50cc74bc5c94a973ef14c2f9ff32
+      internalID: 1199421549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00080
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a653bd89a0eacae45ae43c76f8945372
+      internalID: -17658874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00081
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fe27861185581478e4e3bef0479ecd
+      internalID: -589576031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00082
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f076c18012f89c4ea2641062143b912
+      internalID: 260757148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00083
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ebab9bd1649f8469fa5ecbe25f41db
+      internalID: 1888803712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00084
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5969547ee382d134eb6f0b282de0fa10
+      internalID: 1261716971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00085
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377bfae5db63e744898370171e595931
+      internalID: 303849427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00086
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebb9dccb51d1df4e9fa56d87778d2de
+      internalID: 276539554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00087
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4e1e9576bdf9b46b141d469e523902
+      internalID: -1149569668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00088
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648b314e3c3feae44906e842d9f0112b
+      internalID: -526332476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00089
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 2305
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0226dbe870dd4c42bbb46ff9b7bfcb1
+      internalID: -771411123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00090
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1448715d0ad987b41a83f524a4e7e92f
+      internalID: 79548610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00091
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cdf36e70cf08840b5948b715dd6e2c
+      internalID: -2018365865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00092
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6f36930033d2249a3984288bd820d7
+      internalID: -340011845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00093
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc4af0f8790a0a4ea5b76858468ab6a
+      internalID: 824883950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00094
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5523cb0168760bc479855b6d1381f894
+      internalID: -2060998531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00095
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c41a4280eb4b3b4fa666e8e2e4ed9fc
+      internalID: 826830980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00096
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5c784a0d1a8164da01a14d18c72762
+      internalID: -1632203582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00097
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bd845ab5813634f8df03c619b90fed
+      internalID: 1058044205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00098
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53354eddebf4ecc4d99f70c2715095da
+      internalID: 631832273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00099
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 2106
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b529069787c6f8408c50f39ec492ed5
+      internalID: -154654783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84fe3ea05f9fe54fb0ef75ef4106a4b
+      internalID: -3018595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00101
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73413cb3cea85d4aa741c32ed1ed57c
+      internalID: -1266894447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00102
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b2cc47b8c686546b2807397ad8ab3c
+      internalID: -361284571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00103
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148a7f88a4a2f4e4895f6c83b17150be
+      internalID: -1846130820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00104
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe509ca634b98b943acd63269287a6a9
+      internalID: -1352033970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00105
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2340153687f24af40ba0180fbbaac7bf
+      internalID: -1289604087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00106
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367f0301ac616ac4bb57b6647e6ef16e
+      internalID: -215330995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00107
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a443566e1e0a747886757c0d841a33
+      internalID: 817401903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00108
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7c3aa2e2e7a644f837bd4e6bcda946
+      internalID: -1047828273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00109
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1907
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc9a449631c35b4382712d71dbe8f5e
+      internalID: 587990765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e56af748c1e8942afde6b43e0e3c82
+      internalID: -477753972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00111
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917ee496089a5d245be7c294f972b50b
+      internalID: 764446651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00112
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cbdbeaf5678784fb32f66469cc395d
+      internalID: -1734502858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00113
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f180f910d7e754baceb1117ccaf0a9
+      internalID: 523082047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00114
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22532ca95645c6749b7ae7304f507a91
+      internalID: -873831274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00115
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0404528f236aaa443ab95be000f19cd5
+      internalID: -1462527019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00116
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06dd7b3ccfaf62048ae40ab28c2520be
+      internalID: -389819076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00117
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97145d35a8e14549ad0a421cd394fac
+      internalID: -775790746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00118
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103249b8be035ed4b83fe9810ff7a463
+      internalID: -416710895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthOrb-SevapOrb_00119
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1708
+        width: 199
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ce09a983c634941a8e205bf7456670
+      internalID: 1449686801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e61a12e513fd1864099bef11fe87e34e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HealthOrb-SevapOrb_00069: 783443159
+      HealthOrb-SevapOrb_00009: -757434471
+      HealthOrb-SevapOrb_00029: 2049217833
+      HealthOrb-SevapOrb_00057: -1597425922
+      HealthOrb-SevapOrb_00098: 631832273
+      HealthOrb-SevapOrb_00027: -377091893
+      HealthOrb-SevapOrb_00018: -144703943
+      HealthOrb-SevapOrb_00034: 2094287326
+      HealthOrb-SevapOrb_00028: -606796626
+      HealthOrb-SevapOrb_00017: 155722300
+      HealthOrb-SevapOrb_00076: -498362707
+      HealthOrb-SevapOrb_00073: 1711722310
+      HealthOrb-SevapOrb_00014: 313511276
+      HealthOrb-SevapOrb_00072: 1813505484
+      HealthOrb-SevapOrb_00118: -416710895
+      HealthOrb-SevapOrb_00112: -1734502858
+      HealthOrb-SevapOrb_00115: -1462527019
+      HealthOrb-SevapOrb_00007: 948376013
+      HealthOrb-SevapOrb_00053: -542118783
+      HealthOrb-SevapOrb_00005: 1789910140
+      HealthOrb-SevapOrb_00033: -1621001018
+      HealthOrb-SevapOrb_00099: -154654783
+      HealthOrb-SevapOrb_00012: -1849302
+      HealthOrb-SevapOrb_00016: 1884856287
+      HealthOrb-SevapOrb_00110: -477753972
+      HealthOrb-SevapOrb_00001: -1503735830
+      HealthOrb-SevapOrb_00015: -929294588
+      HealthOrb-SevapOrb_00078: 393351685
+      HealthOrb-SevapOrb_00032: 1534984821
+      HealthOrb-SevapOrb_00062: -593783954
+      HealthOrb-SevapOrb_00006: -686987526
+      HealthOrb-SevapOrb_00013: 1739050411
+      HealthOrb-SevapOrb_00085: 303849427
+      HealthOrb-SevapOrb_00097: 1058044205
+      HealthOrb-SevapOrb_00100: -3018595
+      HealthOrb-SevapOrb_00094: -2060998531
+      HealthOrb-SevapOrb_00010: 754300448
+      HealthOrb-SevapOrb_00083: 1888803712
+      HealthOrb-SevapOrb_00066: -519481290
+      HealthOrb-SevapOrb_00039: 2029290402
+      HealthOrb-SevapOrb_00040: 980924818
+      HealthOrb-SevapOrb_00101: -1266894447
+      HealthOrb-SevapOrb_00037: 1604641864
+      HealthOrb-SevapOrb_00026: -611752717
+      HealthOrb-SevapOrb_00080: -17658874
+      HealthOrb-SevapOrb_00008: 469251699
+      HealthOrb-SevapOrb_00035: 910041136
+      HealthOrb-SevapOrb_00055: -980239261
+      HealthOrb-SevapOrb_00054: -436908255
+      HealthOrb-SevapOrb_00011: -917064491
+      HealthOrb-SevapOrb_00088: -526332476
+      HealthOrb-SevapOrb_00063: 7101806
+      HealthOrb-SevapOrb_00064: 143408601
+      HealthOrb-SevapOrb_00031: -1352065647
+      HealthOrb-SevapOrb_00092: -340011845
+      HealthOrb-SevapOrb_00065: 1396925265
+      HealthOrb-SevapOrb_00096: -1632203582
+      HealthOrb-SevapOrb_00108: -1047828273
+      HealthOrb-SevapOrb_00038: 1371765980
+      HealthOrb-SevapOrb_00044: -619641960
+      HealthOrb-SevapOrb_00046: -2071708902
+      HealthOrb-SevapOrb_00074: 1465960661
+      HealthOrb-SevapOrb_00071: 1675654981
+      HealthOrb-SevapOrb_00052: -1210027540
+      HealthOrb-SevapOrb_00086: 276539554
+      HealthOrb-SevapOrb_00111: 764446651
+      HealthOrb-SevapOrb_00042: -1416315946
+      HealthOrb-SevapOrb_00045: -2142124553
+      HealthOrb-SevapOrb_00109: 587990765
+      HealthOrb-SevapOrb_00024: -1112828648
+      HealthOrb-SevapOrb_00036: 1183984905
+      HealthOrb-SevapOrb_00041: 1785507983
+      HealthOrb-SevapOrb_00022: 1498369475
+      HealthOrb-SevapOrb_00000: -1536972578
+      HealthOrb-SevapOrb_00023: -1888731977
+      HealthOrb-SevapOrb_00079: 1199421549
+      HealthOrb-SevapOrb_00089: -771411123
+      HealthOrb-SevapOrb_00093: 824883950
+      HealthOrb-SevapOrb_00102: -361284571
+      HealthOrb-SevapOrb_00113: 523082047
+      HealthOrb-SevapOrb_00025: -687075137
+      HealthOrb-SevapOrb_00021: 255285134
+      HealthOrb-SevapOrb_00030: -1282902711
+      HealthOrb-SevapOrb_00003: -2069479932
+      HealthOrb-SevapOrb_00116: -389819076
+      HealthOrb-SevapOrb_00051: 498637458
+      HealthOrb-SevapOrb_00105: -1289604087
+      HealthOrb-SevapOrb_00067: -2038646651
+      HealthOrb-SevapOrb_00087: -1149569668
+      HealthOrb-SevapOrb_00047: 106771033
+      HealthOrb-SevapOrb_00059: 1460321027
+      HealthOrb-SevapOrb_00095: 826830980
+      HealthOrb-SevapOrb_00114: -873831274
+      HealthOrb-SevapOrb_00084: 1261716971
+      HealthOrb-SevapOrb_00082: 260757148
+      HealthOrb-SevapOrb_00068: 730155661
+      HealthOrb-SevapOrb_00061: -1631522996
+      HealthOrb-SevapOrb_00048: -1560702470
+      HealthOrb-SevapOrb_00081: -589576031
+      HealthOrb-SevapOrb_00019: 1254667027
+      HealthOrb-SevapOrb_00090: 79548610
+      HealthOrb-SevapOrb_00117: -775790746
+      HealthOrb-SevapOrb_00058: 1018423335
+      HealthOrb-SevapOrb_00106: -215330995
+      HealthOrb-SevapOrb_00004: 1893044508
+      HealthOrb-SevapOrb_00002: 1025936928
+      HealthOrb-SevapOrb_00119: 1449686801
+      HealthOrb-SevapOrb_00056: -1116848766
+      HealthOrb-SevapOrb_00070: 1710131975
+      HealthOrb-SevapOrb_00077: -655341118
+      HealthOrb-SevapOrb_00091: -2018365865
+      HealthOrb-SevapOrb_00043: 1917428910
+      HealthOrb-SevapOrb_00103: -1846130820
+      HealthOrb-SevapOrb_00020: -2128515359
+      HealthOrb-SevapOrb_00104: -1352033970
+      HealthOrb-SevapOrb_00107: 817401903
+      HealthOrb-SevapOrb_00050: -574574045
+      HealthOrb-SevapOrb_00049: -133822368
+      HealthOrb-SevapOrb_00075: 752044437
+      HealthOrb-SevapOrb_00060: -1262330011
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

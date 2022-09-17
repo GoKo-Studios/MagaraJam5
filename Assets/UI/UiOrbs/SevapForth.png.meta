@@ -1,0 +1,2763 @@
+fileFormatVersion: 2
+guid: cb5b1c556739859448b371d910bc67b4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SevapFroth_00000
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2002
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48443e227b4947c498d7dc4d0e8618c9
+      internalID: 1418563766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00001
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2002
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d2558bcb2a0d441826932a38f2b822
+      internalID: 1860828064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00002
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2002
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8402e82767a17da47845f5f557d5af04
+      internalID: -1848698568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00003
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2002
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126d0eb3284144741a20074fdb641d7d
+      internalID: 599232615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00004
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1956
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a303134dad9d00b4cb43193cca9924bd
+      internalID: 763269256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00005
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf623a8eda30c5e42aa500ba51e36421
+      internalID: -384156138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00006
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 960
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c6e97cc3007c847b57fda6010faa1e
+      internalID: 1552202845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00007
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 960
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800e9d6afec44804d8f701bfb2b3f38e
+      internalID: -1639302411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00008
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 960
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1028c71c2a140e24d9ec6bf35a1a2fff
+      internalID: 1428547267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00009
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1345
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d83c388ab4663f49b83d64e1071ea3d
+      internalID: 2050458709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00010
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1345
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05766b0ed28d544bad1e92855bf102a
+      internalID: -775916718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00011
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1863
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629824aa4b12bb849b3c2bb18a616dfa
+      internalID: 1501579783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00012
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1816
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10198f56f9f57c48b04453ed100830a
+      internalID: -115787564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00013
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 960
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce2815531147714da031ec096fc8d6c
+      internalID: -348328604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00014
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 911
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af47a499e577224e8bbbac4a0d26736
+      internalID: 1288410229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00015
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 911
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ffba1b6cdb56b4d86185aa43277dbb
+      internalID: 1905208506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00016
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1297
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b454cff4d11190428af4e12f5411995
+      internalID: -23319617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00017
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1297
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e507a6b85dde9a345bbeef319bda35de
+      internalID: 318249827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00018
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1297
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e7c18a67c23ec4e973753746bba507
+      internalID: -478208442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00019
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1297
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c152c8dc55cce47b3c82c3a7d2ee93
+      internalID: 159630126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00020
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1297
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2befc25c645a234083ddc1fd6505912
+      internalID: -1870350454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00021
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1249
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eaf7cb742eadd64e8d644de8d0ede5f
+      internalID: -846061372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00022
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1816
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba491166d0c8d9408feb5fe3714b915
+      internalID: -671178740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00023
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1249
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea177ccb8172b8d479f183df1f0cf617
+      internalID: 266176284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00024
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1249
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a911897bf2576840a9896dcbcfca011
+      internalID: 1911764353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00025
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1249
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159ce6286d016ff479d53691bc2c7adc
+      internalID: -1494325453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00026
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1249
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0361a960a794baa4483755a057ee150a
+      internalID: 115368507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00027
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1201
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a8e33b98c5b5d4aa3c10775548c5b5
+      internalID: 1274142131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00028
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1201
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200d9a57afa33434d89c0ecafaa0e4d3
+      internalID: -1178509786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00029
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1816
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c03de1f70f136499acdd71bd0dc2cf
+      internalID: -42273858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00030
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1201
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e691e4a39c894cb42bd5c0886b33ee4e
+      internalID: -612765605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00031
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1201
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786108f4c357d44499cf51b04965799b
+      internalID: 1151503150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00032
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 911
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e269e33abc21d4b9d312dd6f73716c
+      internalID: 916853215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00033
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 911
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b5ef542934df1479e0e4ad91a49db1
+      internalID: -1460591001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00034
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1201
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8e71e5b6faec3449ab15898830db1d
+      internalID: -1441587187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00035
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1153
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23caf5d154fadb4b98a7896338a7048
+      internalID: -2067032082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00036
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1153
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0040803f33e1042a141e0e4d69c07f
+      internalID: -1894217925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00037
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1153
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54bf747a0daf4884888709181b6c410f
+      internalID: 1921443232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00038
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1153
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873ab2fe0a0f41044babe1c9c44ab180
+      internalID: -77502032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00039
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1816
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ef938619f9bf64b976eb276dd13437
+      internalID: -1304831890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00040
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1816
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adae4cfdf6d0e548912d167b1f5de70
+      internalID: -1546367547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00041
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1153
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d9679ca6db5614f90c0aeb80c4420d
+      internalID: 549309909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00042
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1105
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c466af6f622c5ae41919d6bc2a75d60d
+      internalID: -1965361947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00043
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1769
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a66bbb2e8eacd241854bdf533afc9e8
+      internalID: -469841104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00044
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1769
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377b46f24693f2e488d723d5ba79d2a4
+      internalID: 1613761336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00045
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1769
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9404a223f5b3edf44aae8cc5ddc01011
+      internalID: 1225851859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00046
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1105
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8150e3bc83d1c484ca3439dad0760e3d
+      internalID: -640798287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00047
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1769
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b1b2c615072ea4b9e44588d35961e5
+      internalID: -333660256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00048
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2003
+        width: 200
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: 0.44444445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f01ebf322e8f4846bf9ad66d0f58dc1
+      internalID: -309881748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00049
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1956
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fba0c83bd3454439edc59987f582bb
+      internalID: -314107762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00050
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1956
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cee2548aed5c1a4c99faced5e44bd65
+      internalID: 1592427801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00051
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1769
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad93845dbdc29247824915b65a27f97
+      internalID: -1238097893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00052
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1956
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf35e2e1cee72b4b9b952f588e1f101
+      internalID: -1001543913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00053
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1956
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18338a4ece0ea684bbd93c5846aacb59
+      internalID: 212419898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00054
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1722
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c8fe1f5834b2347a9a7ba2a485b802
+      internalID: -1194010453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00055
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1722
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb42e18e6cc60b4b98ba3fb2964b001
+      internalID: 1785991135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00056
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1722
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017bd862a9d819945a7164c23f3380f8
+      internalID: -315981496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00057
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1722
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10983b6d581312e409db8753229413eb
+      internalID: -1096213574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00058
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1722
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aec5332d7eca4d44ac4561d8717c5c9
+      internalID: -701143332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00059
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1675
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5065542361b7ea64ca8a0bbc73af833f
+      internalID: -1423832660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00060
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1105
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a90d4b788f4f448b85cf6d5912f121
+      internalID: 667476603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00061
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1105
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5e693b2fbd2894b9fe636265a52519
+      internalID: -1178889115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00062
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1675
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3d6c1aa67cb9a43ba252cd08eeedc1
+      internalID: -206544003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00063
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1675
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86776ca94c968f4d97412af58c1896b
+      internalID: 1047144470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00064
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1105
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fdad3966ddb474bad02f964c5f882b
+      internalID: 2114391676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00065
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1057
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa5743874369ec4f984fe036eeb57ea
+      internalID: 1297983023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00066
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 911
+        width: 200
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48979592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a6a2f4e039e204ebc2434b10d2d9f1
+      internalID: -1195821188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00067
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1057
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3f213526e2ef8418b10087dfd3f223
+      internalID: -76115919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00068
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1057
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8956734663f52742b9a596e906b9e65
+      internalID: 1452820531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00069
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1057
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0f8796403b0074aa150e8823d59e98
+      internalID: -1199480252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00070
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1675
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6111a33e4d13244cb8c162b659da78a
+      internalID: -301476085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00071
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1675
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf20f61072bb1b46b2b3a250714ee44
+      internalID: 1983377279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00072
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1628
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5464ac0f8b17046a8f37e5763030fd
+      internalID: -1646531377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00073
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1628
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65ce71a77eca1c419ae12e245bd5fb8
+      internalID: 1960999508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00074
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1628
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930ad4045ba41a24b93e1f274a72b233
+      internalID: 1385223083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00075
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1628
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc7bb09e1dadc142bda853308c03e55
+      internalID: 1924058217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00076
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1628
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5261d94169d9399418f6dcb36e055584
+      internalID: -580584220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00077
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1581
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4e1caab82f7ba4d94988ab1d61770a
+      internalID: 1927962314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00078
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1057
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2ef6cd13853bd45aa1365bee86c139
+      internalID: -1526352833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00079
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1581
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19db6bf592c8f5a44bb4bd46a23b45f1
+      internalID: -404041286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00080
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1581
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6493da0589f0ade43911896cf0110654
+      internalID: 1595895462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00081
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1581
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385a011f63395cc45a292d460df63a8c
+      internalID: 412597320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00082
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1581
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6fb75688541164db7672581e55b77d
+      internalID: 1370519839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00083
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1534
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dac6e5b15ad62943898257b538e2d0a
+      internalID: 599154091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00084
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1534
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ed02b863e0ee343b6fec96703d53a6
+      internalID: 591221863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00085
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1534
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d01c34b223e3540aae076680581156
+      internalID: 1226468547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00086
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1534
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857bab394f0e77849a9db91cbf13a0c0
+      internalID: 791485514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00087
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1534
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1b22b1c24d9b84393cb6a4ce598eeb
+      internalID: 1602694806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00088
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1009
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33ed547f94ef974091e9b28764cbda0
+      internalID: 712923223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00089
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1487
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc2eddaece394443a2c822ef1c985d6
+      internalID: -1817511608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00090
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1910
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5e63c642543aa4a8c578375300a84c
+      internalID: -2077178189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00091
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1009
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a197668a37c7d8f4ba95a871c0a2ba04
+      internalID: 2056064706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00092
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1487
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d923b439e6911054585711e206d1480a
+      internalID: -1216299978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00093
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1487
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8534a5d65a7bc7b49ba99700dca5e17b
+      internalID: 1109237453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00094
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1487
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4cc34184926ce4cbd31624deb81b6f
+      internalID: -16662548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00095
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1487
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4970e81fdc9f5574cb92571c1eb447c8
+      internalID: 425004180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00096
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67642cda4e565141819cc6d1352cbdc
+      internalID: 1128177105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00097
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1440
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ae3f3d59164494281ef7a25b166f88
+      internalID: 628824680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00098
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1440
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39fd6c2a66679b459d48403630abeca
+      internalID: 1709429222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00099
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1009
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffac6aeb9539b844a241fb36dda97f8
+      internalID: 1171815896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00100
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1009
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0171fab550e06d64086cc8514ac9c425
+      internalID: -307713607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00101
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1009
+        width: 200
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe78a2bd6e18c7842a05bad94d670e58
+      internalID: 267768083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00102
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1440
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f4f50d927e4784383860ed62a94f4b
+      internalID: 179954234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00103
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1440
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ec02577ac397e459538798866872b7
+      internalID: -646862040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1393
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc05e99799a0eb41ae4499761914c50
+      internalID: -3550067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00105
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1393
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7c8ea2cbb925d4e9007a5cb35fd917
+      internalID: 178962590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00106
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1393
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c256d8f0d1b094ab554c5bce84f664
+      internalID: -229659025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00107
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1393
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3231ba8cd5e791a42be10e24020aeb98
+      internalID: 1195411520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00108
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1393
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354594c6ee331914a961c8241dc975c3
+      internalID: -202473150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00109
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1346
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6d1f37ec5cacc44a3b8c1304e8d9ec
+      internalID: 503833801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00110
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1346
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6252c4b0a00070841990068753011e12
+      internalID: -573068044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00111
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1346
+        width: 200
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4680851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24969b34963da164a897b932adaa2a75
+      internalID: 641868707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00112
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1910
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b64baaa697f14f40b3cb34999c25ba4
+      internalID: -29131614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00113
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1910
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcd056ac137efb44a27c7d393c20192
+      internalID: -142487592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00114
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1910
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308b548d009704a408e8462ba2f361cb
+      internalID: -1835894635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00115
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1910
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643b44ec00ad3a546abe03a4f49842df
+      internalID: -963614689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00116
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1864
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dbd75b5bdfd5a408e7b0c831880e0b
+      internalID: 1115413069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00117
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1864
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcd57784b9650d498d35b1ff2e99296
+      internalID: 1662573844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00118
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1864
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16703a5306d76d848aba45a0741b3cc4
+      internalID: 701961802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SevapFroth_00119
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1864
+        width: 200
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45652175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a4e07f375254e40a6aeca8c48be1de
+      internalID: -1701144725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 46121dfa80b076f4d8f61bf1c579df0b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SevapFroth_00020: -1870350454
+      SevapFroth_00108: -202473150
+      SevapFroth_00026: 115368507
+      SevapFroth_00004: 763269256
+      SevapFroth_00065: 1297983023
+      SevapFroth_00076: -580584220
+      SevapFroth_00006: 1552202845
+      SevapFroth_00033: -1460591001
+      SevapFroth_00039: -1304831890
+      SevapFroth_00005: -384156138
+      SevapFroth_00095: 425004180
+      SevapFroth_00047: -333660256
+      SevapFroth_00059: -1423832660
+      SevapFroth_00088: 712923223
+      SevapFroth_00119: -1701144725
+      SevapFroth_00003: 599232615
+      SevapFroth_00112: -29131614
+      SevapFroth_00010: -775916718
+      SevapFroth_00083: 599154091
+      SevapFroth_00075: 1924058217
+      SevapFroth_00021: -846061372
+      SevapFroth_00109: 503833801
+      SevapFroth_00096: 1128177105
+      SevapFroth_00099: 1171815896
+      SevapFroth_00057: -1096213574
+      SevapFroth_00062: -206544003
+      SevapFroth_00024: 1911764353
+      SevapFroth_00028: -1178509786
+      SevapFroth_00064: 2114391676
+      SevapFroth_00074: 1385223083
+      SevapFroth_00063: 1047144470
+      SevapFroth_00080: 1595895462
+      SevapFroth_00034: -1441587187
+      SevapFroth_00066: -1195821188
+      SevapFroth_00077: 1927962314
+      SevapFroth_00081: 412597320
+      SevapFroth_00009: 2050458709
+      SevapFroth_00092: -1216299978
+      SevapFroth_00014: 1288410229
+      SevapFroth_00111: 641868707
+      SevapFroth_00116: 1115413069
+      SevapFroth_00068: 1452820531
+      SevapFroth_00107: 1195411520
+      SevapFroth_00038: -77502032
+      SevapFroth_00040: -1546367547
+      SevapFroth_00101: 267768083
+      SevapFroth_00046: -640798287
+      SevapFroth_00031: 1151503150
+      SevapFroth_00110: -573068044
+      SevapFroth_00050: 1592427801
+      SevapFroth_00022: -671178740
+      SevapFroth_00044: 1613761336
+      SevapFroth_00027: 1274142131
+      SevapFroth_00086: 791485514
+      SevapFroth_00052: -1001543913
+      SevapFroth_00017: 318249827
+      SevapFroth_00037: 1921443232
+      SevapFroth_00073: 1960999508
+      SevapFroth_00106: -229659025
+      SevapFroth_00002: -1848698568
+      SevapFroth_00053: 212419898
+      SevapFroth_00042: -1965361947
+      SevapFroth_00089: -1817511608
+      SevapFroth_00054: -1194010453
+      SevapFroth_00016: -23319617
+      SevapFroth_00067: -76115919
+      SevapFroth_00025: -1494325453
+      SevapFroth_00104: -3550067
+      SevapFroth_00023: 266176284
+      SevapFroth_00048: -309881748
+      SevapFroth_00043: -469841104
+      SevapFroth_00082: 1370519839
+      SevapFroth_00008: 1428547267
+      SevapFroth_00093: 1109237453
+      SevapFroth_00058: -701143332
+      SevapFroth_00056: -315981496
+      SevapFroth_00032: 916853215
+      SevapFroth_00049: -314107762
+      SevapFroth_00001: 1860828064
+      SevapFroth_00060: 667476603
+      SevapFroth_00084: 591221863
+      SevapFroth_00051: -1238097893
+      SevapFroth_00091: 2056064706
+      SevapFroth_00013: -348328604
+      SevapFroth_00007: -1639302411
+      SevapFroth_00019: 159630126
+      SevapFroth_00018: -478208442
+      SevapFroth_00030: -612765605
+      SevapFroth_00011: 1501579783
+      SevapFroth_00055: 1785991135
+      SevapFroth_00036: -1894217925
+      SevapFroth_00097: 628824680
+      SevapFroth_00103: -646862040
+      SevapFroth_00012: -115787564
+      SevapFroth_00045: 1225851859
+      SevapFroth_00090: -2077178189
+      SevapFroth_00115: -963614689
+      SevapFroth_00000: 1418563766
+      SevapFroth_00102: 179954234
+      SevapFroth_00113: -142487592
+      SevapFroth_00015: 1905208506
+      SevapFroth_00035: -2067032082
+      SevapFroth_00061: -1178889115
+      SevapFroth_00098: 1709429222
+      SevapFroth_00114: -1835894635
+      SevapFroth_00085: 1226468547
+      SevapFroth_00118: 701961802
+      SevapFroth_00100: -307713607
+      SevapFroth_00087: 1602694806
+      SevapFroth_00070: -301476085
+      SevapFroth_00029: -42273858
+      SevapFroth_00117: 1662573844
+      SevapFroth_00071: 1983377279
+      SevapFroth_00078: -1526352833
+      SevapFroth_00041: 549309909
+      SevapFroth_00105: 178962590
+      SevapFroth_00094: -16662548
+      SevapFroth_00069: -1199480252
+      SevapFroth_00079: -404041286
+      SevapFroth_00072: -1646531377
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
