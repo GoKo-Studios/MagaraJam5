@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Managers;
+using Assets.Scripts.Enums;
 
 namespace Assets.Scripts.Controllers {
     public class MobAnimationController : MonoBehaviour
@@ -24,16 +25,25 @@ namespace Assets.Scripts.Controllers {
         }
 
         private void OnSetup() {
-            foreach (GameObject mesh in GetComponentsInChildren<GameObject>()) {
-                if (_manager.Data.Mesh.GetComponent<MeshTag>().Tag == mesh.GetComponent<MeshTag>().Tag) {
-                    _animator = mesh.GetComponent<Animator>();
+            foreach (Animator mesh in GetComponentsInChildren<Animator>()) {
+                if (_manager.Data.Mesh.GetComponent<MeshTag>().Tag == mesh.gameObject.GetComponent<MeshTag>().Tag) {
+                    _animator = mesh;
                 }
             }
         }
 
-        private void OnAnimation(string Trigger) {
+        private void OnAnimation(string Name, MobAnimationControllerTypes Type, bool Value) {
             if (_animator == null) return;
-            //_animator.SetTrigger();
+
+            switch(Type) {
+                case MobAnimationControllerTypes.Trigger:
+                    _animator.SetTrigger(Name);
+                break;
+
+                case MobAnimationControllerTypes.Bool:
+                    _animator.SetBool(Name, Value);
+                break;
+            }
         }
     }
 }

@@ -25,13 +25,16 @@ namespace Assets.Scripts.Managers {
 
         [SerializeField] private int _initialMobAmount;
         [SerializeField] private int _initialOrbAmount;
+        [SerializeField] private int _initialBulletAmount;
         private Queue<GameObject> _mobQueue = new Queue<GameObject>();
         private Queue<GameObject> _orbQueue = new Queue<GameObject>();
+        private Queue<GameObject> _bulletQueue = new Queue<GameObject>();
 
         [SerializeField] private List<Queue<GameObject>> _poolableObjectQueue = new List<Queue<GameObject>>();
 
         [SerializeField] private GameObject _mobPrefab; // Only temporary. Could be loaded from Resources.
         [SerializeField] private GameObject _orbPrefab;
+        [SerializeField] private GameObject _bulletPrefab;
 
         public void Start()
         {
@@ -47,6 +50,10 @@ namespace Assets.Scripts.Managers {
             for (int x = 0; x < _initialOrbAmount; x++) {
                 AddObject(PoolableObjectTypes.Orb);
             } 
+
+            for (int x = 0; x < _initialBulletAmount; x++) {
+                AddObject(PoolableObjectTypes.Bullet);
+            } 
         }
 
         public void EnqueueObject(GameObject obj, PoolableObjectTypes Type)
@@ -58,6 +65,10 @@ namespace Assets.Scripts.Managers {
 
                 case PoolableObjectTypes.Orb:
                     _orbQueue.Enqueue(obj);
+                break;
+
+                case PoolableObjectTypes.Bullet:
+                    _bulletQueue.Enqueue(obj);
                 break;
             }
 
@@ -92,6 +103,16 @@ namespace Assets.Scripts.Managers {
                     obj = _orbQueue.Dequeue();
                     obj.SetActive(true);
                 break;
+
+                case PoolableObjectTypes.Bullet:
+                // If there are no remaining poolable objects, initialize more.
+                    if (_bulletQueue.Count <= 0) {
+                        AddObject(PoolableObjectTypes.Bullet);
+                    }
+
+                    obj = _bulletQueue.Dequeue();
+                    obj.SetActive(true);
+                break;
             }
             return obj;
         }
@@ -108,6 +129,12 @@ namespace Assets.Scripts.Managers {
                 case PoolableObjectTypes.Orb:
                     obj = Instantiate(_orbPrefab, transform, true);
                     _orbQueue.Enqueue(obj);
+                    obj.SetActive(false);
+                break;
+
+                case PoolableObjectTypes.Bullet:
+                    obj = Instantiate(_bulletPrefab, transform, true);
+                    _bulletQueue.Enqueue(obj);
                     obj.SetActive(false);
                 break;
             }

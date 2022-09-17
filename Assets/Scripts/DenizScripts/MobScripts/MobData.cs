@@ -20,7 +20,10 @@ public struct MobData
     public Vector3 TriggerSize;
     public float InvulnerableTime;
     public float AttackAngleTreshold;
-    //public float OnDeathAlertRange;
+    public float PanicDuration;
+    public float OnDeathPanicRange;
+    public float PanicRandomRange;
+    public LayerMask PanicLayerMask;
     //public GameObject AttackIndicator;
 
     [Header("VFX")]

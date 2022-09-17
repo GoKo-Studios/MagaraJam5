@@ -73,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3105200907975400960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -256,6 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5140363000698748898}
   - component: {fileID: 1544754774}
+  - component: {fileID: 5200555103709893663}
   m_Layer: 8
   m_Name: Mesh
   m_TagString: Enemy
@@ -271,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5597665116397484284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -288,6 +289,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f8deb9be3f1edb4da6810eef4bc0b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5200555103709893663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5597665116397484284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bfa7da808f120439ca1ca9ba32cc7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5944665332230917635
@@ -369,6 +382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1020656188258738633, guid: 885137b597917dd46b5f0e0e95c738fa,
         type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020656188258738633, guid: 885137b597917dd46b5f0e0e95c738fa,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 42abe6fdb54d52643b25512f7e17c7c6, type: 2}
@@ -410,7 +428,12 @@ PrefabInstance:
     - target: {fileID: 3075357768831004933, guid: 885137b597917dd46b5f0e0e95c738fa,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3075357768831004933, guid: 885137b597917dd46b5f0e0e95c738fa,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3075357768831004933, guid: 885137b597917dd46b5f0e0e95c738fa,
         type: 3}
