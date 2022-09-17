@@ -385,16 +385,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 0.38823533, g: 0.5058824, b: 0.6784314, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -403,7 +393,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -440,13 +429,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -892,7 +876,7 @@ PrefabInstance:
     - target: {fileID: 7580065153319117043, guid: 95a9430cce3b0df489f55c904c2e2c66,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.7830014
+      value: 7.620001
       objectReference: {fileID: 0}
     - target: {fileID: 7580065153319117043, guid: 95a9430cce3b0df489f55c904c2e2c66,
         type: 3}
@@ -6239,8 +6223,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8517725900640002782, guid: 4fa75b5c31913c84fb19a10ce3dd60bd, type: 3}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!1 &128031483
 GameObject:
   m_ObjectHideFlags: 0
@@ -6356,7 +6338,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1 &146484073
 GameObject:
   m_ObjectHideFlags: 0
@@ -7304,16 +7285,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -7322,7 +7293,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7359,13 +7329,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -7530,16 +7495,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -7548,7 +7503,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7585,13 +7539,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -7815,8 +7764,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 675424561}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!1 &219568920
 GameObject:
   m_ObjectHideFlags: 0
@@ -7932,7 +7879,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1 &223581444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 169fef63544b102478085ea0e3759e36,
@@ -10141,11 +10087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510934747}
   m_LocalRotation: {x: -0.0000002980231, y: 1, z: -0.000000670552, w: -0.00000017881388}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_LocalPosition: {x: -0.013750004, y: 0.000012210533, z: 0.017499987}
-=======
   m_LocalPosition: {x: 0.013750009, y: 0.000012210529, z: 0.017499978}
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10183,16 +10125,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -10201,7 +10133,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -10238,13 +10169,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -13560,124 +13486,6 @@ MeshCollider:
   m_CookingOptions: 30
   m_Mesh: {fileID: -1926403951900781465, guid: 50825d05ae6c75941b64a487478b8b7e, type: 3}
 --- !u!1 &676380722
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 676380723}
-  - component: {fileID: 676380725}
-  - component: {fileID: 676380724}
-  m_Layer: 0
-  m_Name: Spot Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &676380723
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676380722}
-  m_LocalRotation: {x: 0.00000007450578, y: 1, z: -0.0000004023312, w: -0.000000059604623}
-  m_LocalPosition: {x: 0.013750004, y: 0.000000003501773, z: 0.017499993}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 920229099}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &676380724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676380722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
---- !u!108 &676380725
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676380722}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!1 &712479656
-=======
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14026,16 +13834,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -14044,7 +13842,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -14081,13 +13878,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -14537,8 +14329,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1132015304}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!1 &760730077
 GameObject:
   m_ObjectHideFlags: 0
@@ -14654,7 +14444,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1001 &782698101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21285,8 +21074,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!1 &929859376
 GameObject:
   m_ObjectHideFlags: 0
@@ -21632,7 +21419,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1 &953709788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 375517915199365746, guid: 4fa75b5c31913c84fb19a10ce3dd60bd,
@@ -26675,11 +26461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971845470}
   m_LocalRotation: {x: -0.0000002980231, y: 1, z: -0.000000670552, w: -0.00000017881388}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_LocalPosition: {x: -0.013750004, y: 0.000012210533, z: 0.017499987}
-=======
   m_LocalPosition: {x: 0.013750009, y: 0.000012210529, z: 0.017499978}
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26717,16 +26499,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -26735,7 +26507,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -26772,13 +26543,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -26848,16 +26614,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -26866,7 +26622,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -26903,13 +26658,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -27556,16 +27306,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -27574,7 +27314,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -27611,13 +27350,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -35525,8 +35259,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275732117}
   m_Mesh: {fileID: -667296322792049582, guid: 03e1bd15b0d0f604d9b1db32a720bafc, type: 3}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!65 &1275732121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35540,7 +35272,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.022357346, y: 0.03337919, z: 0.018920025}
   m_Center: {x: 0.0000000035347254, y: 0.016489595, z: -0.00053999113}
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1 &1276959188 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 375517915199365746, guid: 4fa75b5c31913c84fb19a10ce3dd60bd,
@@ -35785,11 +35516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311993756}
   m_LocalRotation: {x: -0.0000002980231, y: 1, z: -0.000000670552, w: -0.00000017881388}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_LocalPosition: {x: -0.013750004, y: 0.000012210533, z: 0.017499987}
-=======
   m_LocalPosition: {x: 0.013750009, y: 0.000012210529, z: 0.017499978}
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35827,16 +35554,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -35845,7 +35562,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -35882,13 +35598,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -42194,8 +41905,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1424912236}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!1 &1434488260
 GameObject:
   m_ObjectHideFlags: 0
@@ -42311,7 +42020,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1 &1436519692
 GameObject:
   m_ObjectHideFlags: 0
@@ -42376,16 +42084,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -42394,7 +42092,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -42431,13 +42128,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -43353,16 +43045,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -43371,7 +43053,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -43408,13 +43089,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -44395,16 +44071,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -44413,7 +44079,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -44450,13 +44115,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -44687,11 +44347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624007399}
   m_LocalRotation: {x: -0.0000002980231, y: 1, z: -0.000000670552, w: -0.00000017881388}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_LocalPosition: {x: -0.013750004, y: 0.000012210533, z: 0.017499987}
-=======
   m_LocalPosition: {x: 0.01375, y: 0.000012210529, z: 0.017499978}
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44729,16 +44385,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -44747,7 +44393,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -44784,13 +44429,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -45553,8 +45193,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2003668118}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!1 &1679489414
 GameObject:
   m_ObjectHideFlags: 0
@@ -45670,7 +45308,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1 &1683701718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 169fef63544b102478085ea0e3759e36,
@@ -46303,8 +45940,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2064443715787264452, guid: 169fef63544b102478085ea0e3759e36, type: 3}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!1 &1786148690
 GameObject:
   m_ObjectHideFlags: 0
@@ -46420,7 +46055,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1 &1792943585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 50825d05ae6c75941b64a487478b8b7e,
@@ -47347,8 +46981,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd73f1277eea54342a6993dbdfb4c64f, type: 3}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-=======
 --- !u!1 &1896368599
 GameObject:
   m_ObjectHideFlags: 0
@@ -47464,7 +47096,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 --- !u!1 &1897580697 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 169fef63544b102478085ea0e3759e36,
@@ -47632,16 +47263,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -47650,7 +47271,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -47687,13 +47307,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -47858,16 +47473,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -47876,7 +47481,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -47913,13 +47517,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -48717,11 +48316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004687804}
   m_LocalRotation: {x: -0.0000002980231, y: 1, z: -0.000000670552, w: -0.00000017881388}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_LocalPosition: {x: -0.013750004, y: 0.000012210533, z: 0.017499987}
-=======
   m_LocalPosition: {x: 0.013750009, y: 0.000012210529, z: 0.017499978}
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48759,16 +48354,6 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-=======
   m_Color: {r: 0.80343837, g: 0.8113208, b: 0.54725885, a: 1}
   m_Intensity: 75
   m_Range: 20
@@ -48777,7 +48362,6 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -48814,13 +48398,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-=======
   m_ColorTemperature: 9101
   m_UseColorTemperature: 1
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -50091,253 +49670,9 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream:Assets/Scenes/Designer_-_Scene.unity
-  m_GameObject: {fileID: 2052743597}
-  m_Mesh: {fileID: -8339797037719790880, guid: 9a89c01f0ef3d2b46adb8115dbcd4b74, type: 3}
---- !u!64 &2052743601
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052743597}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8339797037719790880, guid: 9a89c01f0ef3d2b46adb8115dbcd4b74, type: 3}
---- !u!1 &2064250227
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2064250228}
-  - component: {fileID: 2064250230}
-  - component: {fileID: 2064250229}
-  m_Layer: 0
-  m_Name: Spot Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2064250228
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064250227}
-  m_LocalRotation: {x: 0.00000007450578, y: 1, z: -0.0000004023312, w: -0.000000059604623}
-  m_LocalPosition: {x: 0.013750004, y: 0.000000003501773, z: 0.017499993}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 160199863}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &2064250229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064250227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
---- !u!108 &2064250230
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064250227}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!1001 &2068309187
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1709495451}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.047966
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 24.925314
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.131279
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.50008726
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.49991274
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.50008726
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.49991274
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.98
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 169fef63544b102478085ea0e3759e36,
-        type: 3}
-      propertyPath: m_Name
-      value: Street_Lamp (9)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 169fef63544b102478085ea0e3759e36, type: 3}
---- !u!4 &2068309188 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 169fef63544b102478085ea0e3759e36,
-    type: 3}
-  m_PrefabInstance: {fileID: 2068309187}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &2068309191
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683701718}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2064443715787264452, guid: 169fef63544b102478085ea0e3759e36, type: 3}
---- !u!1 &2076506212
-=======
   m_GameObject: {fileID: 2076506212}
   m_Mesh: {fileID: 8502847727802596007, guid: a4203e59ce2d5fb489c08a7bc9ab0a8d, type: 3}
 --- !u!1 &2081430028
->>>>>>> Stashed changes:Assets/Scenes/Designer - Scene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
