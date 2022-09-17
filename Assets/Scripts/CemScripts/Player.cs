@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
     public LayerMask enemyLayerMask;
 
     private DashSkill dashSkill;
+    private SmashSkill smashSkill;
 
     public UnityAction dashCollidedWithEnemy;
     
@@ -57,6 +58,7 @@ public class Player : MonoBehaviour
         arrowMovement = GameObject.Find("Noname Weapon").GetComponent<theArrowMovement>();
 
         dashSkill = GetComponent<DashSkill>();
+        smashSkill = GetComponent<SmashSkill>();
 
         for(int i = 0; i < 4; i++){
             stateAwake[i] = true;
@@ -117,8 +119,9 @@ public class Player : MonoBehaviour
 
         LookAtMouse();
 
-        if(!isGrounded && playerInput.groundSmashEvent){
+        if(distanceFromGround > 3.0f && playerInput.groundSmashEvent && smashSkill.IsAvailable()){
             playerStates = PlayerStates.GroundSmash;
+            smashSkill.OnUse();
         }
     }
 
@@ -160,8 +163,9 @@ public class Player : MonoBehaviour
             dashSkill.OnUse();
             playerStates = PlayerStates.Dashing;
         }
-        else if(playerInput.groundSmashEvent && distanceFromGround > 3.0f){
+        else if(playerInput.groundSmashEvent && distanceFromGround > 3.0f && smashSkill.IsAvailable()){
             playerStates = PlayerStates.GroundSmash;
+            smashSkill.OnUse();
         }
         else{
             if(movingDirection.magnitude == 0 && isGrounded){

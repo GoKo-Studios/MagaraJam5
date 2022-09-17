@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public abstract class PlayerSkills : MonoBehaviour
 {
@@ -10,6 +11,19 @@ public abstract class PlayerSkills : MonoBehaviour
 
     public virtual void SetAvailable(bool availability){
         isAvailable = availability;
+    }
+
+    protected void StartCooldownCoroutine(){
+        StartCoroutine(CooldownCountdown());
+    }
+
+    private IEnumerator CooldownCountdown(){
+        while(cooldownCounter > 0.0f){
+            yield return new WaitForSecondsRealtime(1.0f);
+            cooldownCounter -= 1.0f;
+        }
+        cooldownCounter = Mathf.Clamp(cooldownCounter, 0.0f, skillCooldown);
+        yield return null;
     }
 
 }

@@ -141,7 +141,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7177489755086773955}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 511872049}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16681ac06cf7a504fb0331c45cad62b4, type: 3}
@@ -268,25 +268,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &511872049 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7177489754752019114, guid: b868063fa43ff1d4497604abc0f16b18,
-    type: 3}
-  m_PrefabInstance: {fileID: 7177489755086773955}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &511872050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 511872049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c18fd2f80b847848831523d8dc34808, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  taggedEnemyList: []
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,24 +317,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1309235750 stripped
+--- !u!1 &1150875027 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7580065153319117054, guid: 95a9430cce3b0df489f55c904c2e2c66,
+  m_CorrespondingSourceObject: {fileID: 3777601318819174344, guid: 53400ea471d68c143bf65e0ee854371c,
     type: 3}
-  m_PrefabInstance: {fileID: 7580065153057781049}
+  m_PrefabInstance: {fileID: 3777601320573862687}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1309235756
+--- !u!114 &1150875029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309235750}
+  m_GameObject: {fileID: 1150875027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16d342577c254054baaa4be94e943acf, type: 3}
+  m_Script: {fileID: 11500000, guid: d7e53a2640d10e242afb52160ffd9875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillCooldown: 5
+  skillDamage: 25
 --- !u!1 &1845768688
 GameObject:
   m_ObjectHideFlags: 0
