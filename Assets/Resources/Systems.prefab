@@ -103,7 +103,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseCollisionLayer:
     serializedVersion: 2
+<<<<<<< HEAD
     m_Bits: 2056
+=======
+    m_Bits: 1032
+>>>>>>> a9c28a8e2802c83be9b779b489ff2bc30df63013
 --- !u!1 &1800657306650128903
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1828198231966017397
 Transform:
   m_ObjectHideFlags: 0

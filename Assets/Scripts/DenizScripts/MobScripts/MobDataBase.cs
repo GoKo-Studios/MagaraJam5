@@ -82,12 +82,13 @@ public abstract class MobDataBase : ScriptableObject
             }
             else {
                 // If there is no any valid target.
-
-                _targetPosition = Params.MobTransform.position;
-                //Params.Manager.OnIdle?.Invoke();
-                Params.Manager.SetState(MobStates.Idle);
-                //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
-                Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
+                if (Params.Manager.GetState() != MobStates.Panic && Params.Manager.GetState() != MobStates.Stunned && Params.Manager.GetState() != MobStates.Attacking) {
+                    _targetPosition = Params.MobTransform.position;
+                    //Params.Manager.OnIdle?.Invoke();
+                    Params.Manager.SetState(MobStates.Idle);
+                    //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
+                    Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
+                }     
             }
 
             // When the mob is stunned.
@@ -106,7 +107,7 @@ public abstract class MobDataBase : ScriptableObject
             if (Params.Manager.GetState() == MobStates.Panic) {
                 float randomPosX = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
                 float randomPosZ = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
-                _targetPosition = new Vector3(randomPosX, 0, randomPosZ);
+                _targetPosition = new Vector3(Params.MobTransform.position.x + randomPosX, 0, Params.MobTransform.position.z + randomPosZ);
             }
 
             MoveToPosition(Params.NavAgent, _targetPosition);
@@ -282,6 +283,7 @@ public abstract class MobDataBase : ScriptableObject
         float elapsedTime = 0;
         while(elapsedTime < Duration) {
             elapsedTime += Time.deltaTime;
+            Debug.Log("Looping");
             if (Manager.GetState() == MobStates.Stunned) yield break;
             if (Manager.GetState() == MobStates.Attacking) yield break;
             if (Manager.GetState() == MobStates.Following) yield break;

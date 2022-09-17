@@ -52,6 +52,23 @@ namespace Assets.Scripts.Managers {
             return spawnedObj;
         }
 
+        public GameObject SpawnMobWithPoolingAndLocation(MobDataBase Data, Transform Location)
+        {
+            var spawnedObj = ObjectPoolingManager.Instance.DequeObject(PoolableObjectTypes.Mob);
+            spawnedObj.GetComponent<MobManager>().Setup(Data);
+
+            if (spawnedObj.TryGetComponent<NavMeshAgent>(out NavMeshAgent agent)) {
+                agent.Warp(Location.position);
+            }
+            else {
+                spawnedObj.transform.position = Location.position;
+            }
+            spawnedObj.transform.rotation = Location.rotation;
+
+            spawnedObj.GetComponent<PoolableObjectController>().IsCalledByPooling = true;
+            return spawnedObj;
+        }
+
         public GameObject SpawnOrbWithPooling(Vector3 Position) {
             var spawnedObj = ObjectPoolingManager.Instance.DequeObject(PoolableObjectTypes.Orb);
             spawnedObj.transform.position = Position;
