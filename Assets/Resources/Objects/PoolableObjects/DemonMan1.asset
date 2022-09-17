@@ -16,7 +16,7 @@ MonoBehaviour:
     DisplayName: Spider
     MaxHealth: 100
     FollowSpeed: 3
-    DetectionRange: 10
+    DetectionRange: 300
     AttackRange: 3
     StoppingDistance: 3
     DamageDealt: 10
