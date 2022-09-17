@@ -73,6 +73,10 @@ public class Player : MonoBehaviour
     {
         //isGrounded = Physics.CheckSphere(groundCheck.position, 0.2f, groundMask);
         isGrounded = charController.isGrounded;
+        
+        Vector3 forwardMovingDir = playerFollowCam.transform.forward;
+        forwardMovingDir.y = 0.0f;
+        movingDirection = (forwardMovingDir * playerInput.movingInput.y + playerFollowCam.transform.right * playerInput.movingInput.x).normalized;
 
         RaycastHit ray;
         if(Physics.Raycast(transform.position, Vector3.down, out ray, 50f, groundLayerMask)){
@@ -115,6 +119,10 @@ public class Player : MonoBehaviour
 
         PullEnemiesSkill();
 
+        if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.CallBack){
+            LookAtMouse();
+        }
+
         if(distanceFromGround > 3.0f && playerInput.groundSmashEvent && smashSkill.IsAvailable()){
             playerStates = PlayerStates.GroundSmash;
             smashSkill.OnUse();
@@ -129,10 +137,7 @@ public class Player : MonoBehaviour
             stateAwake[1] = false;
         }
 
-        Vector3 forwardMovingDir = playerFollowCam.transform.forward;
-        forwardMovingDir.y = 0.0f;
-
-        movingDirection = (forwardMovingDir * playerInput.movingInput.y + playerFollowCam.transform.right * playerInput.movingInput.x).normalized; 
+         
         charController.Move(movingDirection * speed * Time.deltaTime);
 
         if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.OutAndActive){
@@ -221,22 +226,24 @@ public class Player : MonoBehaviour
 
             hitTheGround = true;
 
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 5.0f);
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 5.0f, enemyLayerMask);
             if(colliders.Length != 0){
                 foreach(Collider col in colliders){
-                    
-                    Debug.Log(col.transform.name);
                     if(col.GetComponentInParent<MobManager>()){
-                        MobManager mobManager = col.GetComponentInParent<MobManager>();
-                        Vector3 direction = (col.transform.position - transform.position).normalized;
-                        direction.y = 1.0f;
-                        
-                        Rigidbody rb = col.GetComponentInParent<Rigidbody>();
-                        
-                        if(mobManager.isActiveAndEnabled){
-                            mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, 30.0f, 4.0f, direction, 2.0f, rb));
+                        try{
+                            MobManager mobManager = col.GetComponentInParent<MobManager>();
+                            Vector3 direction = (col.transform.position - transform.position).normalized;
+                            direction.y = 1.0f;
+                            
+                            Rigidbody rb = col.GetComponentInParent<Rigidbody>();
+                            
+                            if(mobManager.isActiveAndEnabled){
+                                mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, 30.0f, 4.0f, direction, 2.0f, rb));
+                            }
                         }
-                        
+                        catch{
+
+                        }
                     }
                 }
             }
@@ -271,11 +278,16 @@ public class Player : MonoBehaviour
                 if(enemy == null){
                     return;
                 }
-                MobManager mb = enemy.GetComponentInParent<MobManager>();
-                mb.OnStunned?.Invoke(mb, 10.0f);
-                Transform tf = mb.GetComponent<Transform>();
-                NavMeshAgent agent = enemy.GetComponentInParent<NavMeshAgent>();
-                StartCoroutine(PullEnemies((transform.position - tf.position).normalized, tf, agent));
+                try{
+                    MobManager mb = enemy.GetComponentInParent<MobManager>();
+                    mb.OnStunned?.Invoke(mb, 10.0f);
+                    Transform tf = mb.GetComponent<Transform>();
+                    NavMeshAgent agent = enemy.GetComponentInParent<NavMeshAgent>();
+                    StartCoroutine(PullEnemies((transform.position - tf.position).normalized, tf, agent));
+                }
+                catch{
+                    arrowMovement.taggedEnemyList.Remove(enemy);
+                }
             }
             arrowMovement.taggedEnemyList.Clear();
         }

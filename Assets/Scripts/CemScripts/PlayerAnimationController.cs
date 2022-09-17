@@ -10,7 +10,6 @@ public class PlayerAnimationController : MonoBehaviour
     private float rightVelocity;
     private float playerSpeed;
     private bool hasPlayerJumped;
-    private bool blendTreeMode;
     public LayerMask floorOrGrounLM;
     private Vector3 animationMovingDirection;
     private Vector3 distanceF;
@@ -24,7 +23,6 @@ public class PlayerAnimationController : MonoBehaviour
         player.playerJumpEvent += hasJumped;
         player.onSmashEnter += OnSmashEvent;
         player.onSmashExit += OnSmashExit;
-        blendTreeMode = true;
     }
 
     void OnDestroy(){
@@ -57,9 +55,9 @@ public class PlayerAnimationController : MonoBehaviour
             animator.SetTrigger("Jump");
         }
 
-        if(player.isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Player Fall")){
-            animator.SetTrigger("BackToBlendTree");
-        }
+        // if(player.isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Player Fall")){
+        //     animator.SetTrigger("BackToBlendTree");
+        // }
 
         if(player.distanceFromGround > 2.0f){
             animator.SetBool("FallBool", true);
@@ -96,7 +94,6 @@ public class PlayerAnimationController : MonoBehaviour
     }
 
     private void OnSmashExit(){
-        Debug.Log("HELLOOOO");
         animator.SetTrigger("BackToBlendTree");
     }
 
