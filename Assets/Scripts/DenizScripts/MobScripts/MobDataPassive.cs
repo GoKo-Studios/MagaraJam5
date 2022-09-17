@@ -28,12 +28,6 @@ public class MobDataPassive : MobDataBase
                 }
             }
         }
-        
-        // If there is no any valid target.
-        if (_target == null) {
-            //Params.Manager.OnIdle?.Invoke();
-            Params.Manager.SetState(MobStates.Idle);
-        } 
 
         // An object entered the detection range while the mob was not alert.
         if (Params.Manager.GetState() == MobStates.Idle && _target != null) {
@@ -50,18 +44,31 @@ public class MobDataPassive : MobDataBase
             float _distance = Vector3.Distance(Params.MobTransform.position, _target.position);
             if ( _distance < DistanceToKeep) {
                 Params.Manager.SetState(MobStates.Following);
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Trigger, true);
                 Vector3 _direction = (Params.MobTransform.position - _target.position).normalized;
-                Vector3 _targetPosition = Params.MobTransform.position + _direction * (DistanceToKeep - _distance);
+                float _distanceToTravel = DistanceToKeep - _distance;
+                Vector3 _targetPosition = Params.MobTransform.position + _direction * (_distanceToTravel); 
                 MoveToPosition(Params.NavAgent, _targetPosition);
+            }
+            else {
+                Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true); 
+                MoveToPosition(Params.NavAgent, Params.MobTransform.position);
             }
         }
         else {
-            if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
+            // If there is no any valid target.
+    
+            MoveToPosition(Params.NavAgent, Params.MobTransform.position);
+            //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
+            //Params.Manager.OnIdle?.Invoke();
+            Params.Manager.SetState(MobStates.Idle);
+            Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
         }
 
         // When the mob is stunned.
         if (Params.Manager.GetState() == MobStates.Stunned) {
             if (!Params.NavAgent.isStopped) {
+                MoveToPosition(Params.NavAgent, Params.MobTransform.position);
                 Params.NavAgent.velocity = Vector3.zero;
                 Params.NavAgent.isStopped = true;
             }
