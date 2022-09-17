@@ -13,7 +13,6 @@ public class DashSkill : PlayerSkills
     }
 
     private void HitSomeone(){
-        Debug.Log("HELLO");
         if(IsAttackAvailable()){
             attackCooldownCounter = attackCooldown;
             StartCoroutine(AttackCooldownCountodwn());
@@ -45,18 +44,10 @@ public class DashSkill : PlayerSkills
         else{
             skillDamageValue = 0.0f;
         }
-
-        cooldownCounter = skillCooldown;
-        StartCoroutine(CooldownCountodwn());
-    }
-
-    private IEnumerator CooldownCountodwn(){
-        while(cooldownCounter > 0.0f){
-            yield return new WaitForSecondsRealtime(1.0f);
-            cooldownCounter -= 1.0f;
+        if(IsAvailable()){
+            cooldownCounter = skillCooldown;
+            StartCooldownCoroutine();
         }
-        cooldownCounter = Mathf.Clamp(cooldownCounter, 0.0f, skillCooldown);
-        yield return null;
     }
 
     private IEnumerator AttackCooldownCountodwn(){
