@@ -15,10 +15,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashSpeed = 50.0f;
     [SerializeField] private float dashDuration = 0.1f;
     [SerializeField] private float smashSpeed = 30.0f;
+    [SerializeField] private float smashHangingTime = 0.3f;
     [SerializeField] private float jumpHeight = 2.0f;
     [SerializeField] private float gravity = -29.43f; // 3 * -9.81
     [SerializeField] private float fallingSpeed = 1.0f;
-    [SerializeField] private float smashHangingTime = 0.3f;
+    
     private Vector3 velocity;
     public bool isGrounded{get; private set;}
 
@@ -247,6 +248,7 @@ public class Player : MonoBehaviour
                     }
                 }
             }
+            CameraManager.Instance.ScreenShake();
             StartCoroutine(setState(PlayerStates.Idle, 0.5f));
         }
         else if(Time.time - smashHangingTime > 0.3f){
@@ -280,7 +282,9 @@ public class Player : MonoBehaviour
                 }
                 try{
                     MobManager mb = enemy.GetComponentInParent<MobManager>();
+
                     mb.OnStunned?.Invoke(mb, 10.0f);
+                    
                     Transform tf = mb.GetComponent<Transform>();
                     NavMeshAgent agent = enemy.GetComponentInParent<NavMeshAgent>();
                     StartCoroutine(PullEnemies((transform.position - tf.position).normalized, tf, agent));
@@ -330,5 +334,5 @@ public class Player : MonoBehaviour
         }
     }
 
-    
+
 }

@@ -72,12 +72,13 @@ public class MobDataPassive : MobDataBase
         // When the mob is stunned.
         if (Params.Manager.GetState() == MobStates.Stunned) {
             if (!Params.NavAgent.isStopped) {
-                MoveToPosition(Params.NavAgent, Params.MobTransform.position);
-                Params.NavAgent.velocity = Vector3.zero;
-                Params.NavAgent.isStopped = true;
-
-                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+                
             }
+            MoveToPosition(Params.NavAgent, Params.MobTransform.position);
+            Params.NavAgent.velocity = Vector3.zero;
+            Params.NavAgent.isStopped = true;
+
+            Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
         }
         else {
             Params.NavAgent.isStopped = false;

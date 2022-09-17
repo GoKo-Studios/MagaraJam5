@@ -2,6 +2,20 @@ using UnityEngine;
 
 public class PlayerMana : MonoBehaviour
 {
+
+    #region //singleton pattern
+
+    public static PlayerMana Instance;
+
+    private void Awake(){
+        if(Instance != this && Instance != null){
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+    #endregion
+
     [SerializeField]private float maxMana = 100.0f;
     [SerializeField] private float decreaseRate;
     private float currentMana = 100.0f;
@@ -40,6 +54,10 @@ public class PlayerMana : MonoBehaviour
         else{
             return false;
         }
+    }
+
+    public float getCurrentMana(){
+        return currentMana;
     }
 
 }

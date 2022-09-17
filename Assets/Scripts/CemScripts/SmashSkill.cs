@@ -18,6 +18,9 @@ public class SmashSkill : PlayerSkills
             cooldownCounter = skillCooldown;
             StartCooldownCoroutine();
         }
-        
+    }
+
+    public float getCooldownCounter(){
+        return cooldownCounter;
     }
 }

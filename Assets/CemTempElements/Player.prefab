@@ -59,10 +59,10 @@ MonoBehaviour:
   dashSpeed: 50
   dashDuration: 0.1
   smashSpeed: 30
+  smashHangingTime: 0.3
   jumpHeight: 2
   gravity: -29.43
   fallingSpeed: 1
-  smashHangingTime: 0.3
   playerStates: 0
   groundLayerMask:
     serializedVersion: 2
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMana: 100
-  decreaseRate: 5
+  decreaseRate: 0
 --- !u!1 &3777601320706814663
 GameObject:
   m_ObjectHideFlags: 0

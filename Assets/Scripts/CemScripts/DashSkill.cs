@@ -63,4 +63,12 @@ public class DashSkill : PlayerSkills
         player.dashCollidedWithEnemy -= HitSomeone;
     }
 
+    public float getAttackCooldownCounter(){
+        return attackCooldownCounter;
+    }
+
+    public float getDashCooldownCounter(){
+        return cooldownCounter;
+    }
+
 }

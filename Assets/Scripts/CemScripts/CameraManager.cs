@@ -19,12 +19,14 @@ public class CameraManager : MonoBehaviour
     #endregion
 
     private CinemachineVirtualCamera playerFollowCam;
+    private CinemachineImpulseSource impulseSource;
     private float orthographicSize;
     private float previousOrthoSize;
     private float orthoLerpPercentage;
 
     private void Start(){
-        playerFollowCam = transform.GetChild(0).GetComponent<CinemachineVirtualCamera>();
+        playerFollowCam = GameObject.Find("PlayerFollowCam").GetComponent<CinemachineVirtualCamera>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
         orthographicSize = playerFollowCam.m_Lens.OrthographicSize;
         previousOrthoSize = orthographicSize;
     }
@@ -47,6 +49,10 @@ public class CameraManager : MonoBehaviour
     public void setOrthoSize(float size){
         previousOrthoSize = playerFollowCam.m_Lens.OrthographicSize;
         orthographicSize = size;
+    }
+
+    public void ScreenShake() {
+        impulseSource.GenerateImpulseAt(playerFollowCam.transform.position, new Vector3(0.0f, 0.2f, 0.0f));
     }
 
 }

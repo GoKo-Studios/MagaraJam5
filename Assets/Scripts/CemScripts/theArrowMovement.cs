@@ -88,7 +88,7 @@ public class theArrowMovement : MonoBehaviour
 
         moveArrow(mousePos, arrowCenterDeadzone);
 
-        if(arrowInput.callArrowBack || !playerMana.ArrowAvailability()){
+        if(arrowInput.callArrowBack || !PlayerMana.Instance.ArrowAvailability()){
             theArrowState = ArrowStates.CallBack;
             CameraManager.Instance.setOrthoSize(11.0f);
         }
@@ -100,7 +100,7 @@ public class theArrowMovement : MonoBehaviour
 
         moveArrow(playerCallBackDestination.position, 2.0f);
 
-        if(arrowInput.callArrowBack && playerMana.ArrowAvailability()){
+        if(arrowInput.callArrowBack && PlayerMana.Instance.ArrowAvailability()){
             theArrowState = ArrowStates.OutAndActive;
             CameraManager.Instance.setOrthoSize(13.5f);
         }

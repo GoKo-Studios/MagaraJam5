@@ -220,11 +220,16 @@ public abstract class MobDataBase : ScriptableObject
     }
 
     public IEnumerator HandleStunnedState(MobManager Manager, float Duration) {
-        if (Manager.GetState() == MobStates.Stunned) yield break;
-
+        //if (Manager.GetState() == MobStates.Stunned) yield break;
+        Debug.Log(Duration);
         Manager.SetState(MobStates.Stunned);
         float elapsedTime = 0;
         while(elapsedTime < Duration) {
+            if(Manager.GetState() != MobStates.Stunned){
+                
+            }
+            Debug.Log(elapsedTime);
+            Manager.SetState(MobStates.Stunned);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
