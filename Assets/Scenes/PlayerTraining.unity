@@ -814,6 +814,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8331189151294850907, guid: 53400ea471d68c143bf65e0ee854371c,
+        type: 3}
+      propertyPath: skillCooldown
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53400ea471d68c143bf65e0ee854371c, type: 3}
 --- !u!4 &3865161962955536735
@@ -1491,10 +1496,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialMobAmount: 10
   _initialOrbAmount: 10
+  _initialBulletAmount: 0
   _mobPrefab: {fileID: 3802926277855850972, guid: 8f1c866eba6deb846be7a32c555a03a4,
     type: 3}
   _orbPrefab: {fileID: 7009921566515370491, guid: 8c5862771f3cc2e418ddd640a8178a0f,
     type: 3}
+  _bulletPrefab: {fileID: 0}
 --- !u!4 &6601666591577385384
 Transform:
   m_ObjectHideFlags: 0

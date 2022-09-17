@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpHeight = 2.0f;
     [SerializeField] private float gravity = -29.43f; // 3 * -9.81
     [SerializeField] private float fallingSpeed = 1.0f;
+    [SerializeField] private float smashHangingTime = 0.3f;
     private Vector3 velocity;
     public bool isGrounded{get; private set;}
 
@@ -47,6 +48,8 @@ public class Player : MonoBehaviour
 
     public UnityAction dashCollidedWithEnemy;
     public UnityAction playerJumpEvent;
+    public UnityAction onSmashEnter;
+    public UnityAction onSmashExit;
     
     // Start is called before the first frame update
     void Start()
@@ -204,37 +207,46 @@ public class Player : MonoBehaviour
 
     private void GroundSmashStateMovement(){
         if(stateAwake[4] == true){
+            onSmashEnter?.Invoke();
+            smashHangingTime = Time.time;
             setAllAwakes();
             stateAwake[4] = false;
         }
 
+        bool hitTheGround = false;
+
         //playerInput.groundSmashEvent = false;
 
-        if(isGrounded){
+        if(isGrounded && !hitTheGround){
+
+            hitTheGround = true;
 
             Collider[] colliders = Physics.OverlapSphere(transform.position, 5.0f);
-            foreach(Collider col in colliders){
-                
-                Debug.Log(col.transform.name);
-                if(col.GetComponentInParent<MobManager>()){
-                    MobManager mobManager = col.GetComponentInParent<MobManager>();
-                    Vector3 direction = (col.transform.position - transform.position).normalized;
-                    direction.y = 1.0f;
+            if(colliders.Length != 0){
+                foreach(Collider col in colliders){
                     
-                    Rigidbody rb = col.GetComponentInParent<Rigidbody>();
-                    
-                    if(mobManager.isActiveAndEnabled){
-                        mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, 30.0f, 4.0f, direction, 2.0f, rb));
+                    Debug.Log(col.transform.name);
+                    if(col.GetComponentInParent<MobManager>()){
+                        MobManager mobManager = col.GetComponentInParent<MobManager>();
+                        Vector3 direction = (col.transform.position - transform.position).normalized;
+                        direction.y = 1.0f;
+                        
+                        Rigidbody rb = col.GetComponentInParent<Rigidbody>();
+                        
+                        if(mobManager.isActiveAndEnabled){
+                            mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, 30.0f, 4.0f, direction, 2.0f, rb));
+                        }
+                        
                     }
-                    
                 }
             }
-
-            charController.Move(Vector3.down);
             StartCoroutine(setState(PlayerStates.Idle, 0.5f));
         }
-        else{
+        else if(Time.time - smashHangingTime > 0.3f){
             charController.Move(Vector3.down * smashSpeed * Time.deltaTime);
+        }
+        else{
+            charController.Move(Vector3.zero * Time.deltaTime);
         }
     }
 
@@ -278,7 +290,10 @@ public class Player : MonoBehaviour
     }
     
     private IEnumerator setState(PlayerStates state, float delay){
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
+        if(playerStates == PlayerStates.GroundSmash){
+            onSmashExit?.Invoke();
+        }
         playerStates = state;
     }
 

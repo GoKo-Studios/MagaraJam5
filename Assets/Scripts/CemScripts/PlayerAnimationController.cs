@@ -22,11 +22,15 @@ public class PlayerAnimationController : MonoBehaviour
         animator = GetComponent<Animator>();
         characterController = player.GetComponent<CharacterController>();
         player.playerJumpEvent += hasJumped;
+        player.onSmashEnter += OnSmashEvent;
+        player.onSmashExit += OnSmashExit;
         blendTreeMode = true;
     }
 
     void OnDestroy(){
         player.playerJumpEvent -= hasJumped;
+        player.onSmashEnter -= OnSmashEvent;
+        player.onSmashExit -= OnSmashExit;
     }
 
     // Update is called once per frame
@@ -86,4 +90,14 @@ public class PlayerAnimationController : MonoBehaviour
     private void hasJumped(){
         hasPlayerJumped = true;
     }
+
+    private void OnSmashEvent(){
+        animator.SetTrigger("SmashTrigger");
+    }
+
+    private void OnSmashExit(){
+        Debug.Log("HELLOOOO");
+        animator.SetTrigger("BackToBlendTree");
+    }
+
 }
