@@ -33,7 +33,7 @@ MonoBehaviour:
     AttackAngleTreshold: 0
     PanicDuration: 5
     OnDeathPanicRange: 50
-    PanicRandomRange: 5
+    PanicRandomRange: 15
     PanicLayerMask:
       serializedVersion: 2
       m_Bits: 256

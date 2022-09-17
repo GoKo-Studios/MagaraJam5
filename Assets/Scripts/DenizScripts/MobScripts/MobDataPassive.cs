@@ -41,6 +41,7 @@ public class MobDataPassive : MobDataBase
 
         // If there is a valid target, run away from the target to keep distance. 
         if (_target != null) {
+            if (Params.Manager.GetState() == MobStates.Stunned) return;
             float _distance = Vector3.Distance(Params.MobTransform.position, _target.position);
             if ( _distance < DistanceToKeep) {
                 Params.Manager.SetState(MobStates.Following);
@@ -88,6 +89,7 @@ public class MobDataPassive : MobDataBase
             float randomPosX = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
             float randomPosZ = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
             MoveToPosition(Params.NavAgent, new Vector3(Params.MobTransform.position.x + randomPosX, 0, Params.MobTransform.position.z + randomPosZ));
+            Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, true); 
         }
     }
 
