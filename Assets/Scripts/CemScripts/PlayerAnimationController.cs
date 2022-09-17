@@ -40,7 +40,7 @@ public class PlayerAnimationController : MonoBehaviour
         else {
             playerSpeed = 1.0f;
         }
-        animationMovingDirection = Vector3.Lerp(animationMovingDirection, player.movingDirection * playerSpeed, Time.deltaTime * 2.5f);
+        animationMovingDirection = Vector3.Lerp(animationMovingDirection, player.movingDirection * playerSpeed, Time.deltaTime * 5f);
 
         forwardVelocity = Vector3.Dot(animationMovingDirection , player.transform.forward);
         rightVelocity = Vector3.Dot(animationMovingDirection, player.transform.right);

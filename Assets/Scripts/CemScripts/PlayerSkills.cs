@@ -7,6 +7,8 @@ public abstract class PlayerSkills : MonoBehaviour
     public float cooldownCounter {get; protected set;} = 0.0f;
     [SerializeField] protected float skillDamage;
     public float skillDamageValue{get; protected set;}
+    [SerializeField] private float skillStunDuration;
+    [SerializeField] private float skillKnockbackAmount;
     protected bool isAvailable;
 
     public virtual void SetAvailable(bool availability){
@@ -24,6 +26,13 @@ public abstract class PlayerSkills : MonoBehaviour
         }
         cooldownCounter = Mathf.Clamp(cooldownCounter, 0.0f, skillCooldown);
         yield return null;
+    }
+
+    public float getStunDuration(){
+        return skillStunDuration;
+    }
+    public float getKnockbackAmount(){
+        return skillKnockbackAmount;
     }
 
 }

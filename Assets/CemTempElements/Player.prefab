@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5377920669459596940}
   - component: {fileID: 9157592147793947636}
   - component: {fileID: 8331189151294850907}
+  - component: {fileID: 6144446778902180409}
   - component: {fileID: 6559018093385084909}
   m_Layer: 6
   m_Name: Player
@@ -87,6 +88,7 @@ MonoBehaviour:
   dashEvent: 0
   groundSmashEvent: 0
   pullEnemiesEvent: 0
+  playerAimEvent: 0
 --- !u!143 &3777601318819174343
 CharacterController:
   m_ObjectHideFlags: 0
@@ -149,8 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea32233ed99f154b87094658054e9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillCooldown: 5
+  skillCooldown: 2
   skillDamage: 30
+  skillStunDuration: 1.5
+  skillKnockbackAmount: 3
   attackCooldown: 12
 --- !u!114 &8331189151294850907
 MonoBehaviour:
@@ -166,6 +170,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillCooldown: 5
   skillDamage: 25
+  skillStunDuration: 1
+  skillKnockbackAmount: 3
+--- !u!114 &6144446778902180409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777601318819174344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f23c2240bdb8004c8df6a06bb22d232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pullSpeed: 45
+  stunDuration: 1
 --- !u!114 &6559018093385084909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMana: 100
-  decreaseRate: 0
+  decreaseRate: 15
 --- !u!1 &3777601320706814663
 GameObject:
   m_ObjectHideFlags: 0

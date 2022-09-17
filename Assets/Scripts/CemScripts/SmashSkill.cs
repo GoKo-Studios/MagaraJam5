@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SmashSkill : PlayerSkills
 {
-
+    
     public bool IsAvailable(){
         if(cooldownCounter == 0){
             return true;

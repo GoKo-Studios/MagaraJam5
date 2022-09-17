@@ -2,10 +2,10 @@ using UnityEngine;
 
 public enum PlayerStates
 {
-    
     Idle, 
     Walking, 
-    Running, 
+    Running,
+    Aiming, 
     Dashing, 
     GroundSmash 
     

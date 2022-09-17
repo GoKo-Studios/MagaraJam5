@@ -22,6 +22,7 @@ public class PlayerInputManager : MonoBehaviour
     public bool dashEvent;
     public bool groundSmashEvent;
     public bool pullEnemiesEvent;
+    public bool playerAimEvent;
 
 
     private void Start(){
@@ -71,6 +72,7 @@ public class PlayerInputManager : MonoBehaviour
         groundSmashEvent = false;
         jumpEvent = false;
         pullEnemiesEvent = false;
+        playerAimEvent = false;
     }
 
 }

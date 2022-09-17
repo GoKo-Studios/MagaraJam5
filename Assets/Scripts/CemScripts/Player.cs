@@ -33,8 +33,8 @@ public class Player : MonoBehaviour
 
     public PlayerStates playerStates = PlayerStates.Idle;
 
-    private bool[] stateAwake = new bool[5];
-    private float stateSize = 5;
+    private bool[] stateAwake = new bool[6];
+    private int stateSize = 6;
 
     private float dashTimer = 0.0f;
 
@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
 
     private DashSkill dashSkill;
     private SmashSkill smashSkill;
+    private PullSkill pullSkill;
 
     public UnityAction dashCollidedWithEnemy;
     public UnityAction playerJumpEvent;
@@ -63,8 +64,9 @@ public class Player : MonoBehaviour
 
         dashSkill = GetComponent<DashSkill>();
         smashSkill = GetComponent<SmashSkill>();
+        pullSkill = GetComponent<PullSkill>();
 
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < stateSize; i++){
             stateAwake[i] = true;
         }
     }
@@ -93,6 +95,9 @@ public class Player : MonoBehaviour
                 break;
             case PlayerStates.Running:
                 relocationStateMovement(runningSpeed);
+                break;
+            case PlayerStates.Aiming:
+                AimingMovement();
                 break;
             case PlayerStates.Dashing:
                 DashStateMovement();
@@ -177,6 +182,16 @@ public class Player : MonoBehaviour
 
     }
 
+    private void AimingMovement(){
+        if(stateAwake[1] == true){
+            //first transition frame.
+            setAllAwakes();
+            stateAwake[1] = false;
+        }
+
+        charController.Move(movingDirection * walkingSpeed * Time.deltaTime);
+    }
+
     private void DashStateMovement(){
         if(stateAwake[3] == true){
             dashTimer = Time.time;
@@ -196,7 +211,8 @@ public class Player : MonoBehaviour
                     Rigidbody rb = col.GetComponentInParent<Rigidbody>();
                     
                     if(mobManager.isActiveAndEnabled){
-                        mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, dashSkill.skillDamageValue, 4.0f, direction, 2.0f, rb));
+                        mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, dashSkill.skillDamageValue, 
+                        dashSkill.getKnockbackAmount(), direction, dashSkill.getStunDuration(), rb));
                     }
 
                     dashCollidedWithEnemy?.Invoke();
@@ -239,7 +255,8 @@ public class Player : MonoBehaviour
                             Rigidbody rb = col.GetComponentInParent<Rigidbody>();
                             
                             if(mobManager.isActiveAndEnabled){
-                                mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, 30.0f, 4.0f, direction, 2.0f, rb));
+                                mobManager.OnHit?.Invoke(new MobOnHitParams(mobManager, smashSkill.skillDamageValue,
+                                 smashSkill.getKnockbackAmount(), direction, smashSkill.getStunDuration(), rb));
                             }
                         }
                         catch{
@@ -283,7 +300,7 @@ public class Player : MonoBehaviour
                 try{
                     MobManager mb = enemy.GetComponentInParent<MobManager>();
 
-                    mb.OnStunned?.Invoke(mb, 10.0f);
+                    mb.OnStunned?.Invoke(mb, pullSkill.getStunDuration());
                     
                     Transform tf = mb.GetComponent<Transform>();
                     NavMeshAgent agent = enemy.GetComponentInParent<NavMeshAgent>();
@@ -300,7 +317,7 @@ public class Player : MonoBehaviour
     private IEnumerator PullEnemies(Vector3 dir, Transform tf, NavMeshAgent agent){
         while(Vector3.Distance(transform.position, tf.position) > 3.0f){
             yield return new WaitForFixedUpdate();
-            agent.Move(dir * Time.deltaTime * 50f);
+            agent.Move(dir * Time.deltaTime * pullSkill.getPullSpeed());
         }
         yield return null;
     }
