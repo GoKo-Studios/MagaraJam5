@@ -44,14 +44,15 @@ public class MobDataPassive : MobDataBase
             float _distance = Vector3.Distance(Params.MobTransform.position, _target.position);
             if ( _distance < DistanceToKeep) {
                 Params.Manager.SetState(MobStates.Following);
-                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Trigger, true);
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, true);
                 Vector3 _direction = (Params.MobTransform.position - _target.position).normalized;
                 float _distanceToTravel = DistanceToKeep - _distance;
                 Vector3 _targetPosition = Params.MobTransform.position + _direction * (_distanceToTravel); 
                 MoveToPosition(Params.NavAgent, _targetPosition);
             }
             else {
-                Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true); 
+                //Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true); 
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
                 MoveToPosition(Params.NavAgent, Params.MobTransform.position);
             }
         }
@@ -62,7 +63,8 @@ public class MobDataPassive : MobDataBase
             //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
             //Params.Manager.OnIdle?.Invoke();
             Params.Manager.SetState(MobStates.Idle);
-            Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
+            //Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
+            Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
         }
 
         // When the mob is stunned.
@@ -71,6 +73,8 @@ public class MobDataPassive : MobDataBase
                 MoveToPosition(Params.NavAgent, Params.MobTransform.position);
                 Params.NavAgent.velocity = Vector3.zero;
                 Params.NavAgent.isStopped = true;
+
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
             }
         }
         else {
