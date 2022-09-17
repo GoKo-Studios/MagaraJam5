@@ -8,7 +8,7 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    private Vector3 movingDirection;
+    public Vector3 movingDirection{get; private set;}
     private CharacterController charController;
     [SerializeField] private float walkingSpeed = 5.0f;
     [SerializeField] private float runningSpeed = 8.5f;
@@ -29,7 +29,6 @@ public class Player : MonoBehaviour
 
     private theArrowMovement arrowMovement;
 
-    public enum PlayerStates{ Idle, Walking, Running, Dashing, GroundSmash };
     public PlayerStates playerStates = PlayerStates.Idle;
 
     private bool[] stateAwake = new bool[5];
@@ -37,7 +36,7 @@ public class Player : MonoBehaviour
 
     private float dashTimer = 0.0f;
 
-    private float distanceFromGround;
+    public float distanceFromGround{get; private set;}
 
     public LayerMask groundLayerMask;
 
@@ -47,6 +46,7 @@ public class Player : MonoBehaviour
     private SmashSkill smashSkill;
 
     public UnityAction dashCollidedWithEnemy;
+    public UnityAction playerJumpEvent;
     
     // Start is called before the first frame update
     void Start()
@@ -79,27 +79,22 @@ public class Player : MonoBehaviour
         switch (playerStates){
             case PlayerStates.Idle:
                 IdleStateMovement();
-                playerInput.setInputsToFalse();
-                return;
+                break;
             case PlayerStates.Walking:
                 relocationStateMovement(walkingSpeed);
-                playerInput.setInputsToFalse();
-                return;
+                break;
             case PlayerStates.Running:
                 relocationStateMovement(runningSpeed);
-                playerInput.setInputsToFalse();
-                return;
+                break;
             case PlayerStates.Dashing:
                 DashStateMovement();
-                playerInput.setInputsToFalse();
-                return;
+                break;
             case PlayerStates.GroundSmash:
-                GroundSmashStateMovement();
-                playerInput.setInputsToFalse();
-                return;
+                GroundSmashStateMovement();                
+                break;
         }
 
-        
+        playerInput.setInputsToFalse();
     }
 
     private void IdleStateMovement(){
@@ -116,8 +111,6 @@ public class Player : MonoBehaviour
         applyPlayerYVelocity();
 
         PullEnemiesSkill();
-
-        LookAtMouse();
 
         if(distanceFromGround > 3.0f && playerInput.groundSmashEvent && smashSkill.IsAvailable()){
             playerStates = PlayerStates.GroundSmash;
@@ -136,7 +129,7 @@ public class Player : MonoBehaviour
         Vector3 forwardMovingDir = playerFollowCam.transform.forward;
         forwardMovingDir.y = 0.0f;
 
-        movingDirection = forwardMovingDir * playerInput.movingInput.y + playerFollowCam.transform.right * playerInput.movingInput.x; 
+        movingDirection = (forwardMovingDir * playerInput.movingInput.y + playerFollowCam.transform.right * playerInput.movingInput.x).normalized; 
         charController.Move(movingDirection * speed * Time.deltaTime);
 
         if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.OutAndActive){
@@ -253,6 +246,7 @@ public class Player : MonoBehaviour
         if(playerInput.jumpEvent && isGrounded){
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
             PlayerInputManager.Instance.jumpEvent = false;
+            playerJumpEvent?.Invoke();
         }
 
         velocity.y += gravity * fallingSpeed * Time.deltaTime;
