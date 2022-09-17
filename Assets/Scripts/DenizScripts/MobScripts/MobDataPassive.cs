@@ -58,13 +58,14 @@ public class MobDataPassive : MobDataBase
         }
         else {
             // If there is no any valid target.
-    
-            MoveToPosition(Params.NavAgent, Params.MobTransform.position);
-            //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
-            //Params.Manager.OnIdle?.Invoke();
-            Params.Manager.SetState(MobStates.Idle);
-            //Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
-            Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+
+            if (Params.Manager.GetState() != MobStates.Panic && Params.Manager.GetState() != MobStates.Stunned && Params.Manager.GetState() != MobStates.Attacking) {
+                    MoveToPosition(Params.NavAgent, Params.MobTransform.position);
+                    //Params.Manager.OnIdle?.Invoke();
+                    Params.Manager.SetState(MobStates.Idle);
+                    //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
+                    Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+                }                
         }
 
         // When the mob is stunned.
@@ -79,6 +80,14 @@ public class MobDataPassive : MobDataBase
         }
         else {
             Params.NavAgent.isStopped = false;
+        }
+
+        // When the mob is panicking.
+        if (Params.Manager.GetState() == MobStates.Panic) {
+            Debug.Log("Panic");
+            float randomPosX = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
+            float randomPosZ = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
+            MoveToPosition(Params.NavAgent, new Vector3(Params.MobTransform.position.x + randomPosX, 0, Params.MobTransform.position.z + randomPosZ));
         }
     }
 

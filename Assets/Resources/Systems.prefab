@@ -101,6 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e56bb015267ac4eb4c4811d641ccbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseCollisionLayer:
+    serializedVersion: 2
+    m_Bits: 1032
 --- !u!1 &1800657306650128903
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1828198231966017397
 Transform:
   m_ObjectHideFlags: 0

@@ -25,7 +25,11 @@ namespace Assets.Scripts.Managers {
 
         #endregion
 
-        [SerializeField] private List<MobDataBase> _mobDataList; 
+        [SerializeField] private List<MobDataBase> _mobAggressiveList; 
+        [SerializeField] private List <MobDataBase> _mobPassiveList;
+
+        [SerializeField] private GameObject _passiveMobLocations;
+
         [SerializeField] private int _currentWave;
         [SerializeField] private float _waveValue;
         [SerializeField] private int _timeBetweenWaves;
@@ -51,14 +55,16 @@ namespace Assets.Scripts.Managers {
 
          void Start()
         {
-            PopulateDataList();
-
-            ProocedToNextWave();
+            PopulateDataLists();
+            SpawnPassiveMobs();
         }
 
-         private void PopulateDataList() {
-            _mobDataList.Clear();
-            _mobDataList.AddRange(ResourceLoader.LoadResources<MobDataBase>("Objects/PoolableObjects"));
+         private void PopulateDataLists() {
+            _mobPassiveList.Clear();
+            _mobPassiveList.AddRange(ResourceLoader.LoadResources<MobDataBase>("Objects/PoolableObjects/Passive"));
+
+            _mobAggressiveList.Clear();
+            _mobAggressiveList.AddRange(ResourceLoader.LoadResources<MobDataBase>("Objects/PoolableObjects/Aggressive"));
         }
 
         void Update()
@@ -100,6 +106,14 @@ namespace Assets.Scripts.Managers {
             }
         }
 
+        private void SpawnPassiveMobs() {
+            foreach (Transform location in _passiveMobLocations.GetComponentInChildren<Transform>()) {
+                MobDataBase data = _mobPassiveList[Random.Range(0, _mobAggressiveList.Count)];
+                GameObject obj = MobSpawnerManager.Instance.SpawnMobWithPoolingAndLocation(data, location);
+                
+            }
+        }
+
         private void EndWave() {
             EventManager.Instance.OnWaveEnd?.Invoke();
             _state = WaveManagerStates.BetweenWave;
@@ -123,11 +137,11 @@ namespace Assets.Scripts.Managers {
         private void GenerateMobs() {
             List<MobDataBase> generatedEnemies = new List<MobDataBase>();
             while (_waveValue > 0) {
-                int randomEnemyID = Random.Range(0, _mobDataList.Count);
-                float randomEnemyCost = _mobDataList[randomEnemyID].Data.WaveCost;
+                int randomEnemyID = Random.Range(0, _mobAggressiveList.Count);
+                float randomEnemyCost = _mobAggressiveList[randomEnemyID].Data.WaveCost;
 
                 if (_waveValue - randomEnemyCost >= 0) {
-                    generatedEnemies.Add(_mobDataList[randomEnemyID]);
+                    generatedEnemies.Add(_mobAggressiveList[randomEnemyID]);
                     _waveValue -= randomEnemyCost;
                 }
                 else if (_waveValue <= 0) {

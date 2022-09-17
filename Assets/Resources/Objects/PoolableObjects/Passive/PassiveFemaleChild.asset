@@ -31,7 +31,7 @@ MonoBehaviour:
     TriggerSize: {x: 1, y: 2, z: 1}
     InvulnerableTime: 1
     AttackAngleTreshold: 0
-    PanicDuration: 3
+    PanicDuration: 5
     OnDeathPanicRange: 50
     PanicRandomRange: 5
     PanicLayerMask:
