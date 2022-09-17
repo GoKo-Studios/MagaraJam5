@@ -42,6 +42,10 @@ public class theArrowMovement : MonoBehaviour
     public enum ArrowStates { CallBack, OutAndActive, Disabled };
     public ArrowStates theArrowState = ArrowStates.CallBack;
 
+    public UnityEngine.Events.UnityAction<Transform> OnListAdd;
+    public UnityEngine.Events.UnityAction<Transform> OnListRemove;
+    public UnityEngine.Events.UnityAction OnListClear;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -111,17 +115,19 @@ public class theArrowMovement : MonoBehaviour
         if(other.tag == "Enemy"){
             if(!taggedEnemyList.Contains(other.transform)){
                 taggedEnemyList.Add(other.transform);
+                OnListAdd?.Invoke(other.transform);
             }
         }
     }
 
-    public void RemoveFromTaggedEnemyList(Transform enemy){
+    public void RemoveFromTaggedEnemyList(Transform enemy) {
         if(taggedEnemyList.Contains(enemy)){
             taggedEnemyList.Remove(enemy);
+            OnListRemove?.Invoke(enemy);
         }
     }
 
-    private void RotateArrow(Vector3 destination){
+    private void RotateArrow(Vector3 destination) {
         Vector3 relativePos = (new Vector3(destination.x, destination.y + heightFromGround, destination.z) - transform.position).normalized;
         Quaternion toRotation = Quaternion.LookRotation(relativePos);
         angleBetweenTarget = Vector3.Angle(transform.forward, relativePos);

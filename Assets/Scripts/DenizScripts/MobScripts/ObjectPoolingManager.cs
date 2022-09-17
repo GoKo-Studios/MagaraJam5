@@ -88,10 +88,9 @@ namespace Assets.Scripts.Managers {
                     if (_mobQueue.Count <= 0) {
                         AddObject(PoolableObjectTypes.Mob);
                     }
-
+                    
                     obj = _mobQueue.Dequeue();
                     obj.SetActive(true);
-                
                 break;
 
                 case PoolableObjectTypes.Orb:

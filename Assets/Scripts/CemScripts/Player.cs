@@ -310,6 +310,7 @@ public class Player : MonoBehaviour
                     arrowMovement.taggedEnemyList.Remove(enemy);
                 }
             }
+            arrowMovement.OnListClear?.Invoke();
             arrowMovement.taggedEnemyList.Clear();
         }
     }
