@@ -93,7 +93,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1032
   taggedEnemyList: []
-  theArrowState: 1
+  theArrowState: 0
 --- !u!114 &7177489754752019118
 MonoBehaviour:
   m_ObjectHideFlags: 0

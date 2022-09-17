@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15399721, g: 0.17521659, b: 0.18610342, a: 1}
+  m_IndirectSpecularColor: {r: 0.15399697, g: 0.17521621, b: 0.1861029, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -773,21 +773,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 404533721}
-    - target: {fileID: 7580065152992708751, guid: 95a9430cce3b0df489f55c904c2e2c66,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580065152992708751, guid: 95a9430cce3b0df489f55c904c2e2c66,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580065152992708751, guid: 95a9430cce3b0df489f55c904c2e2c66,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7580065153319117043, guid: 95a9430cce3b0df489f55c904c2e2c66,
         type: 3}
       propertyPath: m_RootOrder
@@ -39767,7 +39752,7 @@ GameObject:
   - component: {fileID: 1214081527}
   - component: {fileID: 1214081526}
   - component: {fileID: 1214081528}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: KopruMID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51586,10 +51571,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1912483858, guid: a14e8ab8d22a037438ea89bc3946c649, type: 3}
-      propertyPath: MouseCollisionLayer.m_Bits
-      value: 1032
-      objectReference: {fileID: 0}
     - target: {fileID: 2732437594569947518, guid: a14e8ab8d22a037438ea89bc3946c649,
         type: 3}
       propertyPath: m_RootOrder
@@ -53645,7 +53626,7 @@ GameObject:
   - component: {fileID: 1772758566}
   - component: {fileID: 1772758565}
   - component: {fileID: 1772758567}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: KopruSag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57908,7 +57889,7 @@ GameObject:
   - component: {fileID: 2052743600}
   - component: {fileID: 2052743599}
   - component: {fileID: 2052743601}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: KopruSol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
