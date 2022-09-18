@@ -39,7 +39,13 @@ namespace Assets.Scripts.Managers {
         private void OnNextLevel()
         {
             int index = SceneManager.GetActiveScene().buildIndex + 1;
-            EventManager.Instance.OnLoadLevel?.Invoke(index);
+            int sceneCount = SceneManager.sceneCountInBuildSettings;
+            if(index >= sceneCount){
+                Application.Quit();
+            }
+            else{
+                EventManager.Instance.OnLoadLevel?.Invoke(index);
+            }
         }
 
         private void OnRestartLevel()

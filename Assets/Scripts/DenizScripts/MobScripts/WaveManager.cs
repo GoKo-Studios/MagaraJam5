@@ -48,8 +48,7 @@ namespace Assets.Scripts.Managers {
         [SerializeField] private bool _isEnabled = false;
 
         private void OnEnable() {
-            EventManager.Instance.OnGameStart += OnGameStart;
-            EventManager.Instance.OnGamePause += OnGamePause;
+            
         }
 
         private void OnDisable() {
@@ -73,6 +72,9 @@ namespace Assets.Scripts.Managers {
 
         private void Start()
         {  
+            EventManager.Instance.OnGameStart += OnGameStart;
+            EventManager.Instance.OnGamePause += OnGamePause;
+            
             _currentRemaningTime = _levelFinishTime;
             PopulateDataLists();
             SpawnPassiveMobs();   
@@ -95,6 +97,7 @@ namespace Assets.Scripts.Managers {
 
             if (_currentRemaningTime <= 0f) {
                 StopManager();
+                EventManager.Instance.OnWaveFinish?.Invoke();
             }
             else {
                 _currentRemaningTime -= Time.deltaTime;
