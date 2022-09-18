@@ -25,6 +25,7 @@ public class SoulController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
+            AudioManagerC.Instance.Play("OrbPickup");
             _poolableController.EnqueueCheck(_poolingTime);
             other.GetComponent<SoulCollector>().CollectSoul();
         }

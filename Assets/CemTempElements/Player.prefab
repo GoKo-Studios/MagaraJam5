@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMana: 100
-  decreaseRate: 10
+  decreaseRate: 0
 --- !u!136 &860886972
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5cf6efdd3afb9084e8dae824d3b02013,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.53
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5cf6efdd3afb9084e8dae824d3b02013,
         type: 3}

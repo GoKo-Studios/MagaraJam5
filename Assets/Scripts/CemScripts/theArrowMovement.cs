@@ -27,7 +27,7 @@ public class theArrowMovement : MonoBehaviour
 
     private float distance_mousePos_arrow;
     private float angleBetweenTarget;
-    private float distanceToCallBackPos;
+    public float distanceToCallBackPos{get; private set;}
 
     [SerializeField]
     private float arrowCenterDeadzone = 3.0f;
@@ -164,6 +164,7 @@ public class theArrowMovement : MonoBehaviour
 
     private void AimingMovement(){
         if(stateAwake[2] == true){
+            player.playerStates = PlayerStates.Aiming;
             weaponDamageHolder.SetToWanderingValues();
             setAllAwakes();
             stateAwake[2] = false;
@@ -178,20 +179,21 @@ public class theArrowMovement : MonoBehaviour
 
         SetArrowRotation(player.transform, 5.0f);
 
-        if(setPositionDone && setRotationDone){
+        //if(setPositionDone && setRotationDone){
             if(arrowInput.shootEvent){
                 theArrowState = ArrowStates.Charged;
             }
             else if(arrowInput.aimEvent){
                 theArrowState = ArrowStates.CallBack;
             }
-        }
+        //}
             
     }
 
     private void OnChargedMove(){
         
         if(stateAwake[3] == true){
+            AudioManagerC.Instance.Play("SwordAttackCharge");
             shotCallBackTimer = Time.time;
             weaponDamageHolder.SetToShotValues();
             setAllAwakes();
@@ -220,6 +222,7 @@ public class theArrowMovement : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         Debug.Log(other.transform.name);
         if(other.tag == "Enemy"){
+            AudioManagerC.Instance.Play("SwordAttackJuicy");
             if(!taggedEnemyList.Contains(other.transform)){
                 taggedEnemyList.Add(other.transform);
                 OnListAdd?.Invoke(other.transform);

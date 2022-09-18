@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     
     private Vector3 velocity;
     public bool isGrounded{get; private set;}
+    private bool hitTheGroundAfterSmash;
 
     private Transform groundCheck;
 
@@ -132,7 +133,7 @@ public class Player : MonoBehaviour
 
         PullEnemiesSkill();
 
-        if(arrowMovement.theArrowState == ArrowStates.CallBack){
+        if(arrowMovement.theArrowState == ArrowStates.CallBack || arrowMovement.theArrowState == ArrowStates.Charged ){
             LookAtMouse();
         }
 
@@ -141,9 +142,9 @@ public class Player : MonoBehaviour
             smashSkill.OnUse();
         }
 
-        if(playerInput.playerAimEvent && arrowMovement.theArrowState != ArrowStates.Charged){
-            playerStates = PlayerStates.Aiming;
-        }
+        // if(playerInput.playerAimEvent && arrowMovement.distanceToCallBackPos < 5.0f){
+        //     playerStates = PlayerStates.Aiming;
+        // }
     }
 
     private void relocationStateMovement(float speed){
@@ -162,7 +163,7 @@ public class Player : MonoBehaviour
                 LookAtMovementRotation();
             }
         }
-        else if(arrowMovement.theArrowState == ArrowStates.CallBack){
+        else if(arrowMovement.theArrowState == ArrowStates.CallBack || arrowMovement.theArrowState == ArrowStates.Charged ){
             LookAtMouse();                  
         }
 
@@ -191,9 +192,9 @@ public class Player : MonoBehaviour
             }
         }
 
-        if(playerInput.playerAimEvent && arrowMovement.theArrowState != ArrowStates.Charged){
-            playerStates = PlayerStates.Aiming;
-        }
+        // if(playerInput.playerAimEvent && arrowMovement.distanceToCallBackPos < 5.0f){
+        //     playerStates = PlayerStates.Aiming;
+        // }
 
     }
 
@@ -206,8 +207,10 @@ public class Player : MonoBehaviour
         }
 
         if(playerInput.playerShootEvent){
-            arrowMovement.theArrowState = ArrowStates.Charged;
             onShootEvent?.Invoke();
+            playerStates = PlayerStates.Idle;
+        }
+        else if(playerInput.playerAimEvent){
             playerStates = PlayerStates.Idle;
         }
 
@@ -226,7 +229,7 @@ public class Player : MonoBehaviour
         charController.Move(movingDirection * dashSpeed * Time.deltaTime);
 
         if(dashSkill.IsAttackAvailable()){
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 1.4f);
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 2.5f);
             foreach(Collider col in colliders){
                 if(col.transform.tag == "Enemy"){
                     MobManager mobManager = col.GetComponentInParent<MobManager>();
@@ -255,19 +258,22 @@ public class Player : MonoBehaviour
 
     private void GroundSmashStateMovement(){
         if(stateAwake[5] == true){
+            AudioManagerC.Instance.Play("PlayerSmashSkill");
             onSmashEnter?.Invoke();
             smashHangingTime = Time.time;
             setAllAwakes();
             stateAwake[5] = false;
+            hitTheGroundAfterSmash = false;
         }
-
-        bool hitTheGround = false;
 
         //playerInput.groundSmashEvent = false;
 
-        if(isGrounded && !hitTheGround){
+        if(isGrounded && !hitTheGroundAfterSmash){
 
-            hitTheGround = true;
+            hitTheGroundAfterSmash = true;
+
+            AudioManagerC.Instance.Play("PlayerSmashSkillSlam");
+            Debug.Log("HELLO");
 
             Collider[] colliders = Physics.OverlapSphere(transform.position, 5.0f, enemyLayerMask);
             if(colliders.Length != 0){
@@ -292,6 +298,7 @@ public class Player : MonoBehaviour
                 }
             }
             CameraManager.Instance.ScreenShake();
+            
             StartCoroutine(setState(PlayerStates.Idle, 0.5f));
         }
         else if(Time.time - smashHangingTime > 0.3f){
@@ -304,10 +311,11 @@ public class Player : MonoBehaviour
 
     private void applyPlayerYVelocity(){
         if(isGrounded && velocity.y < 0f){
-        velocity.y = -2.0f;
+            velocity.y = -2.0f;
         }
 
         if(playerInput.jumpEvent && isGrounded){
+            AudioManagerC.Instance.Play("PlayerJump");
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
             PlayerInputManager.Instance.jumpEvent = false;
             playerJumpEvent?.Invoke();
@@ -354,6 +362,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSecondsRealtime(delay);
         if(playerStates == PlayerStates.GroundSmash){
             onSmashExit?.Invoke();
+            
         }
         playerStates = state;
     }
