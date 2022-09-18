@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMana: 100
-  decreaseRate: 15
+  decreaseRate: 10
 --- !u!1 &3777601320706814663
 GameObject:
   m_ObjectHideFlags: 0
