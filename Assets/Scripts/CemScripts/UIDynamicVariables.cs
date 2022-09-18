@@ -110,7 +110,7 @@ public class UIDynamicVariables : MonoBehaviour
     }
     void CoolDown()
     {
-        if (playerDashCooldown >= 3 && isCoolDown1 == false )
+        if (playerDashCooldown >= 2 && isCoolDown1 == false )
         {
             cooldowntime = playerDashCooldown;
             isCoolDown1 = true;
@@ -126,7 +126,7 @@ public class UIDynamicVariables : MonoBehaviour
                 isCoolDown1 = false;
             }
         }
-        if (playerSmashCooldown >= 3 && isCoolDown2 == false)
+        if (playerSmashCooldown >= 2 && isCoolDown2 == false)
         {
             cooldowntime = playerSmashCooldown;
             isCoolDown2 = true;
