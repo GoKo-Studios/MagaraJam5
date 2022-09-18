@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3eeb8155bdbe7cf44aee0cfbc2152cce, type: 3}
-  m_Name: PassiveFemaleChild
+  m_Name: PassiveDemonWoman1
   m_EditorClassIdentifier: 
   Data:
     DisplayName: Passive
-    MaxHealth: 25
+    MaxHealth: 50
     FollowSpeed: 5
     DetectionRange: 20
     AttackRange: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
     DetectionLayerMask:
       serializedVersion: 2
       m_Bits: 64
-    Mesh: {fileID: 2901160154079533544, guid: 39fa389c98895554d8a66bead8bd1e37, type: 3}
+    Mesh: {fileID: 4883463234120105915, guid: 37511cd280c7e42469e50812a78be419, type: 3}
     WaveCost: 0
     PoolingTime: 5
     AttackTime: 0

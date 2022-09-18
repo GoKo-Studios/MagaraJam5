@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abf08532e657690469e8839dd52a04f3, type: 3}
-  m_Name: Ranged
+  m_Name: DemonPolice
   m_EditorClassIdentifier: 
   Data:
     DisplayName: Ranged
@@ -23,9 +23,9 @@ MonoBehaviour:
     DetectionLayerMask:
       serializedVersion: 2
       m_Bits: 64
-    Mesh: {fileID: 2986628881038703742, guid: 101fb7339b978ad4e8fa7dbb5f233b33, type: 3}
-    WaveCost: 2.5
-    PoolingTime: 1
+    Mesh: {fileID: 2789157583792828339, guid: 0b8dae2f29b1484448a50d5a04457cc8, type: 3}
+    WaveCost: 5
+    PoolingTime: 5
     AttackTime: 1
     AttackAreaSize: {x: 0.5, y: 1, z: 30}
     TriggerSize: {x: 0, y: 0, z: 0}
@@ -39,7 +39,7 @@ MonoBehaviour:
       m_Bits: 256
     HitEffect: {fileID: 0}
     HitSound: {fileID: 0}
-  DistanceToKeep: 20
+  DistanceToKeep: 15
   DistanceToFollow: 30
   RangedCollisionLayerMask:
     serializedVersion: 2
