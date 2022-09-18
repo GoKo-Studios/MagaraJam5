@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseCollisionLayer:
     serializedVersion: 2
-    m_Bits: 2056
+    m_Bits: 8
 --- !u!1 &7676295569053344824
 GameObject:
   m_ObjectHideFlags: 0
