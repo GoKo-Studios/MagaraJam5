@@ -21336,11 +21336,14 @@ MonoBehaviour:
   _waveCount: 3
   _waveDuration: 60
   _spawnInterval: 1
+  _levelFinishTime: 360
+  _waveValueMultiplier: 3
   _currentWave: 0
   _baseWaveValue: 10
   _timeBetweenWaves: 1
   _spawnedEnemies: []
   _state: 0
+  _isEnabled: 0
 --- !u!4 &720833338
 Transform:
   m_ObjectHideFlags: 0
@@ -48059,8 +48062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae392f01ed510f445b53ba1217feda44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waveObject: {fileID: 1321844178}
   _waveText: {fileID: 553899925}
-  _timerObject: {fileID: 1321844178}
   _timerText: {fileID: 2122612716}
 --- !u!4 &1268669402
 Transform:
@@ -70653,6 +70656,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 176393745}
     m_Modifications:
+    - target: {fileID: 1669680286, guid: 1f8cd93739c4d7845ad6f0dd77a55a85, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5414080413312163911, guid: 1f8cd93739c4d7845ad6f0dd77a55a85,
         type: 3}
       propertyPath: m_Pivot.x

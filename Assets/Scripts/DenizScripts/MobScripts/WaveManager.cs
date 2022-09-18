@@ -32,7 +32,6 @@ namespace Assets.Scripts.Managers {
         [SerializeField] private float _waveDuration;
         [SerializeField] private float _spawnInterval;
         [SerializeField] private float _levelFinishTime;
-        [SerializeField] private float _waveValueMultiplier;
 
         [SerializeField] private int _currentWave;
         [SerializeField] private float _baseWaveValue;
@@ -173,7 +172,8 @@ namespace Assets.Scripts.Managers {
         }
 
         private void GenerateWave() {
-            _waveValue = _baseWaveValue + _currentWave * _waveValueMultiplier;
+                           
+            _waveValue = _baseWaveValue + _currentWave * 10.0f;
             GenerateMobs();
 
             _waveTimer = _waveDuration;
