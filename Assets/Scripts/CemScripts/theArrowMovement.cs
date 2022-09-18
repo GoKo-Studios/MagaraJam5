@@ -10,6 +10,7 @@ public class theArrowMovement : MonoBehaviour
     [SerializeField] private float distanceCap = 15.0f;
     [SerializeField] private float rotateSpeed = 10.0f;
     [SerializeField] private float shotSpeed = 50.0f;
+    [SerializeField] private float shotAutoCallBackTime = 1.2f;
     private float shotCallBackTimer;
 
     private float heightFromGround;
@@ -48,6 +49,8 @@ public class theArrowMovement : MonoBehaviour
     private bool setPositionDone;
     private bool setRotationDone;
 
+    private WeaponDamageHolder weaponDamageHolder;
+
     public ArrowStates theArrowState = ArrowStates.CallBack;
     private bool[] stateAwake = new bool[4];
     private int stateSize = 4;
@@ -67,6 +70,7 @@ public class theArrowMovement : MonoBehaviour
         playerCallBackDestination = GameObject.Find("WeaponCallBackPos").transform;
         player = GameObject.Find("Player").GetComponent<Player>();
         playerMana = player.transform.GetComponent<PlayerMana>();
+        weaponDamageHolder = transform.GetComponent<WeaponDamageHolder>();
 
         aimPosTransform = player.transform.GetChild(3).GetComponent<Transform>();
 
@@ -94,7 +98,10 @@ public class theArrowMovement : MonoBehaviour
                 break;
         }
 
-        if(theArrowState == ArrowStates.CallBack){
+        if(theArrowState == ArrowStates.CallBack && Vector3.Distance(transform.position, playerCallBackDestination.position) < 2.5f){
+            GetComponent<BoxCollider>().enabled = false;
+        }
+        else if(theArrowState == ArrowStates.Aiming){
             GetComponent<BoxCollider>().enabled = false;
         }
         else{
@@ -106,6 +113,7 @@ public class theArrowMovement : MonoBehaviour
 
     private void OutAndActiveMovement(){
         if(stateAwake[1] == true){
+            weaponDamageHolder.SetToWanderingValues();
             setAllAwakes();
             stateAwake[1] = false;
         }
@@ -132,6 +140,7 @@ public class theArrowMovement : MonoBehaviour
 
     private void CallBackMovement(){
         if(stateAwake[0] == true){
+            weaponDamageHolder.SetToWanderingValues();
             setAllAwakes();
             stateAwake[0] = false;
         }
@@ -155,6 +164,7 @@ public class theArrowMovement : MonoBehaviour
 
     private void AimingMovement(){
         if(stateAwake[2] == true){
+            weaponDamageHolder.SetToWanderingValues();
             setAllAwakes();
             stateAwake[2] = false;
         }
@@ -183,10 +193,11 @@ public class theArrowMovement : MonoBehaviour
         
         if(stateAwake[3] == true){
             shotCallBackTimer = Time.time;
+            weaponDamageHolder.SetToShotValues();
             setAllAwakes();
             stateAwake[3] = false;
         }
-        if(Time.time - shotCallBackTimer > 3.0f){
+        if(Time.time - shotCallBackTimer > shotAutoCallBackTime){
             theArrowState = ArrowStates.CallBack;
         }
         else if(arrowInput.callArrowBack){

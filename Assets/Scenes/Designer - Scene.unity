@@ -7962,6 +7962,8 @@ GameObject:
   - component: {fileID: 176393744}
   - component: {fileID: 176393743}
   - component: {fileID: 176393742}
+  - component: {fileID: 176393747}
+  - component: {fileID: 176393746}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -8058,6 +8060,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &176393746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176393741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bba47643c0fc6499ae0a38ae5c1be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &176393747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176393741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a629297893acad4f9d52b22022f83c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &181610031
 GameObject:
   m_ObjectHideFlags: 0
@@ -12051,66 +12077,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _radius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineSteps
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 332c23652c43f0540a1bfb0458f1af32, type: 2}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].value
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].value
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
     - target: {fileID: 7177489754752019114, guid: b868063fa43ff1d4497604abc0f16b18,
         type: 3}
       propertyPath: m_Name
@@ -70755,11 +70721,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3777601318819174341, guid: 53400ea471d68c143bf65e0ee854371c,
-        type: 3}
-      propertyPath: playerFollowCam
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3777601318819174344, guid: 53400ea471d68c143bf65e0ee854371c,
         type: 3}

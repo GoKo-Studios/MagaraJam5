@@ -54,6 +54,7 @@ MonoBehaviour:
   distanceCap: 15
   rotateSpeed: 10
   shotSpeed: 50
+  shotAutoCallBackTime: 1.2
   turnCurve:
     serializedVersion: 2
     m_Curve:
@@ -154,9 +155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f50791f5da6e84493a12647b5eea86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 25
-  Knockback: 10
-  StunDuration: 0
+  WanderingDamage: 25
+  WanderingKnockback: 4
+  WanderingStunDuration: 2
+  ShotDamage: 50
+  ShotKnockback: 6
+  ShotStunDuration: 2
 --- !u!114 &1080686843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,15 +178,33 @@ MonoBehaviour:
   _arrowScript: {fileID: 0}
   _lineInitialAmount: 10
   _player: {fileID: 0}
-  _lineSteps: 0
+  _lineSteps: 30
   _lineCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.25
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.25
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _lineMaterial: {fileID: 0}
-  _radius: 0
+  _lineMaterial: {fileID: 2100000, guid: 332c23652c43f0540a1bfb0458f1af32, type: 2}
+  _radius: 1
 --- !u!1001 &6973163102321742037
 PrefabInstance:
   m_ObjectHideFlags: 0
