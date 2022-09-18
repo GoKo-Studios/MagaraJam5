@@ -28,7 +28,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject _levelExit;
     [SerializeField] private GameObject _levelExitIndicators;
 
-    private void OnEnable() {
+    private void Start() {
         EventManager.Instance.OnWaveFinish += OnWaveFinish;
         EventManager.Instance.OnGameStart += OnGameStart;
 

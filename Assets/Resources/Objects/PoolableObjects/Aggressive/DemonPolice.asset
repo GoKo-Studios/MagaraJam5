@@ -27,7 +27,7 @@ MonoBehaviour:
     WaveCost: 5
     PoolingTime: 5
     AttackTime: 1
-    AttackAreaSize: {x: 0.5, y: 1, z: 30}
+    AttackAreaSize: {x: 0, y: 0, z: 0}
     TriggerSize: {x: 0, y: 0, z: 0}
     InvulnerableTime: 1
     AttackAngleTreshold: 180
