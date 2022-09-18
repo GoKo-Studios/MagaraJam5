@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Enums;
+using System.Collections;
 
 namespace Assets.Scripts.Managers {
     public class WaveManager : MonoBehaviour
@@ -34,6 +35,8 @@ namespace Assets.Scripts.Managers {
         [SerializeField] private float _baseWaveValue;
         [SerializeField] private int _timeBetweenWaves;
 
+        [SerializeField] private float _startTime;
+
         private List<MobDataBase> _generatedWave = new List<MobDataBase>();
         [SerializeField] public List<GameObject> _spawnedEnemies;
         private float _waveValue;
@@ -63,11 +66,19 @@ namespace Assets.Scripts.Managers {
 
         }
 
+        private IEnumerator StartTime() {
+            yield return new WaitForSecondsRealtime(_startTime);
+            EventManager.Instance.OnGameStart?.Invoke();
+        }
+
         private void Start()
-        {
+        {  
             _currentRemaningTime = _levelFinishTime;
             PopulateDataLists();
-            SpawnPassiveMobs();    
+            SpawnPassiveMobs();   
+
+            StartCoroutine(StartTime());
+             
         }
 
          private void PopulateDataLists() {

@@ -25,7 +25,7 @@ namespace Assets.Scripts.Managers {
         [SerializeField] private TextMeshProUGUI _waveText;
         [SerializeField] private TextMeshProUGUI _timerText;
 
-        private void OnEnable() {
+        private void Start() {
             EventManager.Instance.OnWaveStart += OnWaveStart;
             EventManager.Instance.OnUpdateTimer += OnUpdateTimer;
             EventManager.Instance.OnWaveEnd += OnWaveEnd;
@@ -61,7 +61,7 @@ namespace Assets.Scripts.Managers {
         }
 
         private void OnWaveStart(int waveRemaining) {
-            _waveText.enabled = true;
+            _waveObject.SetActive(true);
             _waveText.text = "Wave Remaining " + waveRemaining;
         }
 
