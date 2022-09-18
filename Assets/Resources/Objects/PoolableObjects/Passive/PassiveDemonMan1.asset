@@ -9,33 +9,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ae7e9dbe84d1814fb2d1c0601e2ce12, type: 3}
-  m_Name: DemonMan1
+  m_Script: {fileID: 11500000, guid: 3eeb8155bdbe7cf44aee0cfbc2152cce, type: 3}
+  m_Name: PassiveDemonMan1
   m_EditorClassIdentifier: 
   Data:
-    DisplayName: Spider
-    MaxHealth: 100
-    FollowSpeed: 3
-    DetectionRange: 300
-    AttackRange: 3
-    StoppingDistance: 3
-    DamageDealt: 10
+    DisplayName: Passive
+    MaxHealth: 50
+    FollowSpeed: 5
+    DetectionRange: 20
+    AttackRange: 0
+    StoppingDistance: 0
+    DamageDealt: 0
     DetectionLayerMask:
       serializedVersion: 2
       m_Bits: 64
     Mesh: {fileID: 3941317257407790521, guid: d0fad8f8ce960ce49a49657aa68b7e14, type: 3}
-    WaveCost: 2.5
-    PoolingTime: 1
-    AttackTime: 1.5
-    AttackAreaSize: {x: 3, y: 1, z: 6}
+    WaveCost: 0
+    PoolingTime: 5
+    AttackTime: 0
+    AttackAreaSize: {x: 0, y: 0, z: 0}
     TriggerSize: {x: 1, y: 2, z: 1}
     InvulnerableTime: 1
-    AttackAngleTreshold: 50
-    PanicDuration: 3
+    AttackAngleTreshold: 0
+    PanicDuration: 5
     OnDeathPanicRange: 50
-    PanicRandomRange: 5
+    PanicRandomRange: 15
     PanicLayerMask:
       serializedVersion: 2
       m_Bits: 256
     HitEffect: {fileID: 0}
     HitSound: {fileID: 0}
+  DistanceToKeep: 18
+  RandomRunDistance: 15

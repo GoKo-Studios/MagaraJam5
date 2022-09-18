@@ -69,14 +69,16 @@ public abstract class MobDataBase : ScriptableObject
 
                         _targetPosition = Params.MobTransform.position;
                         Params.NavAgent.isStopped = true;
-                        Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Trigger, true);
+                        Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, true);
+                        Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
                     }
                 }
                 // Follow
                 else {
-                    Params.Manager.SetState(MobStates.Following);
-                    Params.Manager.OnAnimation("Walk", MobAnimationControllerTypes.Trigger, true);     
+                    Params.Manager.SetState(MobStates.Following);   
                     _targetPosition = _target.position;
+                    Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, true); 
+                    Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, false); 
                     
                 }
             }
@@ -87,7 +89,8 @@ public abstract class MobDataBase : ScriptableObject
                     //Params.Manager.OnIdle?.Invoke();
                     Params.Manager.SetState(MobStates.Idle);
                     //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
-                    Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
+                    Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+                    Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, false); 
                 }     
             }
 
@@ -97,6 +100,9 @@ public abstract class MobDataBase : ScriptableObject
                     _targetPosition = Params.MobTransform.position;
                     Params.NavAgent.velocity = Vector3.zero;
                     Params.NavAgent.isStopped = true;
+
+                    Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+                    Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, false); 
                 }
             }
             else {
@@ -108,6 +114,9 @@ public abstract class MobDataBase : ScriptableObject
                 float randomPosX = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
                 float randomPosZ = Random.Range(-Params.Manager.Data.PanicRandomRange, Params.Manager.Data.PanicRandomRange + 1);
                 _targetPosition = new Vector3(Params.MobTransform.position.x + randomPosX, 0, Params.MobTransform.position.z + randomPosZ);
+
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, true); 
+                
             }
 
             MoveToPosition(Params.NavAgent, _targetPosition);
@@ -228,7 +237,6 @@ public abstract class MobDataBase : ScriptableObject
             if(Manager.GetState() != MobStates.Stunned){
                 
             }
-            Debug.Log(elapsedTime);
             Manager.SetState(MobStates.Stunned);
             elapsedTime += Time.deltaTime;
             yield return null;

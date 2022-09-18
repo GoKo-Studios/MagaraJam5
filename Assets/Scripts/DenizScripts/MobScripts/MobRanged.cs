@@ -54,7 +54,8 @@ public class MobRanged : MobDataBase
                 // Follow
 
                 Params.Manager.SetState(MobStates.Following);
-                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Trigger, true);
+                 Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, true); 
+                Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, false); 
                 
                 Vector3 _targetPosition = _target.position;
                 MoveToPosition(Params.NavAgent, _targetPosition);
@@ -73,8 +74,9 @@ public class MobRanged : MobDataBase
                                 Params.MobTransform, Params.Manager.Data.AttackAreaSize));
 
                         MoveToPosition(Params.NavAgent, Params.MobTransform.position);
-                        Params.NavAgent.isStopped = true;
-                        Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Trigger, true);      
+                        Params.NavAgent.isStopped = true;   
+                        Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+                         Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, true);   
                     }        
                 }        
             }
@@ -82,7 +84,8 @@ public class MobRanged : MobDataBase
                 // Keep Distance
                 Debug.Log(_distance);
                 Params.Manager.SetState(MobStates.Following);
-                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Trigger, true);
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, true); 
+                Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, false); 
                 
                 float _distanceToTravel = DistanceToKeep - _distance;
                 _directionTowardsTarget.y = 0;
@@ -91,19 +94,22 @@ public class MobRanged : MobDataBase
             }
             else {
                 // Stop
-
-                Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true); 
                 MoveToPosition(Params.NavAgent, Params.MobTransform.position);
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+                Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, false); 
             }
         }
         else {
             // If there is no any valid target.
 
-            MoveToPosition(Params.NavAgent, Params.MobTransform.position);
-            //Params.Manager.OnIdle?.Invoke();
-            Params.Manager.SetState(MobStates.Idle);
-            //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
-            Params.Manager.OnAnimation("Idle", MobAnimationControllerTypes.Trigger, true);
+            if (Params.Manager.GetState() != MobStates.Panic && Params.Manager.GetState() != MobStates.Stunned && Params.Manager.GetState() != MobStates.Attacking) {
+                MoveToPosition(Params.NavAgent, Params.MobTransform.position);
+                //Params.Manager.OnIdle?.Invoke();
+                Params.Manager.SetState(MobStates.Idle);
+                //if (!Params.NavAgent.isStopped) Params.NavAgent.isStopped = true;
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+                Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, false); 
+            }
         }
 
         // When the mob is stunned.
@@ -112,6 +118,8 @@ public class MobRanged : MobDataBase
                 MoveToPosition(Params.NavAgent, Params.MobTransform.position);
                 Params.NavAgent.velocity = Vector3.zero;
                 Params.NavAgent.isStopped = true;
+                Params.Manager.OnAnimation("Run", MobAnimationControllerTypes.Bool, false); 
+                Params.Manager.OnAnimation("Attack", MobAnimationControllerTypes.Bool, false); 
             }
         }
         else {

@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
     DisplayName: Passive
-    MaxHealth: 100
+    MaxHealth: 25
     FollowSpeed: 5
-    DetectionRange: 10
+    DetectionRange: 20
     AttackRange: 0
-    StoppingDistance: 1
+    StoppingDistance: 0
     DamageDealt: 0
     DetectionLayerMask:
       serializedVersion: 2
       m_Bits: 64
     Mesh: {fileID: 3062342619115485909, guid: fdb61dea74e5db5489fda713f39af9c7, type: 3}
-    WaveCost: 2.5
-    PoolingTime: 1
+    WaveCost: 0
+    PoolingTime: 5
     AttackTime: 0
     AttackAreaSize: {x: 0, y: 0, z: 0}
     TriggerSize: {x: 1, y: 2, z: 1}
@@ -39,5 +39,5 @@ MonoBehaviour:
       m_Bits: 256
     HitEffect: {fileID: 0}
     HitSound: {fileID: 0}
-  DistanceToKeep: 12
-  RandomRunDistance: 10
+  DistanceToKeep: 18
+  RandomRunDistance: 15

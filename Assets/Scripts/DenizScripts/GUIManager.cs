@@ -23,20 +23,22 @@ namespace Assets.Scripts.Managers {
 
         #endregion
 
+        [SerializeField] private GameObject _waveObject;
         [SerializeField] private TextMeshProUGUI _waveText;
-        [SerializeField] private GameObject _timerObject;
         [SerializeField] private TextMeshProUGUI _timerText;
 
         private void OnEnable() {
             EventManager.Instance.OnWaveStart += OnWaveStart;
             EventManager.Instance.OnUpdateTimer += OnUpdateTimer;
             EventManager.Instance.OnWaveEnd += OnWaveEnd;
+            EventManager.Instance.OnWaveFinish += OnWaveFinish;
         }
 
         private void OnDisable() {
             EventManager.Instance.OnWaveStart -= OnWaveStart;
             EventManager.Instance.OnUpdateTimer -= OnUpdateTimer;
             EventManager.Instance.OnWaveEnd -= OnWaveEnd;
+            EventManager.Instance.OnWaveFinish -= OnWaveFinish;
         }
 
         public void Button_SpawnAggressiveMob() {
@@ -47,27 +49,26 @@ namespace Assets.Scripts.Managers {
             MobSpawnerManager.Instance.SpawnMobWithPooling(ResourceLoader.LoadResource<ScriptableObject>("Objects/PoolableObjects/NewPassiveMob") as MobDataBase);
         }
 
-        private void UpdateWaveTimer(int time) {
-            
-        }
-
         public void Button_GameStart() {
             EventManager.Instance.OnGameStart?.Invoke();
+            _waveObject.SetActive(true);
         }
 
         private void OnWaveEnd() {
-            //_waveText.enabled = false;
-            //_timerObject.SetActive(true);
+
         }
 
         private void OnUpdateTimer(float timer) {
-            _timerText.text = ((int)timer).ToString();
+            _timerText.text = "Time Until Next Wave: " + ((int)timer).ToString();
         }
 
-        private void OnWaveStart(int waveRemeaning) {
+        private void OnWaveStart(int waveRemaining) {
             _waveText.enabled = true;
-            _timerObject.SetActive(true);
-            _waveText.text = "Wave Remaning " + waveRemeaning;
+            _waveText.text = "Wave Remaining " + waveRemaining;
+        }
+
+        private void OnWaveFinish() {
+            _waveObject.SetActive(false);
         }
     }
 }
