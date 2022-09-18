@@ -147,13 +147,14 @@ public abstract class MobDataBase : ScriptableObject
         Manager.OnDamageTaken?.Invoke(Manager, DamageTaken);
     }
 
-    public  virtual void HandleDeath(MobManager Manager) {
+    public virtual void HandleDeath(MobManager Manager) {
+        if (Manager.GetState() == MobStates.StopAI) return;
+        Manager.SetState(MobStates.StopAI);
         Manager.OnAnimation("Death", MobAnimationControllerTypes.Trigger, true);
         Manager.GetComponent<PoolableObjectController>().EnqueueCheck(Manager.Data.PoolingTime);
         WaveManager.Instance.RemoveFromSpawnedList(Manager.gameObject);
         MobSpawnerManager.Instance.SpawnOrbWithPooling(Manager.gameObject.transform.position);
         Manager.StopAllCoroutines();
-        Manager.SetState(MobStates.StopAI);
         Manager.Invoke("Clear", Manager.Data.PoolingTime - 1f);
         FindObjectOfType<theArrowMovement>().RemoveFromTaggedEnemyList(Manager.transform.GetChild(1).transform);
     }

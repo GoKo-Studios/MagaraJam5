@@ -258,7 +258,7 @@ public class Player : MonoBehaviour
 
     private void GroundSmashStateMovement(){
         if(stateAwake[5] == true){
-            AudioManagerC.Instance.Play("PlayerSmashSkill");
+            AudioManagerC.Instance.Play("WingFlap");
             onSmashEnter?.Invoke();
             smashHangingTime = Time.time;
             setAllAwakes();
@@ -272,7 +272,7 @@ public class Player : MonoBehaviour
 
             hitTheGroundAfterSmash = true;
 
-            AudioManagerC.Instance.Play("PlayerSmashSkillSlam");
+            AudioManagerC.Instance.Play("SlamGround");
             Debug.Log("HELLO");
 
             Collider[] colliders = Physics.OverlapSphere(transform.position, 5.0f, enemyLayerMask);
@@ -315,7 +315,7 @@ public class Player : MonoBehaviour
         }
 
         if(playerInput.jumpEvent && isGrounded){
-            AudioManagerC.Instance.Play("PlayerJump");
+            AudioManagerC.Instance.Play("WingFlap");
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
             PlayerInputManager.Instance.jumpEvent = false;
             playerJumpEvent?.Invoke();

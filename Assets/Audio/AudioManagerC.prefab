@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4966218597349129019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8245885905134303796}
+  - component: {fileID: 5868516887364249394}
+  m_Layer: 0
+  m_Name: AudioManagerC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8245885905134303796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4966218597349129019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 540.808, y: 391.54706, z: -562.26715}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5868516887364249394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4966218597349129019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e75246432695645a12b6986fa32edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: CityAmbiance
+    clip: {fileID: 8300000, guid: 9d41d9c4fa35e994d903ec44c20777ad, type: 3}
+    volume: 0.716
+    pitch: 1.21
+    loop: 1
+    source: {fileID: 0}
+  - name: SwordAttackWandering
+    clip: {fileID: 8300000, guid: a867ce4b8104f1e42a5bde15eb48c98e, type: 3}
+    volume: 0.579
+    pitch: 0.92
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordAttackCharged
+    clip: {fileID: 8300000, guid: bbdd21585f505014a9d47f6ac2d5b2e5, type: 3}
+    volume: 0.532
+    pitch: 0.61
+    loop: 0
+    source: {fileID: 0}
+  - name: SlamGround
+    clip: {fileID: 8300000, guid: 3044c379e87dda14cbf7e7af4ccaa6cb, type: 3}
+    volume: 0.574
+    pitch: 0.89
+    loop: 0
+    source: {fileID: 0}
+  - name: WingFlap
+    clip: {fileID: 8300000, guid: cb3ce65d4a3b0254abacce1da1d2c0f6, type: 3}
+    volume: 0.523
+    pitch: 1.22
+    loop: 0
+    source: {fileID: 0}
+  - name: OrbPickUp
+    clip: {fileID: 8300000, guid: cee4af69a3a97074991fdb966dd86ed1, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}

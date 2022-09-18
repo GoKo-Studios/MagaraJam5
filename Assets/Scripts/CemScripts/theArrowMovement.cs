@@ -193,7 +193,7 @@ public class theArrowMovement : MonoBehaviour
     private void OnChargedMove(){
         
         if(stateAwake[3] == true){
-            AudioManagerC.Instance.Play("SwordAttackCharge");
+            AudioManagerC.Instance.Play("SwordAttackCharged");
             shotCallBackTimer = Time.time;
             weaponDamageHolder.SetToShotValues();
             setAllAwakes();
@@ -222,7 +222,7 @@ public class theArrowMovement : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         Debug.Log(other.transform.name);
         if(other.tag == "Enemy"){
-            AudioManagerC.Instance.Play("SwordAttackJuicy");
+            AudioManagerC.Instance.Play("SwordAttackWandering");
             if(!taggedEnemyList.Contains(other.transform)){
                 taggedEnemyList.Add(other.transform);
                 OnListAdd?.Invoke(other.transform);
