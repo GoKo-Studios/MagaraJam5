@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02817962, g: 0.021466099, b: 0.013291191, a: 1}
+  m_IndirectSpecularColor: {r: 0.028179632, g: 0.021466095, b: 0.0132911755, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12177,66 +12177,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _radius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineSteps
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 332c23652c43f0540a1bfb0458f1af32, type: 2}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].value
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].value
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[0].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080686843, guid: b868063fa43ff1d4497604abc0f16b18, type: 3}
-      propertyPath: _lineCurve.m_Curve.Array.data[1].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
     - target: {fileID: 7177489754752019114, guid: b868063fa43ff1d4497604abc0f16b18,
         type: 3}
       propertyPath: m_Name
@@ -71531,11 +71471,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3777601318819174341, guid: 53400ea471d68c143bf65e0ee854371c,
-        type: 3}
-      propertyPath: playerFollowCam
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3777601318819174344, guid: 53400ea471d68c143bf65e0ee854371c,
         type: 3}

@@ -152,7 +152,7 @@ public class theArrowMovement : MonoBehaviour
         Debug.Log(Vector3.Distance(transform.position, playerCallBackDestination.position));
 
         if(arrowInput.callArrowBack && PlayerMana.Instance.ArrowAvailability() && 
-        Vector3.Distance(transform.position, playerCallBackDestination.position) < 2.5f ){
+        Vector3.Distance(transform.position, playerCallBackDestination.position) < 5.0f ){
             theArrowState = ArrowStates.OutAndActive;
             CameraManager.Instance.setOrthoSize(13.5f);
         }
