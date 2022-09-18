@@ -33,7 +33,7 @@ public class PlayerMana : MonoBehaviour
     }
 
     private void Update(){
-        if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.OutAndActive){
+        if(arrowMovement.theArrowState == ArrowStates.OutAndActive){
             currentMana -= decreaseRate * Time.deltaTime;
             currentMana = Mathf.Clamp(currentMana, 0.0f, maxMana);
         }

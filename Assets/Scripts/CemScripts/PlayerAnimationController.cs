@@ -97,4 +97,8 @@ public class PlayerAnimationController : MonoBehaviour
         animator.SetTrigger("BackToBlendTree");
     }
 
+    private void OnAimEnter(){
+        
+    }
+
 }

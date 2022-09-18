@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
     public UnityAction playerJumpEvent;
     public UnityAction onSmashEnter;
     public UnityAction onSmashExit;
+    public UnityAction onAimEvent;
+    public UnityAction onShootEvent;
     
     // Start is called before the first frame update
     void Start()
@@ -125,13 +127,17 @@ public class Player : MonoBehaviour
 
         PullEnemiesSkill();
 
-        if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.CallBack){
+        if(arrowMovement.theArrowState == ArrowStates.CallBack){
             LookAtMouse();
         }
 
         if(distanceFromGround > 3.0f && playerInput.groundSmashEvent && smashSkill.IsAvailable()){
             playerStates = PlayerStates.GroundSmash;
             smashSkill.OnUse();
+        }
+
+        if(playerInput.playerAimEvent && arrowMovement.theArrowState != ArrowStates.Charged){
+            playerStates = PlayerStates.Aiming;
         }
     }
 
@@ -146,12 +152,12 @@ public class Player : MonoBehaviour
          
         charController.Move(movingDirection * speed * Time.deltaTime);
 
-        if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.OutAndActive){
+        if(arrowMovement.theArrowState == ArrowStates.OutAndActive){
             if(movingDirection != Vector3.zero){
                 LookAtMovementRotation();
             }
         }
-        else if(arrowMovement.theArrowState == theArrowMovement.ArrowStates.CallBack){
+        else if(arrowMovement.theArrowState == ArrowStates.CallBack){
             LookAtMouse();                  
         }
 
@@ -180,23 +186,36 @@ public class Player : MonoBehaviour
             }
         }
 
+        if(playerInput.playerAimEvent && arrowMovement.theArrowState != ArrowStates.Charged){
+            playerStates = PlayerStates.Aiming;
+        }
+
     }
 
     private void AimingMovement(){
-        if(stateAwake[1] == true){
+        if(stateAwake[3] == true){
             //first transition frame.
+            onAimEvent?.Invoke();
             setAllAwakes();
-            stateAwake[1] = false;
+            stateAwake[3] = false;
         }
+
+        if(playerInput.playerShootEvent){
+            arrowMovement.theArrowState = ArrowStates.Charged;
+            onShootEvent?.Invoke();
+            playerStates = PlayerStates.Idle;
+        }
+
+        LookAtMouse();
 
         charController.Move(movingDirection * walkingSpeed * Time.deltaTime);
     }
 
     private void DashStateMovement(){
-        if(stateAwake[3] == true){
+        if(stateAwake[4] == true){
             dashTimer = Time.time;
             setAllAwakes();
-            stateAwake[3] = false;
+            stateAwake[4] = false;
         }
         charController.Move(movingDirection * dashSpeed * Time.deltaTime);
 
@@ -228,11 +247,11 @@ public class Player : MonoBehaviour
     }
 
     private void GroundSmashStateMovement(){
-        if(stateAwake[4] == true){
+        if(stateAwake[5] == true){
             onSmashEnter?.Invoke();
             smashHangingTime = Time.time;
             setAllAwakes();
-            stateAwake[4] = false;
+            stateAwake[5] = false;
         }
 
         bool hitTheGround = false;

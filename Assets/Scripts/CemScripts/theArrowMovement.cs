@@ -9,6 +9,8 @@ public class theArrowMovement : MonoBehaviour
     [SerializeField] private float speed = 2.0f;
     [SerializeField] private float distanceCap = 15.0f;
     [SerializeField] private float rotateSpeed = 10.0f;
+    [SerializeField] private float shotSpeed = 50.0f;
+    private float shotCallBackTimer;
 
     private float heightFromGround;
     
@@ -37,10 +39,18 @@ public class theArrowMovement : MonoBehaviour
 
     ArrowInputManager arrowInput;
 
+    public Transform aimPosTransform;
+
+    private Player player;
+
     public List<Transform> taggedEnemyList;
 
-    public enum ArrowStates { CallBack, OutAndActive, Disabled };
+    private bool setPositionDone;
+    private bool setRotationDone;
+
     public ArrowStates theArrowState = ArrowStates.CallBack;
+    private bool[] stateAwake = new bool[4];
+    private int stateSize = 4;
 
     public UnityEngine.Events.UnityAction<Transform> OnListAdd;
     public UnityEngine.Events.UnityAction<Transform> OnListRemove;
@@ -55,7 +65,14 @@ public class theArrowMovement : MonoBehaviour
         rb = transform.GetComponent<Rigidbody>();
 
         playerCallBackDestination = GameObject.Find("WeaponCallBackPos").transform;
-        playerMana = GameObject.Find("Player").GetComponent<PlayerMana>();
+        player = GameObject.Find("Player").GetComponent<Player>();
+        playerMana = player.transform.GetComponent<PlayerMana>();
+
+        aimPosTransform = player.transform.GetChild(3).GetComponent<Transform>();
+
+        for(int i = 0; i < stateSize; i++){
+            stateAwake[i] = true;
+        }
     }
 
     // Update is called once per frame
@@ -63,14 +80,17 @@ public class theArrowMovement : MonoBehaviour
     {
 
         switch (theArrowState){
-            case ArrowStates.Disabled:
-                
-                break;
             case ArrowStates.OutAndActive:
                 OutAndActiveMovement();
                 break;
             case ArrowStates.CallBack:
                 CallBackMovement();
+                break;
+            case ArrowStates.Aiming:
+                AimingMovement();
+                break;
+            case ArrowStates.Charged:
+                OnChargedMove();
                 break;
         }
 
@@ -78,6 +98,10 @@ public class theArrowMovement : MonoBehaviour
     }
 
     private void OutAndActiveMovement(){
+        if(stateAwake[1] == true){
+            setAllAwakes();
+            stateAwake[1] = false;
+        }
 
         mousePos = InputListener.mousePosOnWorld;
 
@@ -96,9 +120,14 @@ public class theArrowMovement : MonoBehaviour
             theArrowState = ArrowStates.CallBack;
             CameraManager.Instance.setOrthoSize(11.0f);
         }
+
     }
 
     private void CallBackMovement(){
+        if(stateAwake[0] == true){
+            setAllAwakes();
+            stateAwake[0] = false;
+        }
 
         RotateArrow(playerCallBackDestination.position);
 
@@ -108,6 +137,55 @@ public class theArrowMovement : MonoBehaviour
             theArrowState = ArrowStates.OutAndActive;
             CameraManager.Instance.setOrthoSize(13.5f);
         }
+
+        if(arrowInput.aimEvent){
+            theArrowState = ArrowStates.Aiming;
+        }
+    }
+
+    private void AimingMovement(){
+        if(stateAwake[2] == true){
+            setAllAwakes();
+            stateAwake[2] = false;
+        }
+        
+        if(!setPositionDone){
+            SetArrowPos(aimPosTransform.position, 2.0f); 
+        }
+        else{
+            transform.position = aimPosTransform.position;
+        }
+
+        SetArrowRotation(player.transform, 5.0f);
+
+        if(setPositionDone && setRotationDone){
+            if(arrowInput.shootEvent){
+                theArrowState = ArrowStates.Charged;
+            }
+            else if(arrowInput.aimEvent){
+                theArrowState = ArrowStates.CallBack;
+            }
+        }
+            
+    }
+
+    private void OnChargedMove(){
+        
+        if(stateAwake[3] == true){
+            shotCallBackTimer = Time.time;
+            setAllAwakes();
+            stateAwake[3] = false;
+        }
+        if(Time.time - shotCallBackTimer > 3.0f){
+            theArrowState = ArrowStates.CallBack;
+        }
+        else if(arrowInput.callArrowBack){
+            theArrowState = ArrowStates.CallBack;
+        }
+        else{
+            rb.velocity = transform.forward * shotSpeed;
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other){
@@ -142,6 +220,34 @@ public class theArrowMovement : MonoBehaviour
         // Debug.Log(Vector3.Distance(transform.position, mousePos));
         rb.velocity = transform.forward * speed * TurnSpeedCurve(angleBetweenTarget) * mappedDistance;
     }
+
+    private void SetArrowPos(Vector3 destination, float speed){
+        transform.position = Vector3.Lerp(transform.position, destination, Time.deltaTime * speed);
+        Debug.Log(destination);
+        if(Vector3.Distance(transform.position, destination) < 0.1f){
+            setPositionDone = true;
+        }
+        else{
+            setPositionDone = false;
+        }
+    }
+
+    private void SetArrowRotation(Transform destination, float speed){
+        transform.forward = Vector3.Lerp(transform.forward, destination.forward, Time.deltaTime * speed);
+        if(transform.forward == destination.forward){
+            setRotationDone = true;
+        }
+        else{
+            setRotationDone = false;
+        }
+    }
+
+    private void setAllAwakes(){
+        for(int i = 0; i < stateSize; i++){
+            stateAwake[i] = true;
+        }
+    }
+    
 
     private float TurnSpeedCurve(float angle) {
         float res = MapRange(0, 180, 0, 1, angle);

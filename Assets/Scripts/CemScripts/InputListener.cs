@@ -57,8 +57,12 @@ public class InputListener : MonoBehaviour
             InputEventSystem.Instance.pullEnemies?.Invoke();
         }
 
+        if(Input.GetMouseButton(0)){
+            InputEventSystem.Instance.ShootEvent?.Invoke();
+        }
+
         if(Input.GetKeyDown(KeyCode.R)){
-            InputEventSystem.Instance.playerAim?.Invoke();
+            InputEventSystem.Instance.AimEvent?.Invoke();
         }
 
         if(Input.GetMouseButtonDown(1)){

@@ -23,6 +23,7 @@ public class PlayerInputManager : MonoBehaviour
     public bool groundSmashEvent;
     public bool pullEnemiesEvent;
     public bool playerAimEvent;
+    public bool playerShootEvent;
 
 
     private void Start(){
@@ -32,6 +33,8 @@ public class PlayerInputManager : MonoBehaviour
         InputEventSystem.Instance.dashEvent += OnDashEvent;
         InputEventSystem.Instance.groundSmash += OnGroundSmashEvent;
         InputEventSystem.Instance.pullEnemies += OnPullEnemiesEvent;
+        InputEventSystem.Instance.AimEvent += OnAimEvent;
+        InputEventSystem.Instance.ShootEvent += OnShootEvent;
     }
     
     private void OnDestroy(){
@@ -41,6 +44,8 @@ public class PlayerInputManager : MonoBehaviour
         InputEventSystem.Instance.dashEvent -= OnDashEvent;
         InputEventSystem.Instance.groundSmash -= OnGroundSmashEvent;
         InputEventSystem.Instance.pullEnemies -= OnPullEnemiesEvent;
+        InputEventSystem.Instance.AimEvent -= OnAimEvent;
+        InputEventSystem.Instance.ShootEvent -= OnShootEvent;
     }
 
     protected void getMovementDirInput(Vector2 input){
@@ -67,11 +72,20 @@ public class PlayerInputManager : MonoBehaviour
         pullEnemiesEvent = true;
     }
 
+    private void OnAimEvent(){
+        playerAimEvent = true;
+    }
+
+    private void OnShootEvent(){
+        playerShootEvent = true;
+    }
+
     public void setInputsToFalse(){
         dashEvent = false;
         groundSmashEvent = false;
         jumpEvent = false;
         pullEnemiesEvent = false;
+        playerShootEvent = false;
         playerAimEvent = false;
     }
 
