@@ -153,13 +153,12 @@ public class theArrowMovement : MonoBehaviour
 
         Debug.Log(Vector3.Distance(transform.position, playerCallBackDestination.position));
 
-        if(arrowInput.callArrowBack && PlayerMana.Instance.ArrowAvailability() && 
-        Vector3.Distance(transform.position, playerCallBackDestination.position) < 5.0f ){
+        if(arrowInput.callArrowBack && PlayerMana.Instance.ArrowAvailability() && IsCallbackDone()){
             theArrowState = ArrowStates.OutAndActive;
             CameraManager.Instance.setOrthoSize(13.5f);
         }
 
-        if(arrowInput.aimEvent){
+        if(arrowInput.aimEvent && IsCallbackDone()){
             theArrowState = ArrowStates.Aiming;
         }
     }
@@ -211,9 +210,13 @@ public class theArrowMovement : MonoBehaviour
         
     }
 
-    // private bool IsCallbackDone(){
-    //     if()
-    // }
+    private bool IsCallbackDone(){
+        if(distanceToCallBackPos < 5.0f){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     private void OnTriggerEnter(Collider other){
         Debug.Log(other.transform.name);

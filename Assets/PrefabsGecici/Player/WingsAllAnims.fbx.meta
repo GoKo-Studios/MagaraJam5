@@ -1,11 +1,35 @@
 fileFormatVersion: 2
-guid: 32086b0a72d4cfc459b0655adcb61e3a
+guid: 6b2fa89f724cebd49b9d658bc050c3d3
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: -203655887218126122
-    second: mixamo.com
+      74: 7709686125681325085
+    second: Armature|Armature.001Action
+  - first:
+      74: 9128885920207887336
+    second: Armature|Armature.002Action
+  - first:
+      74: 4419341551624498096
+    second: Armature|ArmatureAction.003
+  - first:
+      74: 2264077025236624520
+    second: Armature.001|Armature.001Action
+  - first:
+      74: -1153017888000365145
+    second: Armature.001|Armature.002Action
+  - first:
+      74: 546454221387537807
+    second: Armature.001|ArmatureAction.003
+  - first:
+      74: 6906267723572508546
+    second: Armature.002|Armature.001Action
+  - first:
+      74: 5138602965388526686
+    second: Armature.002|Armature.002Action
+  - first:
+      74: 3656176099244414663
+    second: Armature.002|ArmatureAction.003
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,19 +60,48 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
-      takeName: mixamo.com
+      name: Armature|Armature.001Action
+      takeName: Armature|Armature.001Action
       internalID: 0
       firstFrame: 0
-      lastFrame: 21
+      lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature.002Action
+      takeName: Armature|Armature.002Action
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

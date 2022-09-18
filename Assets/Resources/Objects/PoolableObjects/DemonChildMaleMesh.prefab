@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 3062342619115485911}
   - component: {fileID: 3062342619115485910}
   m_Layer: 0
-  m_Name: DemonChildMale
+  m_Name: DemonChildMaleMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a67b7e3e26ca84fbf39906c55f4c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tag: 3
+  Tag: 1
 --- !u!95 &3062342619115485910
 Animator:
   serializedVersion: 4
