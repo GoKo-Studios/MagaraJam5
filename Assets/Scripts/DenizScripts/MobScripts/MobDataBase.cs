@@ -24,6 +24,8 @@ public abstract class MobDataBase : ScriptableObject
     // Movement logic to be used in MobMovementController.
     public virtual void MovementController(MobOnMoveParams Params) {
 
+            if (Params.Manager.GetState() == MobStates.StopAI) return;
+
             // Search for a target by checking if any object is in detection range.
             RaycastHit[] _hits = SearchRange(Params.MobTransform.position, Params.Manager.Data.DetectionRange, Params.Manager.Data.DetectionLayerMask);
 
@@ -152,7 +154,7 @@ public abstract class MobDataBase : ScriptableObject
         MobSpawnerManager.Instance.SpawnOrbWithPooling(Manager.gameObject.transform.position);
         Manager.StopAllCoroutines();
         Manager.SetState(MobStates.StopAI);
-        Manager.Clear();
+        Manager.Invoke("Clear", Manager.Data.PoolingTime - 1f);
         FindObjectOfType<theArrowMovement>().RemoveFromTaggedEnemyList(Manager.transform.GetChild(1).transform);
     }
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
     DisplayName: Passive
-    MaxHealth: 25
+    MaxHealth: 15
     FollowSpeed: 5
     DetectionRange: 20
     AttackRange: 0

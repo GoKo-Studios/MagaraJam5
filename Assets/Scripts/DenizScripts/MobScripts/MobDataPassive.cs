@@ -13,6 +13,8 @@ public class MobDataPassive : MobDataBase
 
     public override void MovementController(MobOnMoveParams Params)
     {                   
+
+         if (Params.Manager.GetState() == MobStates.StopAI) return;
         // Search for a target by checking if any object is in detection range.
         RaycastHit[] _hits = SearchRange(Params.MobTransform.position, Params.Manager.Data.DetectionRange, Params.Manager.Data.DetectionLayerMask);
 

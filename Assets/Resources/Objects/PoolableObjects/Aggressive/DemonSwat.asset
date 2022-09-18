@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
     DisplayName: Melee
-    MaxHealth: 100
+    MaxHealth: 125
     FollowSpeed: 4
     DetectionRange: 300
     AttackRange: 3

@@ -43,4 +43,4 @@ MonoBehaviour:
   DistanceToFollow: 30
   RangedCollisionLayerMask:
     serializedVersion: 2
-    m_Bits: 1087
+    m_Bits: 3131
