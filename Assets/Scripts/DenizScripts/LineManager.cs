@@ -11,6 +11,13 @@ public class LineManager : MonoBehaviour
     [SerializeField] private Queue<GameObject> _lineQueue = new Queue<GameObject>();
     [SerializeField] private int _lineInitialAmount;
     [SerializeField] private Player _player;
+    private GameObject _circle;
+
+    [Header("Line Renderer")]
+    [SerializeField] private int _lineSteps; // Complexity of the circles.
+    [SerializeField] private AnimationCurve _lineCurve; // Width of the circles.
+    [SerializeField] private Material _lineMaterial; 
+    [SerializeField] private float _radius;
 
     private void Awake() {
         _arrowScript = GetComponent<theArrowMovement>();
@@ -30,9 +37,19 @@ public class LineManager : MonoBehaviour
     }
 
     void Start()
-    {
+    {   
+        DrawCircle(_lineSteps, _radius);
         for (int i = 0; i < _lineInitialAmount; i++) {
             AddLine();    
+        }
+    }
+
+    private void Update() {
+        if (_lineList.Count == 0) {
+            DisableCircle();
+        }
+        else {
+            EnableCircle();
         }
     }
 
@@ -82,7 +99,7 @@ public class LineManager : MonoBehaviour
     }
 
     private void SetupLine(LineController controller, Transform target) {
-        controller.AssignTarget(_player.transform, target);
+        controller.AssignTarget(_circle.transform, target);
     }
 
     private void OnListAdd(Transform obj) {
@@ -98,6 +115,41 @@ public class LineManager : MonoBehaviour
             DisableLine(line.Renderer);
         }
         _lineList.Clear();
+    }
+
+    private void EnableCircle() {
+        _circle.SetActive(true);
+    }
+
+    private void DisableCircle() {
+        _circle.SetActive(false);
+    }
+
+    private void DrawCircle(int steps, float radius) {
+        _circle = Instantiate(new GameObject(), _player.transform.position, Quaternion.identity, _player.transform);
+        LineRenderer lineRenderer = _circle.AddComponent<LineRenderer>();
+        lineRenderer.useWorldSpace = false;
+        lineRenderer.widthCurve = _lineCurve;
+        lineRenderer.material = _lineMaterial;
+        lineRenderer.positionCount = steps;
+ 
+        for(int currentStep=0; currentStep<steps; currentStep++)
+        {
+            float circumferenceProgress = (float)currentStep/(steps-1);
+ 
+            float currentRadian = circumferenceProgress * 2 * Mathf.PI;
+            
+            float xScaled = Mathf.Cos(currentRadian);
+            float yScaled = Mathf.Sin(currentRadian);
+ 
+            float x = radius * xScaled;
+            float y = 0;
+            float z = radius * yScaled;
+ 
+            Vector3 currentPosition = new Vector3(x,y,z);
+ 
+            lineRenderer.SetPosition(currentStep,currentPosition);
+        }
     }
 }
 

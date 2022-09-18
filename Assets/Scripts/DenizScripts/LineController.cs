@@ -19,8 +19,9 @@ public class LineController : MonoBehaviour
         if (_target == null) {
             _manager.DequeuLine(_target);
         }
-
-        _lineRenderer.SetPosition(0, _origin.position);
+        Vector3 direction = (_target.position - _origin.position).normalized;
+        
+        _lineRenderer.SetPosition(0, _origin.position + direction * 1f);
         _lineRenderer.SetPosition(1, _target.position);
     }
 
