@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Managers {
     public class LevelManager : MonoBehaviour
@@ -21,70 +22,35 @@ namespace Assets.Scripts.Managers {
 
         #endregion
 
-        #region Self Variables
-
-        #region Serialized Variables
-
-        [Header("Holder")] [SerializeField] private GameObject _levelHolder;
-
-        [Space] [SerializeField] private int _totalLevelCount;
-        [SerializeField] private int LevelID = 0;
-
-        #endregion
-
-        #endregion
-
         private void Start()
         {
             EventManager.Instance.OnLoadLevel += OnLoadLevel;
-            EventManager.Instance.OnClearLevel += OnClearLevel;
             EventManager.Instance.OnNextLevel += OnNextLevel;
             EventManager.Instance.OnRestartLevel += OnRestartLevel;
-
-            _levelHolder = GameObject.Find("LevelHolder");
-            EventManager.Instance.OnLoadLevel?.Invoke(LevelID);
         }
 
         private void OnDisable()
         {
             EventManager.Instance.OnLoadLevel -= OnLoadLevel;
-            EventManager.Instance.OnClearLevel -= OnClearLevel;
             EventManager.Instance.OnNextLevel -= OnNextLevel;
             EventManager.Instance.OnRestartLevel -= OnRestartLevel;
-
         }
 
         private void OnNextLevel()
         {
-            LevelID++;
-             EventManager.Instance.OnClearLevel?.Invoke();
-            // DOVirtual.DelayedCall(.1f, () => EventManager.Instance.onLevelInitialize?.Invoke(GetLevelID()));
-            // EventManager.Instance.onSaveGameData?.Invoke(new GameSaveDataParams()
-            // {
-            //     Level = LevelID
-            // });
+            int index = SceneManager.GetActiveScene().buildIndex + 1;
+            EventManager.Instance.OnLoadLevel?.Invoke(index);
         }
 
         private void OnRestartLevel()
         {
-            EventManager.Instance.OnClearLevel?.Invoke();
-            //DOVirtual.DelayedCall(.1f, () => EventManager.Instance.onLevelInitialize?.Invoke(GetLevelID()));
-            //EventManager.Instance.onSaveGameData?.Invoke(new GameSaveDataParams()
-            // {
-            //     Level = LevelID
-            // });
+            int index = SceneManager.GetActiveScene().buildIndex;
+            EventManager.Instance.OnLoadLevel?.Invoke(index);
         }
 
         private void OnLoadLevel(int levelID)
-        {
-            var newLevelObject = ResourceLoader.LoadResource<GameObject>(($"Levels/Level{levelID}"));
-            var newLevel = Instantiate(newLevelObject, Vector3.zero, Quaternion.identity);
-            if (newLevel != null) newLevel.transform.SetParent(_levelHolder.transform);
-        }
-
-        private void OnClearLevel()
-        {
-            Destroy(_levelHolder.transform.GetChild(0).gameObject);
+        { 
+            SceneManager.LoadScene(levelID);
         }
     }
 }
