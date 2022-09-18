@@ -24,7 +24,7 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 64
     Mesh: {fileID: 2986628881038703742, guid: 101fb7339b978ad4e8fa7dbb5f233b33, type: 3}
-    WaveCost: 0
+    WaveCost: 2.5
     PoolingTime: 1
     AttackTime: 1
     AttackAreaSize: {x: 0.5, y: 1, z: 30}
