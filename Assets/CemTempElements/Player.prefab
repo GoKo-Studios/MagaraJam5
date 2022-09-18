@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMana: 100
-  decreaseRate: 0
+  decreaseRate: 10
 --- !u!136 &860886972
 CapsuleCollider:
   m_ObjectHideFlags: 0

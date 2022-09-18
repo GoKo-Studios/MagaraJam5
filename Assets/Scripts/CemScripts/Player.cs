@@ -222,6 +222,7 @@ public class Player : MonoBehaviour
     private void DashStateMovement(){
         if(stateAwake[4] == true){
             onDashEnter?.Invoke();
+            AudioManagerC.Instance.Play("PlayerDashSkill");
             dashTimer = Time.time;
             setAllAwakes();
             stateAwake[4] = false;

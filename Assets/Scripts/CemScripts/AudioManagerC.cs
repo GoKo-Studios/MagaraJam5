@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class AudioManagerC : MonoBehaviour
@@ -37,7 +38,17 @@ public class AudioManagerC : MonoBehaviour
     }
 
     void Start(){
+        if(SceneManager.GetActiveScene().buildIndex == 0 ){
+            Play("HollyMusic");
+            
+        }
         Play("CityAmbiance");
+    }
+
+    void Update(){
+        if(SceneManager.GetActiveScene().buildIndex != 0 ){
+            Stop("HollyMusic");
+        }
     }
 
     public void Play(string name){
@@ -48,9 +59,18 @@ public class AudioManagerC : MonoBehaviour
         s.source.Play();
     }
 
+    public void Stop(string name){
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(s == null){
+            return;
+        }
+        s.source.Stop();
+    }
+
     public void SetVolume(float volume){
         foreach(Sound s in sounds){
             s.source.volume = volume;
         }
     }
+
 }

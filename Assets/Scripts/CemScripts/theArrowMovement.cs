@@ -193,7 +193,7 @@ public class theArrowMovement : MonoBehaviour
     private void OnChargedMove(){
         
         if(stateAwake[3] == true){
-            AudioManagerC.Instance.Play("SwordAttackCharged");
+            AudioManagerC.Instance.Play("SwordAttackCharge");
             shotCallBackTimer = Time.time;
             weaponDamageHolder.SetToShotValues();
             setAllAwakes();

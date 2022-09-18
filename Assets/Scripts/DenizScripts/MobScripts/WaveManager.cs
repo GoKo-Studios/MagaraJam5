@@ -114,6 +114,7 @@ namespace Assets.Scripts.Managers {
                         }  
                     }
                     else {
+                        if(Time.deltaTime == 0.0f ) return;
                         _spawnTimer -= Time.deltaTime;
                     }
 

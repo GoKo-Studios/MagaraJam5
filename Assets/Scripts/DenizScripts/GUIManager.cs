@@ -57,12 +57,12 @@ namespace Assets.Scripts.Managers {
         }
 
         private void OnUpdateTimer(float timer) {
-            _timerText.text = "Time Until Next Wave: " + ((int)timer).ToString();
+            _timerText.text = "Sonraki Dalga: " + ((int)timer).ToString();
         }
 
         private void OnWaveStart(int waveRemaining) {
             _waveObject.SetActive(true);
-            _waveText.text = "Wave Remaining " + waveRemaining;
+            _waveText.text = "Kalan Dalga: " + waveRemaining;
         }
 
         private void OnWaveFinish() {
