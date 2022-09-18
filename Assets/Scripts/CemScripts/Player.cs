@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
     public UnityAction playerJumpEvent;
     public UnityAction onSmashEnter;
     public UnityAction onSmashExit;
+    public UnityAction onDashEnter;
+    public UnityAction onDashExit;
     public UnityAction onAimEvent;
     public UnityAction onShootEvent;
     
@@ -108,6 +110,8 @@ public class Player : MonoBehaviour
                 GroundSmashStateMovement();                
                 break;
         }
+
+        Debug.Log(smashSkill.skillDamageValue);
 
         playerInput.setInputsToFalse();
     }
@@ -213,6 +217,7 @@ public class Player : MonoBehaviour
 
     private void DashStateMovement(){
         if(stateAwake[4] == true){
+            onDashEnter?.Invoke();
             dashTimer = Time.time;
             setAllAwakes();
             stateAwake[4] = false;
@@ -242,6 +247,7 @@ public class Player : MonoBehaviour
 
         //playerInput.dashEvent = false;
         if(Time.time - dashTimer > dashDuration){
+            onDashExit?.Invoke();
             playerStates = PlayerStates.Idle;
         }
     }

@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WingsAnimController : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+{   
+    Player player;
+    void Start(){
+        player = GetComponentInParent<Player>();
+        player.onSmashEnter += OnSmashEvent;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnDestroy(){
+        player.onSmashEnter -= OnSmashEvent;
+    }
+
+    private void OnSmashEvent(){
+
+    }
+
+    private void OnDashEvent(){
+
     }
 }

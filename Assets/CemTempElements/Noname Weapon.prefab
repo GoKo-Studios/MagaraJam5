@@ -155,10 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f50791f5da6e84493a12647b5eea86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WanderingDamage: 25
+  WanderingDamage: 15
   WanderingKnockback: 4
   WanderingStunDuration: 2
-  ShotDamage: 50
+  ShotDamage: 40
   ShotKnockback: 6
   ShotStunDuration: 2
 --- !u!114 &1080686843

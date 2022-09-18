@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillCooldown: 2
-  skillDamage: 30
+  skillDamage: 50
   skillStunDuration: 1.5
   skillKnockbackAmount: 3
   attackCooldown: 12
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e53a2640d10e242afb52160ffd9875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillCooldown: 0
-  skillDamage: 25
+  skillCooldown: 3
+  skillDamage: 45
   skillStunDuration: 1
   skillKnockbackAmount: 3
 --- !u!114 &6144446778902180409

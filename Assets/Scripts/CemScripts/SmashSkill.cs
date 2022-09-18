@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class SmashSkill : PlayerSkills
 {
-    
+    void Start(){
+        skillDamageValue = skillDamage;
+    }
     public bool IsAvailable(){
         if(cooldownCounter == 0){
             return true;
