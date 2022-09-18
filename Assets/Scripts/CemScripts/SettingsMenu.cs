@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.Managers;
 
-public class StartSceneManager : MonoBehaviour
+public class SettingsMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,9 +14,5 @@ public class StartSceneManager : MonoBehaviour
     void Update()
     {
         
-    }
-    public void Button_Start()
-    {
-        EventManager.Instance.OnNextLevel?.Invoke();
     }
 }
