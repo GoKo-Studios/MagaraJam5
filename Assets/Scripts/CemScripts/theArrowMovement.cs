@@ -28,6 +28,7 @@ public class theArrowMovement : MonoBehaviour
 
     private float distance_mousePos_arrow;
     private float angleBetweenTarget;
+    private float distanceToCallBackPos;
 
     [SerializeField]
     private float arrowCenterDeadzone = 3.0f;
@@ -82,6 +83,7 @@ public class theArrowMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        distanceToCallBackPos = Vector3.Distance(playerCallBackDestination.position, transform.position);
 
         switch (theArrowState){
             case ArrowStates.OutAndActive:
@@ -208,6 +210,10 @@ public class theArrowMovement : MonoBehaviour
         }
         
     }
+
+    // private bool IsCallbackDone(){
+    //     if()
+    // }
 
     private void OnTriggerEnter(Collider other){
         Debug.Log(other.transform.name);
