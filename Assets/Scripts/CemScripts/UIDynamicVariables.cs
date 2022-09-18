@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,10 +34,18 @@ public class UIDynamicVariables : MonoBehaviour
     public Slider HealthOrb;
     private bool isCoolDown1 = false;
     private bool isCoolDown2 = false;
+    
     public Image CoolDown1;
     public Image CoolDown2;
+    
+    public Image ClickedEffect1;
+    public Image ClickedEffect2;
+    public Image ClickedEffect3;
+    public Image ClickedEffect4;
     private float cooldowntime;
-
+    public float speed = 0.3f;
+    public Color StartBlinkColor = Color.white;
+    public Color EndBlinkColor = Color.gray;
     private GameObject DashAttackState;
 
     void Start()
@@ -47,9 +56,61 @@ public class UIDynamicVariables : MonoBehaviour
         DashAttackState = transform.Find("DashAttackState").gameObject;
     }
 
+    void ClickEffect()
+    {
+        IEnumerator Blink1()
+        {
+            ClickedEffect1.color = Color.Lerp(StartBlinkColor, EndBlinkColor, speed);
+            yield return new WaitForSeconds(0.2f);
+            ClickedEffect1.color = Color.Lerp(EndBlinkColor, StartBlinkColor, speed);
+            yield return null;
+        }
+        IEnumerator Blink2()
+        {
+            ClickedEffect2.color = Color.Lerp(StartBlinkColor, EndBlinkColor, speed);
+            yield return new WaitForSeconds(0.2f);
+            ClickedEffect2.color = Color.Lerp(EndBlinkColor, StartBlinkColor, speed);
+            yield return null;
+        }
+        IEnumerator Blink3()
+        {
+            ClickedEffect3.color = Color.Lerp(StartBlinkColor, EndBlinkColor, speed);
+            yield return new WaitForSeconds(0.2f);
+            ClickedEffect3.color = Color.Lerp(EndBlinkColor, StartBlinkColor, speed);
+            yield return null;
+        }
+        IEnumerator Blink4()
+        {
+            ClickedEffect4.color = Color.Lerp(StartBlinkColor, EndBlinkColor, speed);
+            yield return new WaitForSeconds(0.2f);
+            ClickedEffect4.color = Color.Lerp(EndBlinkColor, StartBlinkColor, speed);
+            yield return null;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            
+            StartCoroutine(Blink1());
+            
+
+        }
+        if (Input.GetKey(KeyCode.LeftShift ))
+        {
+            StartCoroutine(Blink2());
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            StartCoroutine(Blink3());
+        }
+        if (Input.GetKey(KeyCode.F))
+        {
+            StartCoroutine(Blink4());
+        }
+        
+
+    }
     void CoolDown()
     {
-        if (playerDashCooldown >= 1 && isCoolDown1 == false )
+        if (playerDashCooldown >= 3 && isCoolDown1 == false )
         {
             cooldowntime = playerDashCooldown;
             isCoolDown1 = true;
@@ -65,7 +126,7 @@ public class UIDynamicVariables : MonoBehaviour
                 isCoolDown1 = false;
             }
         }
-        if (playerSmashCooldown >= 2 && isCoolDown2 == false)
+        if (playerSmashCooldown >= 3 && isCoolDown2 == false)
         {
             cooldowntime = playerSmashCooldown;
             isCoolDown2 = true;
@@ -95,8 +156,9 @@ public class UIDynamicVariables : MonoBehaviour
         playerSmashCooldown = smashSkill.getCooldownCounter();
 
         CoolDown();
-
-        if(dashSkill.IsAttackAvailable()){
+        ClickEffect();
+        
+        if (dashSkill.IsAttackAvailable()){
             DashAttackState.SetActive(true);
         }
         else{
