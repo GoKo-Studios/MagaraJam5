@@ -94,6 +94,13 @@ public class theArrowMovement : MonoBehaviour
                 break;
         }
 
+        if(theArrowState == ArrowStates.CallBack){
+            GetComponent<BoxCollider>().enabled = false;
+        }
+        else{
+            GetComponent<BoxCollider>().enabled = true;
+        }
+
         arrowInput.SetInputsToFalse();
     }
 

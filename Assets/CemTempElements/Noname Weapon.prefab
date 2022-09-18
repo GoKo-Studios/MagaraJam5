@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7177489754752019117}
   - component: {fileID: 1031410749703573142}
   - component: {fileID: 2777128943568191291}
+  - component: {fileID: 1080686843}
   m_Layer: 7
   m_Name: Noname Weapon
   m_TagString: Weapon
@@ -52,6 +53,7 @@ MonoBehaviour:
   speed: 2
   distanceCap: 15
   rotateSpeed: 10
+  shotSpeed: 50
   turnCurve:
     serializedVersion: 2
     m_Curve:
@@ -92,6 +94,7 @@ MonoBehaviour:
   mouseRayMask:
     serializedVersion: 2
     m_Bits: 1032
+  aimPosTransform: {fileID: 0}
   taggedEnemyList: []
   theArrowState: 0
 --- !u!114 &7177489754752019118
@@ -108,6 +111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowToTheFloor: 0
   callArrowBack: 0
+  aimEvent: 0
+  shootEvent: 0
 --- !u!54 &7177489754752019117
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,8 +140,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7358124, y: 0.164002, z: 3.4857683}
-  m_Center: {x: 0.008498549, y: 0.00044223666, z: 0.37538147}
+  m_Size: {x: 1.725224, y: 2.2801714, z: 3.4857683}
+  m_Center: {x: 0.1503272, y: -0.6746171, z: 0.37538147}
 --- !u!114 &2777128943568191291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +157,32 @@ MonoBehaviour:
   Damage: 25
   Knockback: 10
   StunDuration: 0
+--- !u!114 &1080686843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177489754752019114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf0becf3798da849a8b1bce747d7209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _linePrefab: {fileID: 6217478606649273173, guid: 4aba2326fbb62334297bae01e5b40644,
+    type: 3}
+  _arrowScript: {fileID: 0}
+  _lineInitialAmount: 10
+  _player: {fileID: 0}
+  _lineSteps: 0
+  _lineCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lineMaterial: {fileID: 0}
+  _radius: 0
 --- !u!1001 &6973163102321742037
 PrefabInstance:
   m_ObjectHideFlags: 0
