@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace Assets.Scripts.Managers {
     public class GUIManager : MonoBehaviour
@@ -22,12 +23,20 @@ namespace Assets.Scripts.Managers {
 
         #endregion
 
+        [SerializeField] private TextMeshProUGUI _waveText;
+        [SerializeField] private GameObject _timerObject;
+        [SerializeField] private TextMeshProUGUI _timerText;
+
         private void OnEnable() {
-            EventManager.Instance.OnUpdateTimer += UpdateWaveTimer;
+            EventManager.Instance.OnWaveStart += OnWaveStart;
+            EventManager.Instance.OnUpdateTimer += OnUpdateTimer;
+            EventManager.Instance.OnWaveEnd += OnWaveEnd;
         }
 
         private void OnDisable() {
-            EventManager.Instance.OnUpdateTimer -= UpdateWaveTimer;
+            EventManager.Instance.OnWaveStart -= OnWaveStart;
+            EventManager.Instance.OnUpdateTimer -= OnUpdateTimer;
+            EventManager.Instance.OnWaveEnd -= OnWaveEnd;
         }
 
         public void Button_SpawnAggressiveMob() {
@@ -40,6 +49,25 @@ namespace Assets.Scripts.Managers {
 
         private void UpdateWaveTimer(int time) {
             
+        }
+
+        public void Button_GameStart() {
+            EventManager.Instance.OnGameStart?.Invoke();
+        }
+
+        private void OnWaveEnd() {
+            //_waveText.enabled = false;
+            //_timerObject.SetActive(true);
+        }
+
+        private void OnUpdateTimer(float timer) {
+            _timerText.text = ((int)timer).ToString();
+        }
+
+        private void OnWaveStart(int waveRemeaning) {
+            _waveText.enabled = true;
+            _timerObject.SetActive(true);
+            _waveText.text = "Wave Remaning " + waveRemeaning;
         }
     }
 }

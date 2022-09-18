@@ -27,33 +27,44 @@ namespace Assets.Scripts.Managers {
 
         [SerializeField] private List<MobDataBase> _mobAggressiveList; 
         [SerializeField] private List <MobDataBase> _mobPassiveList;
-
         [SerializeField] private GameObject _passiveMobLocations;
+        [SerializeField] private int _waveCount;
+        [SerializeField] private float _waveDuration;
+        [SerializeField] private float _spawnInterval;
 
         [SerializeField] private int _currentWave;
-        [SerializeField] private float _waveValue;
+        [SerializeField] private float _baseWaveValue;
         [SerializeField] private int _timeBetweenWaves;
+
         private List<MobDataBase> _generatedWave = new List<MobDataBase>();
         [SerializeField] private List<GameObject> _spawnedEnemies;
-        [SerializeField] private float _waveDuration;
+        private float _waveValue;
         private float _waveTimer;
-        private float _spawnInterval;
         private float _spawnTimer;
         private float _betweenTimer;
         [SerializeField] private WaveManagerStates _state;
 
         private void OnEnable() {
-            //EventManager.Instance.OnGameStart += OnGameStart;
+            EventManager.Instance.OnGameStart += OnGameStart;
             //EventManager.Instance.OnWaveSkip += OnWaveSkip;
-            //EventManager.Instance.OnGamePause += OnGamePause;
+            EventManager.Instance.OnGamePause += OnGamePause;
         }
 
         private void OnDisable() {
-            //EventManager.Instance.OnPlay -= OnPlay;
+            EventManager.Instance.OnGameStart -= OnGameStart;
             //EventManager.Instance.onSkip -= OnSkip;
+            EventManager.Instance.OnGamePause -= OnGamePause;
         }
 
-         void Start()
+        private void OnGameStart() {
+            ProocedToNextWave();
+        }
+
+        private void OnGamePause() {
+
+        }
+
+        void Start()
         {
             PopulateDataLists();
             SpawnPassiveMobs();
@@ -78,20 +89,26 @@ namespace Assets.Scripts.Managers {
                             _spawnTimer = _spawnInterval;
 
                             _spawnedEnemies.Add(obj);
-                        }
-                        else {
-                            _waveTimer = 0;
-                        }   
+                        }  
                     }
                     else {
                         _spawnTimer -= Time.deltaTime;
-                        _waveTimer -= Time.deltaTime;
                     }
-                    
+
+                    // When wave timer runs out.
+                    if (_waveTimer > 0) {
+                        _waveTimer -= Time.deltaTime;
+                        EventManager.Instance.OnUpdateTimer?.Invoke(_waveTimer);
+                    }
+                    else {
+                        EndWave();
+                    }
+
                     // There are no remaining spawned enemies.
                     if (_spawnedEnemies.Count <= 0) {
                         EndWave();
                     }
+                    
                 break;
 
                 case WaveManagerStates.BetweenWave:
@@ -110,7 +127,6 @@ namespace Assets.Scripts.Managers {
             foreach (Transform location in _passiveMobLocations.GetComponentInChildren<Transform>()) {
                 MobDataBase data = _mobPassiveList[Random.Range(0, _mobAggressiveList.Count)];
                 GameObject obj = MobSpawnerManager.Instance.SpawnMobWithPoolingAndLocation(data, location);
-                
             }
         }
 
@@ -122,15 +138,22 @@ namespace Assets.Scripts.Managers {
         public void ProocedToNextWave() {
             _state = WaveManagerStates.Idle;
             _betweenTimer = _timeBetweenWaves;
-            _currentWave++;
-            GenerateWave();
+
+            if (_currentWave + 1 < _waveCount) {
+                _currentWave++;
+                GenerateWave();
+            }
+            else {
+                // Stop Wave Manager
+                EventManager.Instance.OnWaveFinish?.Invoke();
+            }
+
         }
 
         private void GenerateWave() {
-            _waveValue = _currentWave * 10;
+            _waveValue = _baseWaveValue + _currentWave * 10;
             GenerateMobs();
 
-            _spawnInterval = _waveDuration / _generatedWave.Count;
             _waveTimer = _waveDuration;
         }
 
@@ -152,7 +175,7 @@ namespace Assets.Scripts.Managers {
             _generatedWave.Clear();
             _generatedWave = generatedEnemies;
 
-            EventManager.Instance.OnWaveStart?.Invoke(_currentWave);
+            EventManager.Instance.OnWaveStart?.Invoke(_waveCount - _currentWave);
             _state = WaveManagerStates.InWave;
         }
 

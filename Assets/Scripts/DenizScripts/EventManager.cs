@@ -33,7 +33,8 @@ namespace Assets.Scripts.Managers {
         public UnityAction OnGameEnd;
         public UnityAction<int> OnWaveStart;
         public UnityAction OnWaveEnd;
-        public UnityAction<int> OnUpdateTimer;
+        public UnityAction<float> OnUpdateTimer;
+        public UnityAction OnWaveFinish;
 
         public UnityAction OnNextLevel;
         public UnityAction OnRestartLevel;
