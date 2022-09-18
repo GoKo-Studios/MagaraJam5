@@ -1,9 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using Assets.Scripts.Enums;
-using Assets.Scripts.Controllers;
 
 namespace Assets.Scripts.Managers {
     public class WaveManager : MonoBehaviour

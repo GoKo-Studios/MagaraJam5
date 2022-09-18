@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
     public UnityAction onDashExit;
     public UnityAction onAimEvent;
     public UnityAction onShootEvent;
+    public UnityAction onPullEvent;
     
     // Start is called before the first frame update
     void Start()
@@ -318,6 +319,7 @@ public class Player : MonoBehaviour
 
     private void PullEnemiesSkill(){
         if(playerInput.pullEnemiesEvent && isGrounded && arrowMovement.taggedEnemyList.Count > 0){
+            onPullEvent?.Invoke();
             foreach(Transform enemy in arrowMovement.taggedEnemyList){
                 if(enemy == null){
                     return;

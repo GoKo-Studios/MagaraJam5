@@ -1228,11 +1228,13 @@ MonoBehaviour:
   _waveCount: 0
   _waveDuration: 10
   _spawnInterval: 0
+  _levelFinishTime: 0
   _currentWave: 0
   _baseWaveValue: 0
   _timeBetweenWaves: 1
   _spawnedEnemies: []
   _state: 0
+  _isEnabled: 0
 --- !u!1 &6601666591233172922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,8 +1925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae392f01ed510f445b53ba1217feda44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waveObject: {fileID: 0}
   _waveText: {fileID: 0}
-  _timerObject: {fileID: 0}
   _timerText: {fileID: 0}
 --- !u!4 &6601666592379757935
 Transform:
