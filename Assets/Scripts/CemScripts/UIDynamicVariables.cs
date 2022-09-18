@@ -36,11 +36,15 @@ public class UIDynamicVariables : MonoBehaviour
     public Image CoolDown1;
     public Image CoolDown2;
     private float cooldowntime;
+
+    private GameObject DashAttackState;
+
     void Start()
     {
         playerTransform = GameObject.Find("Player").transform;
         dashSkill = playerTransform.GetComponent<DashSkill>();
         smashSkill = playerTransform.GetComponent<SmashSkill>();
+        DashAttackState = transform.Find("DashAttackState").gameObject;
     }
 
     void CoolDown()
@@ -91,6 +95,13 @@ public class UIDynamicVariables : MonoBehaviour
         playerSmashCooldown = smashSkill.getCooldownCounter();
 
         CoolDown();
+
+        if(dashSkill.IsAttackAvailable()){
+            DashAttackState.SetActive(true);
+        }
+        else{
+            DashAttackState.SetActive(false);
+        }
 
         HealthOrb.value = playerHPSmooth;
         SevapOrb.value = playerMana;
